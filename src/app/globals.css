@@ -1,26 +1,169 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-ink: #111114;
+  --color-ink-2: #1c1c21;
+  --color-paper: #f5f4f0;
+  --color-paper-2: #ebe9e3;
+  --color-brand: #e1252d;
+  --color-brand-2: #b92a2b;
+  --color-ember: #ff6a2b;
+  --color-muted: #5a5a63;
+  --color-muted-d: #8b8b95;
+  --color-line: rgb(17 17 20 / 0.1);
+  --color-line-d: rgb(255 255 255 / 0.12);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --ease-expo: cubic-bezier(0.2, 0.7, 0, 1);
+  --ease-io: cubic-bezier(0.77, 0, 0.18, 1);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --breakpoint-nav: 64rem;
+
+  --animate-spin-slow: spin 18s linear infinite;
+  --animate-lb: lb-in 0.4s cubic-bezier(0.2, 0.7, 0, 1);
+  --animate-laser: laser 4.5s cubic-bezier(0.77, 0, 0.18, 1) infinite;
+
+  --animate-rise: rise 0.9s cubic-bezier(0.2, 0.7, 0, 1) backwards;
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(26px); }
+  }
+  @keyframes lb-in {
+    from { opacity: 0; transform: scale(0.97); }
+  }
+  @keyframes laser {
+    0% { left: -30%; }
+    60%, 100% { left: 100%; }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme inline {
+  --font-display: var(--font-archivo), "Arial Narrow", system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, Menlo, monospace;
+}
+
+/* ---------- utilities ---------- */
+@utility wrap {
+  width: 100%;
+  max-width: 1480px;
+  margin-inline: auto;
+  padding-inline: clamp(18px, 4vw, 64px);
+}
+@utility sec {
+  position: relative;
+  padding-block: clamp(80px, 10vw, 150px);
+}
+@utility font-display-x {
+  font-family: var(--font-display);
+  font-stretch: 108%;
+}
+@utility title-xl {
+  font-family: var(--font-display);
+  font-stretch: 108%;
+  letter-spacing: -0.035em;
+  font-size: clamp(40px, 5.4vw, 88px);
+  line-height: 1;
+  font-weight: 700;
+  text-wrap: balance;
+}
+@utility title-lg {
+  font-family: var(--font-display);
+  font-stretch: 108%;
+  letter-spacing: -0.03em;
+  font-size: clamp(28px, 2.8vw, 42px);
+  line-height: 1.05;
+  font-weight: 700;
+}
+@utility lead {
+  font-size: clamp(17px, 1.3vw, 20px);
+  line-height: 1.7;
+}
+@utility text-brand-gradient {
+  background-image: linear-gradient(95deg, var(--color-brand) 10%, var(--color-ember) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* soft page-top background: warm paper fading to white with a faint red/ember glow (no grid) */
+@utility bg-soft {
+  background:
+    radial-gradient(900px 520px at 12% -8%, rgb(225 37 45 / 0.08), transparent 62%),
+    radial-gradient(900px 600px at 95% 6%, rgb(255 106 43 / 0.06), transparent 60%),
+    linear-gradient(180deg, var(--color-paper) 0%, #ffffff 100%);
+}
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+/* ---------- base ---------- */
+@layer base {
+  :root { --hdr: 88px; }
+  @media (max-width: 720px) { :root { --hdr: 74px; } }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: #fff;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  ::selection { background: var(--color-brand); color: #fff; }
+  :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; }
+  button, summary, select { cursor: pointer; }
+}
+
+/* lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* ---------- motion: initial states (GSAP reveals them) ---------- */
+[data-split] { visibility: hidden; }
+.sw { padding-bottom: 0.08em; }
+.reveal { opacity: 0; transform: translateY(36px); }
+.reveal-img { clip-path: inset(100% 0 0 0); }
+.hero-in { opacity: 0; transform: translateY(28px); }
+.hero-line { transform: translateY(110%); }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-split], .reveal, .reveal-img, .hero-in, .hero-line {
+    visibility: visible !important; opacity: 1 !important; transform: none !important; clip-path: none !important;
+  }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+/* the "10" that fills with red as you scroll */
+.ten-num::after {
+  content: attr(data-n);
+  position: absolute; inset: 0;
+  color: var(--color-brand); -webkit-text-stroke: 0;
+  clip-path: inset(calc(100% - var(--p, 0%)) 0 0 0);
+}
+
+/* headings whose colour sweeps in left→right when they enter the viewport (see <Sweep/>) */
+.sweep, .sweep .accent {
+  background-image: linear-gradient(90deg, var(--sweep-c, var(--color-ink)) 50%, #cfcfd4 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-position 1.3s var(--ease-io);
+}
+.sweep .accent { --sweep-c: var(--color-brand); transition-delay: 0.35s; }
+.sweep[data-on="true"], .sweep[data-on="true"] .accent { background-position: 0 0; }
+@media (prefers-reduced-motion: reduce) {
+  .sweep, .sweep .accent { background-position: 0 0; }
+}
+
+/* cards with a soft red spotlight that follows the pointer */
+.spot {
+  background:
+    radial-gradient(380px circle at var(--x, 50%) var(--y, 0%), rgb(225 37 45 / 0.07), transparent 50%),
+    #fff;
 }
