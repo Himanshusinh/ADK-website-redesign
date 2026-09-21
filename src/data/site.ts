@@ -31,7 +31,7 @@ export type Node = {
 export type ItemInfo = { name: string; img: string; href: string | null };
 
 export const company = {
-  name: 'ADK Engineering & Solutions',
+  name: 'ADK Engineering PVT LTD',
   phone: '+91 63526 44186',
   whatsapp: '919227085416',
   email: 'inquiry1@adkeng.com',
@@ -214,7 +214,8 @@ export const productTree: Node[] = [
           { title: 'Our Strength', items: ['Over 14 years of relevant experience', 'Transparent process and regular follow up', 'Long term relationship', 'On time delivery of service', 'Periodic review for better process orientation', 'Well-qualified and efficient staff', 'Continues working towards customer satisfaction', 'Predefined system based approach'] },
         ],
         components: ['Quick Clamping', 'Controller', 'Backgauge', 'Punch & Die', 'Oil Pump', 'Hydraulic System', 'Mechanical Crowning'],
-        tables: [{ title: 'Technical Parameters', head: ['Model', 'Nominal Pressure (kN)', 'Table Length (mm)', 'Distance Between Columns (mm)', 'Throat Depth (mm)', 'Stroke (mm)', 'Open Height (mm)', 'Dimension (mm)'], rows: rows(`
+        tables: [{
+          title: 'Technical Parameters', head: ['Model', 'Nominal Pressure (kN)', 'Table Length (mm)', 'Distance Between Columns (mm)', 'Throat Depth (mm)', 'Stroke (mm)', 'Open Height (mm)', 'Dimension (mm)'], rows: rows(`
           40T 1600|400|1600|1200|260|150|430|2400*1300*2200
           63T 2500|630|2500|2000|320|160|450|3000*1400*2400
           80T 2500|800|2500|2000|320|160|450|3000*1400*2400
@@ -234,7 +235,8 @@ export const productTree: Node[] = [
           400T 6000|4000|6000|4800|500|300|610|6300*2700*3500
           500T 4000|5000|4000|3100|500|300|610|4300*2700*3500
           500T 6000|5000|6000|4800|500|300|610|6300*2700*3600
-          800T 8000|8000|8000|6300|600|320|800|8300*3600*4500`) }],
+          800T 8000|8000|8000|6300|600|320|800|8300*3600*4500`)
+        }],
       },
       {
         slug: 'nc-press-brake',
@@ -244,18 +246,21 @@ export const productTree: Node[] = [
         highlights: [['Tonnage', '40T – 500T'], ['Hydraulics', 'Bosch Rexroth'], ['Controller', 'Estun / Delem']],
         lists: [
           { title: 'Highlights', items: pressIntro },
-          { title: 'NC Press Brake', items: [
-            'The entire EU streamlined design, heat treatment frame, high rigidity workbench, optional mechanical compensation device for precise bending.',
-            'Hydraulic synchronization control and Estun E21/Estun E200P or Delem DA41s programmable logic controller ensure precise repeatability and ease of use.',
-            'The integrated hydraulic system (Bosch Rexroth, Germany) can quickly and automatically switch to a slow bend.',
-            'The X-axis and Y-axis are programmed by the controller and controlled by servo motor to achieve accurate positioning.',
-            'Advanced variable frequency hydraulic control technology, with more stable, and more reliable operation.',
-            'NC series press brake equipped with standard single-axis backgauge system (X-axis) and single-axis bending angle system (Y-axis), you can choose to add V-axis compensation function, and select the appropriate mold to easily bend the workpiece with complex shapes.',
-          ] },
+          {
+            title: 'NC Press Brake', items: [
+              'The entire EU streamlined design, heat treatment frame, high rigidity workbench, optional mechanical compensation device for precise bending.',
+              'Hydraulic synchronization control and Estun E21/Estun E200P or Delem DA41s programmable logic controller ensure precise repeatability and ease of use.',
+              'The integrated hydraulic system (Bosch Rexroth, Germany) can quickly and automatically switch to a slow bend.',
+              'The X-axis and Y-axis are programmed by the controller and controlled by servo motor to achieve accurate positioning.',
+              'Advanced variable frequency hydraulic control technology, with more stable, and more reliable operation.',
+              'NC series press brake equipped with standard single-axis backgauge system (X-axis) and single-axis bending angle system (Y-axis), you can choose to add V-axis compensation function, and select the appropriate mold to easily bend the workpiece with complex shapes.',
+            ]
+          },
           { title: 'Standard Equipment', items: ['Steel welded frame', 'Hydraulic system (Germany Bosch - Rexroth)', 'Standard two axis control (X,Y) Electrical system (France Schneider)', 'Synchronized dual cylinder', 'X axis servo motorized backgauge, Ball screw and Linear guide', 'Quick clamping (Optional)'] },
         ],
         components: ['Controller', 'Backgauge', 'Torque Synchronous Control System'],
-        tables: [{ title: 'Technical Parameters', head: ['Model', 'Nominal Pressure (kN)', 'Table Length (mm)', 'Distance Between Columns (mm)', 'Throat Depth (mm)', 'Stroke (mm)', 'Open Height (mm)', 'Dimension (LWH) (mm)'], rows: rows(`
+        tables: [{
+          title: 'Technical Parameters', head: ['Model', 'Nominal Pressure (kN)', 'Table Length (mm)', 'Distance Between Columns (mm)', 'Throat Depth (mm)', 'Stroke (mm)', 'Open Height (mm)', 'Dimension (LWH) (mm)'], rows: rows(`
           40T 1600|400|1600|1300|250|100|355|1900*1200*1900
           63T 2500|630|2500|2050|250|120|370|2500*1350*2100
           80T 2500|800|2500|2050|250|120|380|2500*1400*2150
@@ -274,7 +279,8 @@ export const productTree: Node[] = [
           400T 3200|4000|3200|2600|400|250|580|3300*2400*3200
           400T 4000|4000|4000|3100|400|250|580|4000*2400*3200
           500T 4000|5000|4000|3100|500|320|620|4000*2650*3320
-          500T 6000|5000|6000|4600|500|320|620|6000*2700*3320`) }],
+          500T 6000|5000|6000|4600|500|320|620|6000*2700*3320`)
+        }],
       },
     ],
   },
@@ -327,22 +333,26 @@ export const productTree: Node[] = [
         name: 'Gantry Type',
         img: IMG.gantry,
         highlights: [['Speed', '0–12000 mm/min'], ['Accuracy', '±0.03 mm/3mtr'], ['Source', 'Hypertherm']],
-        lists: [{ title: 'Features', items: [
-          'Heavy duty gantry type structure.',
-          'Dual shaft linear motion guide with rack & pinion drive for transverse direction movement of torch station.',
-          'Anti collision system with proximity protection.',
-          'Electrical limit switch on both side of longitudinal track end with mechanical bumpers helps in emergency collision protection.',
-          'High tension high accuracy rail dual side driven rack & pinion drive for longitudinal direction.',
-          'Automatic wear compensation by high tension cup spring keeps the engagement of the pinion in the rack free of backlash.',
-          'Electrical limit switch installed on both end side of transverse track & torch suspension together with mechanical bumper helps in emergency collision protection.',
-          'Track wiper device.',
-        ] }],
-        tables: [{ title: 'Technical Parameters', head: ['Model', 'ADK 2508 P/F', 'ADK 3508 P/F', 'ADK 4008 P/F', 'ADK 5508 P/F'], rows: rows(`
+        lists: [{
+          title: 'Features', items: [
+            'Heavy duty gantry type structure.',
+            'Dual shaft linear motion guide with rack & pinion drive for transverse direction movement of torch station.',
+            'Anti collision system with proximity protection.',
+            'Electrical limit switch on both side of longitudinal track end with mechanical bumpers helps in emergency collision protection.',
+            'High tension high accuracy rail dual side driven rack & pinion drive for longitudinal direction.',
+            'Automatic wear compensation by high tension cup spring keeps the engagement of the pinion in the rack free of backlash.',
+            'Electrical limit switch installed on both end side of transverse track & torch suspension together with mechanical bumper helps in emergency collision protection.',
+            'Track wiper device.',
+          ]
+        }],
+        tables: [{
+          title: 'Technical Parameters', head: ['Model', 'ADK 2508 P/F', 'ADK 3508 P/F', 'ADK 4008 P/F', 'ADK 5508 P/F'], rows: rows(`
           Working Width (mm)|1800 x 6500|2800 x 6500|3200 x 6500|4500 x 6500
           Speed (mm/min)|0-12000
           Accuracy (mm/3mtr)|±0.03
           Power Source Capacity (amp)|PMX 45, PMX 65, PMX 85, PMX 105, PMX 125, MAXPRO 200
-          Source Make|Hypertherm`) }],
+          Source Make|Hypertherm`)
+        }],
         apps: plasmaApps,
       },
       {
@@ -350,13 +360,16 @@ export const productTree: Node[] = [
         name: 'Table Type',
         img: IMG.tableType,
         highlights: [['Track width', '2500 mm & above'], ['Track length', '4000 mm & above'], ['Controller', 'FLSK 2300B']],
-        lists: [{ title: 'Mechanical Parts', items: [
-          'Table Type Gantry structure.',
-          'High tension high accuracy double side driven rack & pinion drive.',
-          'Dual shaft L M Guide ways and bearing (KHS-LG) arrangement for Transverse movement of Torch stations and longitudinal movement of Gantry.',
-          'Automatic wear compensation by high tension cup spring keeps the engagement of the pinion in this rack free of backlash.',
-        ] }],
-        tables: [{ title: 'Technical Parameters', rows: rows(`
+        lists: [{
+          title: 'Mechanical Parts', items: [
+            'Table Type Gantry structure.',
+            'High tension high accuracy double side driven rack & pinion drive.',
+            'Dual shaft L M Guide ways and bearing (KHS-LG) arrangement for Transverse movement of Torch stations and longitudinal movement of Gantry.',
+            'Automatic wear compensation by high tension cup spring keeps the engagement of the pinion in this rack free of backlash.',
+          ]
+        }],
+        tables: [{
+          title: 'Technical Parameters', rows: rows(`
           Track Width (mm)|2500, 3500, 4200 & Above
           Track Length (mm)|4000, 6000, 8000 & Above
           Effective Track Length (mm)|2500, 4500, 6500 & Above
@@ -366,7 +379,8 @@ export const productTree: Node[] = [
           Power source|Hypertherm USAO-12000 mm/Min
           Rapid Positioning Speed (mm /3 Mtr)|+/- 0.3
           Longitudinal Guiding Accuracy (mm)|+/- 0.5
-          Repeatability Accuracy|AC 220 V (Single Phase) (+/-10%), 50 Hz, 2`) }],
+          Repeatability Accuracy|AC 220 V (Single Phase) (+/-10%), 50 Hz, 2`)
+        }],
         apps: plasmaApps,
       },
       {
@@ -374,7 +388,8 @@ export const productTree: Node[] = [
         name: 'Portable Type',
         img: IMG.portable,
         highlights: [['Cutting width', '1250 mm'], ['Cutting length', '2500 mm'], ['Source', 'Hypertherm, USA']],
-        tables: [{ title: 'Technical Parameters', rows: rows(`
+        tables: [{
+          title: 'Technical Parameters', rows: rows(`
           Cutting width (mm)|1250
           Cutting length (mm)|2500
           Plasma controller|NC Controller
@@ -382,7 +397,8 @@ export const productTree: Node[] = [
           Y-axis Frame|Heat resistive heavy duty Iron frame for Y-Axis
           Plasma|One Station
           Power source|Hypertherm, USA
-          Software|Fast cam (Basic) - Australia`) }],
+          Software|Fast cam (Basic) - Australia`)
+        }],
         apps: plasmaApps,
       },
     ],
@@ -399,7 +415,8 @@ export const productTree: Node[] = [
         img: IMG.hBeam,
         desc: pebDesc,
         highlights: [['Web width', '200–1500 mm'], ['Flange height', '150–500 mm'], ['Web taper', '15°']],
-        tables: [{ title: 'Technical Parameters', rows: rows(`
+        tables: [{
+          title: 'Technical Parameters', rows: rows(`
           Min. web width (mm)|200
           Max. web width (mm)|1500
           Web thickness (mm)|5-20
@@ -407,7 +424,8 @@ export const productTree: Node[] = [
           Max. flange height (mm)|500
           Flange thickness (mm)|5-25
           Web taper angle (degree)|15 (Above 16 mm thick flanges to be Pre-Bent & Pre-Tracked)
-          Beam length (mtr)|—`) }],
+          Beam length (mtr)|—`)
+        }],
       },
       {
         slug: 'saw-gantry-welding-machine',
@@ -415,14 +433,16 @@ export const productTree: Node[] = [
         img: IMG.sawGantry,
         desc: pebDesc,
         highlights: [['Web width', 'Up to 2500 mm'], ['Flange height', 'Up to 1000 mm'], ['Beam length', '2.5–15 mtr']],
-        tables: [{ title: 'Technical Parameters', rows: rows(`
+        tables: [{
+          title: 'Technical Parameters', rows: rows(`
           Min. web width (mm)|200|200
           Max. web width (mm)|1500|2500
           Web thickness (mm)|5-40|5-80
           Min. flange height (mm)|150|250
           Max. flange height (mm)|500|1000
           Flange thickness (mm)|5-40
-          Beam length (mtr)|2.5-15|2.5-15`) }],
+          Beam length (mtr)|2.5-15|2.5-15`)
+        }],
       },
     ],
   },
@@ -444,7 +464,8 @@ export const productTree: Node[] = [
     imgs: [IMG.panel1, IMG.panel2, IMG.panel3],
     desc: ["Panel Bender adopts universal bending die, which can complete bending of various shapes with only one set of die, and users don't need to customize another die. The equipment can easily meet the requirements of arc, dead edge, return, closed and other complex sheet metal bending."],
     highlights: [['Bend speed', '0.2 s/bend'], ['Bend width', 'Up to 2500 mm'], ['Bend height', '170 mm']],
-    tables: [{ title: 'Technical Parameters', head: ['Model', 'ADK-PB1400 P', 'ADK-PB2000 P', 'ADK-PB2500 P'], rows: rows(`
+    tables: [{
+      title: 'Technical Parameters', head: ['Model', 'ADK-PB1400 P', 'ADK-PB2000 P', 'ADK-PB2500 P'], rows: rows(`
       Fastest Bend Speed (S/Bend)|0.2
       Maximum Bend Width (mm)|1400|2000|2500
       Bend Height (mm)|170
@@ -452,7 +473,8 @@ export const productTree: Node[] = [
       Total Motor Power (KW)|38|77|77
       Average Power (KW)|1.8|2.5|2.8
       Overall Dimensions (mm)|4400*1900*2900|5100*2650*3300|5650*3000*3400
-      Total Weight (T)|12T Approx|16T Approx|19T Approx`) }],
+      Total Weight (T)|12T Approx|16T Approx|19T Approx`)
+    }],
   },
 
   {
@@ -505,7 +527,7 @@ export const explorer: { label: string; slug: string; rep?: string }[] = [
 ];
 
 export const timeline: [string, string][] = [
-  ['2015', "Born of the ADK Engineering & solutions with goal of our MD'S to provide best technical & budget friendly solution with good service support."],
+  ['2015', "Born of the ADK Engineering PVT LTD with goal of our MD'S to provide best technical & budget friendly solution with good service support."],
   ['2016', 'Installed 1st Fiber Laser Cutting Machine & 8 Plasma Cutting Machine.'],
   ['2017', 'Got the market acceptance for our product. Expanding sales & service network & participating in tech fair to boost ADK brand.'],
   ['2018', 'Within two years of span ADK has been served 100+ customer with good technical solutions.'],
@@ -515,17 +537,17 @@ export const timeline: [string, string][] = [
   ['2022', "India's 1st 30KW Fiber Laser Cutting Machine & crossed 400+ successful installation."],
   ['2023', '3000x24000 mtr long table size Laser machine order with first time ever & crossed 550+ installation.'],
   ['2024', 'Another milestone achieved! 121 more satisfied customers are now part of the ADK family with a 20 KW order!'],
-  ['2025', 'Strengthening the ADK brand with 820+ successful overall installations and 151+ new installations in 2025, driven by customer trust and innovation.'],
+  ['2025', 'Strengthening the ADK brand with 850+ successful overall installations and 151+ new installations in 2025, driven by customer trust and innovation.'],
   ['2026', 'Expanding stronger with 300+ new installations and building long-term partnerships across India.'],
 ];
 
 export const about = {
   intro: [
-    "ADK ENGINEERING & SOLUTIONS, We're shaping the future as well as illuminating it with the brilliance of sheet metal industries. As a premier provider of cutting-edge sheet metal industries, we stand at the forefront of innovation, pushing the boundaries of what's possible in industries ranging from healthcare to manufacturing, telecommunications to entertainment.",
+    "ADK ENGINEERING PVT LTD, We're shaping the future as well as illuminating it with the brilliance of sheet metal industries. As a premier provider of cutting-edge sheet metal industries, we stand at the forefront of innovation, pushing the boundaries of what's possible in industries ranging from healthcare to manufacturing, telecommunications to entertainment.",
     'We pioneer innovation in precision engineering to redefine the future of manufacturing. With a relentless commitment to excellence, we specialize in designing, manufacturing and delivering all kind of sheet metal solutions that empower industries worldwide.',
-    'ADK ENGINEERING & SOLUTIONS, our commitment to customer satisfaction extends far beyond the point of sale. We understand that the true measure of our success lies not only in the quality of our products but also in the level of support and service we provide to our valued customers.',
+    'ADK ENGINEERING PVT LTD, our commitment to customer satisfaction extends far beyond the point of sale. We understand that the true measure of our success lies not only in the quality of our products but also in the level of support and service we provide to our valued customers.',
   ],
-  who: "ADK is bound to provide standardized industry solutions, genuine products and long term business relationship. A company is more valuable if it is bound by relation rather than by fear. Based on this principal we created ADK Engineering & Solutions in 2015 at Ahmedabad, Gujarat. Our company's foundation is rooted by our leaders having a vast experience in engineering and cutting industries for more than 16 years. ADK Engineering and Solutions is the fastest growing company in the field of CNC FIBER LASER CUTTING MACHINE, CNC PLASMA CUTTING MACHINE and CNC OXYFUEL CUTTING MACHINE, CNC/NC Press Brake Machine, Fiber Laser Welding Machine, CNC/NC Shearing Machine, PEB Machineries. As per our customers' need, demand and to serve our clients better, ADK has also started to deal in equipments & related Spares.",
+  who: "ADK is bound to provide standardized industry solutions, genuine products and long term business relationship. A company is more valuable if it is bound by relation rather than by fear. Based on this principal we created ADK Engineering PVT LTD in 2015 at Ahmedabad, Gujarat. Our company's foundation is rooted by our leaders having a vast experience in engineering and cutting industries for more than 16 years. ADK Engineering PVT LTD is the fastest growing company in the field of CNC FIBER LASER CUTTING MACHINE, CNC PLASMA CUTTING MACHINE and CNC OXYFUEL CUTTING MACHINE, CNC/NC Press Brake Machine, Fiber Laser Welding Machine, CNC/NC Shearing Machine, PEB Machineries. As per our customers' need, demand and to serve our clients better, ADK has also started to deal in equipments & related Spares.",
   whatLead: 'ADK is longing to have multiple contact centres across India for delivering time bound services.',
   what: "Our goal is to deliver error free and time bound services and qualitative products to exceed our customers' expectations, to become the leader in relationship based marketing era. ADK has an urge to be the trend setter in cutting industry's solution designing. ADK's team of expert engineers having great industrial knowledge are always willing to understand your requirement and provide you the best possible solution at the optimum cost saving. Our team of experts has mastered in providing cost effective, user friendly and customer oriented solutions. ADK's relationship commitment is not limited to new business generation but it is extended to life long after sales services and optimum output from its products.",
   supportLead: 'Our after sales service encompasses a wide range of offerings designed to meet your needs at every stage of the product lifecycle.',

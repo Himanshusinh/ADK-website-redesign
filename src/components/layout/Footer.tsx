@@ -38,7 +38,7 @@ export function Footer() {
         <div>
           <Image
             src={company.logo}
-            alt="ADK Engineering & Solutions"
+            alt="ADK Engineering PVT LTD"
             width={1201}
             height={450}
             className="mb-[22px] h-14 w-auto object-contain"
@@ -128,7 +128,7 @@ export function Footer() {
       </div>
 
       <div className="wrap relative flex flex-wrap items-center justify-between gap-5 border-t border-line pt-6 pb-[30px] text-[15px] text-muted">
-        <p>Copyright © {new Date().getFullYear()} ADK Engineering &amp; Solutions. All rights reserved.</p>
+        <p>Copyright © {new Date().getFullYear()} ADK Engineering PVT LTD. All rights reserved.</p>
         <BackToTop />
       </div>
     </footer>

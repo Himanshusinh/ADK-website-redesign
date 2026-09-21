@@ -38,7 +38,7 @@ export default function AboutPage() {
       <section className="sec bg-white text-ink">
         <div className="wrap grid items-start gap-[clamp(32px,6vw,110px)] lg:grid-cols-[1fr_1.05fr]">
           <div>
-            <Eyebrow>ADK Engineering &amp; Solutions</Eyebrow>
+            <Eyebrow>ADK Engineering PVT LTD</Eyebrow>
             <Split as="h1" className="title-xl">Shaping the future of sheet metal industries</Split>
           </div>
           <div>
@@ -81,7 +81,7 @@ export default function AboutPage() {
       </HScroll>
 
       <section className="sec grid gap-[clamp(80px,10vw,150px)] bg-white text-ink">
-        <SplitBlock img="/images/about-us/who-we-are.webp" alt="Who we are" eyebrow="Welcome to ADK Engineering & Solutions" title="Who We Are">
+        <SplitBlock img="/images/about-us/who-we-are.webp" alt="Who we are" eyebrow="Welcome to ADK Engineering PVT LTD" title="Who We Are">
           <Reveal as="p" className="lead text-muted">
             {about.who}
           </Reveal>

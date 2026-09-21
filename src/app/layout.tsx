@@ -14,13 +14,13 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains', display: 'swap' });
 
 const description =
-  'ADK Engineering & Solutions, Ahmedabad — fiber laser cutting, CNC plasma cutting, CNC press brake, fiber laser welding, PEB machinery, shearing machines and spares with PAN India service support.';
+  'ADK Engineering PVT LTD, Ahmedabad — fiber laser cutting, CNC plasma cutting, CNC press brake, fiber laser welding, PEB machinery, shearing machines and spares with PAN India service support.';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.adkeng.com'),
   title: {
-    default: 'ADK Engineering & Solutions | Fiber Laser Cutting, Plasma Cutting & Press Brake Machines, Ahmedabad',
-    template: '%s | ADK Engineering & Solutions',
+    default: 'ADK Engineering PVT LTD | Fiber Laser Cutting, Plasma Cutting & Press Brake Machines, Ahmedabad',
+    template: '%s | ADK Engineering PVT LTD',
   },
   description,
   openGraph: { type: 'website', siteName: company.name, description, images: ['/images/home-page/banners/adk-b1.webp'] },

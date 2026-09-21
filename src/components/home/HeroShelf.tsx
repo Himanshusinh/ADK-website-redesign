@@ -13,7 +13,7 @@ import { reducedMotion } from '@/components/motion/gsap';
 const trust = [
   ['16+', 'Years of experience'],
   ['750+', 'Happy customers'],
-  ['820+', 'Machines installed'],
+  ['850+', 'Machines installed'],
   ['PAN India', `Service · ${company.branches.length} branches`],
 ];
 
@@ -47,7 +47,7 @@ export function HeroShelf() {
       <div className="wrap relative text-center">
         <p className="animate-rise mb-6 inline-flex items-center gap-2.5 font-mono text-[13px] tracking-[0.14em] text-muted uppercase">
           <span className="size-2 rotate-45 rounded-[2px] bg-brand max-sm:hidden" />
-          ADK Engineering &amp; Solutions · Ahmedabad · Since 2015
+          ADK Engineering PVT LTD · Ahmedabad · Since 2015
         </p>
         <h1
           className="animate-rise font-display-x mx-auto max-w-[15ch] text-[clamp(44px,6.6vw,112px)] leading-[0.98] font-extrabold tracking-[-0.045em]"

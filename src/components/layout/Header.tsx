@@ -107,10 +107,10 @@ export function Header() {
         )}
       >
         <div className={clsx('mx-auto flex max-w-[1680px] items-center gap-[clamp(16px,2.4vw,40px)] px-[clamp(18px,4vw,64px)] transition-[height] duration-500 ease-expo', h)}>
-          <TLink href="/" aria-label="ADK Engineering & Solutions — Home" className="shrink-0">
+          <TLink href="/" aria-label="ADK Engineering PVT LTD — Home" className="shrink-0">
             <Image
               src={LOGO}
-              alt="ADK Engineering & Solutions"
+              alt="ADK Engineering PVT LTD"
               width={1201}
               height={450}
               priority
