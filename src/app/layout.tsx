@@ -24,7 +24,13 @@ export const metadata: Metadata = {
   },
   description,
   openGraph: { type: 'website', siteName: company.name, description, images: ['/images/home-page/banners/adk-b1.webp'] },
-  icons: { icon: '/images/home-page/logo/adk-logo.webp' },
+  icons: {
+    icon: [
+      { url: '/adk pvt ltd logo final.png', type: 'image/png' },
+      { url: '/favicon.ico' },
+    ],
+    apple: '/icon.png',
+  },
 };
 
 export const viewport: Viewport = { themeColor: '#ffffff' };

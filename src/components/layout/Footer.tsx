@@ -36,7 +36,13 @@ export function Footer() {
 
       <div className="wrap grid gap-10 pt-[70px] pb-[50px] md:grid-cols-2 xl:grid-cols-[1.3fr_.8fr_1.1fr_1.3fr]">
         <div>
-          <Image src="/images/home-page/logo/adk-logo-dark.webp" alt="ADK Engineering & Solutions" width={260} height={140} className="mb-[22px] h-16 w-auto" />
+          <Image
+            src={company.logo}
+            alt="ADK Engineering & Solutions"
+            width={1201}
+            height={450}
+            className="mb-[22px] h-14 w-auto object-contain"
+          />
           <p className="max-w-[34ch] text-base text-muted">{company.goal}</p>
           <div className="mt-[26px] flex gap-2.5">
             {company.socials.map((s) => {

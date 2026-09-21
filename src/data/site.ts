@@ -39,6 +39,7 @@ export const company = {
   factory: ['Block No. 2100, Paiki-2,', 'Beside Umiya Industries Estate,', 'Santej, Ahmedabad-382721,', 'Gujarat, India'],
   branches: ['Nagpur', 'Pune', 'Kolhapur', 'Bhopal', 'Jaipur', 'Kolkata', 'Hubli'],
   goal: 'Our goal is to offer broad capabilities, competitive pricing, exceptional quality and outstanding service to each and every customer.',
+  logo: '/adk pvt ltd logo final.png',
   catalogue: '/pdf/ADK-CATALOGUE.pdf',
   socials: [
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/ankit-patel-1a4687250/' },

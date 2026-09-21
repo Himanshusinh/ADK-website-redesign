@@ -11,7 +11,7 @@ import { company, moreLinks, navLinks, productHref, productTree } from '@/data/s
 import { pad, tel } from '@/lib/utils';
 import { gsap, lenisRef, reducedMotion } from '@/components/motion/gsap';
 
-const LOGO = '/images/home-page/logo/adk-logo-dark.webp';
+const LOGO = company.logo;
 
 export function Header() {
   const pathname = usePathname();
@@ -108,7 +108,14 @@ export function Header() {
       >
         <div className={clsx('mx-auto flex max-w-[1680px] items-center gap-[clamp(16px,2.4vw,40px)] px-[clamp(18px,4vw,64px)] transition-[height] duration-500 ease-expo', h)}>
           <TLink href="/" aria-label="ADK Engineering & Solutions — Home" className="shrink-0">
-            <Image src={LOGO} alt="ADK Engineering & Solutions" width={260} height={140} preload className={clsx('w-auto transition-[height] duration-500', scrolled ? 'h-11' : 'h-[44px] md:h-[52px]')} />
+            <Image
+              src={LOGO}
+              alt="ADK Engineering & Solutions"
+              width={1201}
+              height={450}
+              priority
+              className={clsx('w-auto object-contain transition-[height] duration-500', scrolled ? 'h-10' : 'h-[44px] md:h-[50px]')}
+            />
           </TLink>
 
           <nav aria-label="Main" className="ml-auto hidden nav:block">
