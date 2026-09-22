@@ -43,7 +43,7 @@ export const company = {
   email: 'inquiry1@adkeng.com',
   office: ['A-503/504, Empire Business Hub,', 'Nr. Shukan Mall, Science City Road,', 'Sola, Ahmedabad 380060, Gujarat.'],
   factory: ['Block No. 2100, Paiki-2,', 'Beside Umiya Industries Estate,', 'Santej, Ahmedabad-382721,', 'Gujarat, India'],
-  branches: ['Nagpur', 'Pune', 'Nashik', 'Kolhapur', 'Bhopal', 'Jaipur', 'Kolkata', 'Hubli', 'Surat', 'Mumbai', 'Indore'],
+  branches: ['Nagpur', 'Pune', 'Nashik', 'Kolhapur', 'Bhopal', 'Jaipur', 'Surat', 'Mumbai', 'Indore'],
   goal: 'Our goal is to offer broad capabilities, competitive pricing, exceptional quality and outstanding service to each and every customer.',
   logo: '/adk pvt ltd logo final.png',
   catalogue: '/pdf/ADK-CATALOGUE.pdf',
