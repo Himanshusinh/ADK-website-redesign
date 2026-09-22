@@ -25,6 +25,12 @@ export type Node = {
   contact?: { email: string; phone: string };
   /** technical sheet not published yet */
   sheetOnRequest?: boolean;
+  /** transparent render of the machine — switches the page to the dark cinematic hero */
+  cutout?: string;
+  /** laser sources the machine can be ordered with */
+  sources?: string[];
+  /** cut-part photos; inherited by every product below the node that sets it */
+  samples?: string[];
   children?: Node[];
 };
 
@@ -145,13 +151,34 @@ export const productTree: Node[] = [
     name: 'Fiber Laser Cutting Machines',
     img: IMG.sheetLaser,
     apps: laserApps,
+    samples: ['/images/gallery/03.webp', '/images/gallery/04.webp', '/images/gallery/05.webp', '/images/gallery/06.webp', '/images/gallery/07.webp'],
     children: [
       {
         slug: 'sheet-metal-laser-cutting-machine',
         name: 'Sheet Metal Laser Cutting Machine',
         img: IMG.sheetLaser,
         children: [
-          series('e-ii-series', 'E II Series', IMG.sheetLaser, 'Economical single-platform fiber laser cutting machine.'),
+          {
+            ...series('e-ii-series', 'E II Series', '/images/series/e-ii/front.jpg', 'Economical single-platform fiber laser cutting machine.'),
+            sheetOnRequest: false,
+            cutout: '/images/series/e-ii/cutout.webp',
+            imgs: ['/images/series/e-ii/front.jpg', '/images/series/e-ii/side.jpg'],
+            highlights: [['Working area', '3000 × 1500 mm'], ['Speed', '80 m/min'], ['Accuracy', '±0.03 mm'], ['Machine capacity', 'Up to 60 kW']],
+            sources: ['RAYCUS', 'IPG', 'MAX PHOTONICS'],
+            tables: [
+              {
+                title: 'Technical Parameters',
+                head: ['Model', 'BCF 3015E II'],
+                rows: [
+                  ['Working Area (mm)', '3000 x 1500'],
+                  ['Speed (m/min)', '80'],
+                  ['Accuracy (mm)', '+/-0.03'],
+                  ['Machine Capacity (KW)', 'Up to 60KW'],
+                  ['Power Source', 'RAYCUS, IPG, MAX PHOTONICS'],
+                ],
+              },
+            ],
+          },
           series('ln-ii-series', 'LN II Series', IMG.sheetLaser, 'High speed single-platform fiber laser cutting machine.'),
           series('ln-series', 'LN Series', IMG.sheetLaser, 'High capacity single-platform fiber laser cutting machine.'),
           series('ga-pro-series', 'GA Pro Series', IMG.exchangeLaser, 'High-stability fiber laser cutting machine.'),
@@ -515,6 +542,18 @@ export const lineup = [
   { name: 'Shearing Machine', href: productHref('shearing-machine'), img: IMG.shear1 },
 ];
 
+/**
+ * Dark landing hero — one slide per headline verb (0 cut · 1 bend · 2 weld).
+ * To use footage instead of a photo, drop an .mp4 in /public/video and set `video` on that slide;
+ * `img` then becomes its poster frame. `fit: 'contain'` keeps a studio render on black whole; `fit: 'frame'` shows a small factory photo whole with feathered edges (give its `ratio`).
+ */
+export const heroSlides: { name: string; tag: string; href: string; img: string; video?: string; verb: 0 | 1 | 2; pos?: string; fit?: 'contain' | 'frame'; ratio?: number }[] = [
+  { name: 'Fiber Laser Cutting', tag: 'Sheet metal · tube · robot · 19 series', href: productHref('fiber-laser-cutting-machine'), img: '/images/hero-stage/laser.jpg', verb: 0, fit: 'contain' },
+  { name: 'CNC Press Brake', tag: 'CNC & NC · 40T – 800T', href: productHref('cnc-press-brake-machine'), img: '/images/hero-stage/press-brake.jpg', verb: 1, pos: '30% 45%' },
+  { name: 'Laser Welding', tag: 'Handheld · 1500 – 3000 W', href: productHref('fiber-laser-welding-machine-main'), img: '/images/hero-stage/welding.jpg', verb: 2, pos: '78% 55%' },
+  { name: 'Shearing Machine', tag: 'Swing beam & guillotine', href: productHref('shearing-machine'), img: '/images/hero-stage/shearing.jpg', verb: 0, fit: 'frame', ratio: 1052 / 622 },
+];
+
 /** Home "machine range" explorer: tab label, category, and (optionally) the product whose specs represent it. */
 export const explorer: { label: string; slug: string; rep?: string }[] = [
   { label: 'Laser Cutting', slug: 'fiber-laser-cutting-machine' },
@@ -559,6 +598,15 @@ export const about = {
     ['Upgrades and Enhancements', 'As technology evolves, so do our products. We offer upgrade packages and enhancements to keep your machinery at the forefront of innovation, enabling you to maintain a competitive edge in your industry.'],
   ] as [string, string][],
 };
+
+/** photo for an application name used in a product's `apps` list (falls back to none) */
+const appPhotos: Record<string, string> = {
+  'Heavy Fabrication': 'heavy-fabrication', Elevators: 'elevators', 'Automobile Industries': 'automobile', 'Chemical Plant Equipments Mfg': 'chemical-plant',
+  'Road Construction Machinery Mfg': 'road-construction', 'Job Work': 'job-work', 'Profile Cutting': 'profile-cutting', 'Control Panel Mfg': 'control-panel',
+  'Food Machinery Mfg': 'food-machinery', 'Agriculture Machinery Mfg': 'agriculture', 'Steel Furniture': 'steel-furniture', 'Sheet Metal Work': 'steel-metal-work',
+  Architecture: 'architecture', 'Aero Space': 'aerospace', 'Textile Machinery Mfg': 'textile-machinery',
+};
+export const appPhoto = (name: string) => (appPhotos[name] ? `/images/application/${appPhotos[name]}.webp` : undefined);
 
 export const applications = ['aerospace', 'agriculture', 'architecture', 'automobile', 'chemical plant', 'control panel', 'elevators', 'food machinery', 'heavy fabrication', 'hydraulic machinery', 'job work', 'material handling equipments', 'pre engineering building', 'profile cutting', 'road construction', 'steel furniture', 'steel metal work', 'tank manufacturing', 'textile machinery', 'tower manufacturing']
   .map((n) => ({ name: n.replace(/\b\w/g, (c) => c.toUpperCase()), img: `/images/application/${n.replace(/ /g, '-')}.webp` }));

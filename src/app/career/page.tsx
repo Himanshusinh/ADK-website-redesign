@@ -5,7 +5,6 @@ import { PageStart } from '@/components/shared/PageStart';
 import { LightboxTrigger } from '@/components/layout/UI';
 import { Reveal } from '@/components/motion/Reveal';
 import { BtnBody, btnClass } from '@/components/ui/Button';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 
 export const metadata: Metadata = { title: 'Career' };
 
@@ -15,7 +14,6 @@ export default function CareerPage() {
       <section className="sec text-ink">
         <div className="wrap">
           <h1 className="sr-only">Career</h1>
-          <Eyebrow>We&apos;re hiring</Eyebrow>
           <div className="grid gap-6 md:grid-cols-3">
             {careers.map((j, i) => (
               <Reveal

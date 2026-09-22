@@ -10,17 +10,17 @@ const icons = { arrow: ArrowRight, download: Download, arrowUR: ArrowUpRight };
 
 const variants: Record<BtnVariant, string> = {
   red: 'bg-brand text-white before:bg-ink hover:shadow-[0_14px_40px_-12px_rgba(225,37,45,.7)]',
-  dark: 'bg-ink text-white before:bg-brand',
+  dark: 'bg-ink text-on-ink before:bg-brand hover:text-white',
   ghost: 'text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,.28)] before:bg-white hover:text-ink',
   light: 'bg-white text-ink before:bg-brand hover:text-white',
-  outline: 'bg-white text-ink shadow-[inset_0_0_0_1px_var(--color-line)] before:bg-ink hover:text-white',
+  outline: 'bg-surface text-ink shadow-[inset_0_0_0_1px_var(--color-line)] before:bg-ink hover:text-on-ink',
 };
 
 export function btnClass(variant: BtnVariant = 'red', size: BtnSize = 'md', className?: string) {
   return clsx(
     'group/btn relative isolate inline-flex items-center overflow-hidden rounded-full font-semibold whitespace-nowrap transition-[color,box-shadow] duration-500',
     'before:absolute before:inset-0 before:-z-10 before:translate-y-[101%] before:rounded-full before:transition-transform before:duration-[550ms] before:ease-expo hover:before:translate-y-0',
-    size === 'md' ? 'h-[58px] gap-4 pr-2 pl-7 text-[15px]' : 'h-[46px] gap-3 pr-[7px] pl-[22px] text-sm',
+    size === 'md' ? 'h-[52px] gap-3.5 pr-[7px] pl-6 text-[14.5px]' : 'h-[42px] gap-3 pr-[6px] pl-5 text-[13.5px]',
     variants[variant],
     className,
   );
@@ -41,7 +41,7 @@ export function BtnBody({ label, icon = 'arrow', size = 'md', variant = 'red' }:
         className={clsx(
           'grid shrink-0 place-items-center rounded-full transition-[rotate,background-color,color] duration-[550ms] ease-expo',
           icon === 'arrow' && 'group-hover/btn:-rotate-45',
-          size === 'md' ? 'size-[42px]' : 'size-8',
+          size === 'md' ? 'size-[38px]' : 'size-[30px]',
           variant === 'light' || variant === 'outline' ? 'bg-ink/[.06]' : 'bg-white/15',
           (variant === 'red' || variant === 'ghost' || variant === 'outline') && 'group-hover/btn:bg-brand group-hover/btn:text-white',
           variant === 'dark' && 'group-hover/btn:bg-black/20',

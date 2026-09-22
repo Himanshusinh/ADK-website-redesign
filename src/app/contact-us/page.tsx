@@ -4,7 +4,6 @@ import { company, maps } from '@/data/site';
 import { tel } from '@/lib/utils';
 import { PageStart } from '@/components/shared/PageStart';
 import { InquiryForm } from '@/components/shared/InquiryForm';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Split } from '@/components/motion/Split';
 import { Reveal } from '@/components/motion/Reveal';
 
@@ -23,7 +22,6 @@ export default function ContactPage() {
       <section className="sec bg-white text-ink">
         <div className="wrap grid items-start gap-[clamp(40px,6vw,100px)] lg:grid-cols-2">
           <div>
-            <Eyebrow>Get In Touch</Eyebrow>
             <Split as="h1" className="title-xl">Talk to an ADK expert</Split>
             <Reveal as="p" className="lead mt-[22px] mb-9 text-muted">
               Feel free to contact us via phone or email anytime if you have any questions or need help!
@@ -35,8 +33,8 @@ export default function ContactPage() {
                     <Icon className="size-5" />
                   </span>
                   <div>
-                    <h3 className="mb-1.5 font-display text-lg font-semibold">{title}</h3>
-                    <p className="text-base leading-[1.6] text-muted">{body}</p>
+                    <h3 className="mb-1.5 font-display text-[16.5px] font-semibold">{title}</h3>
+                    <p className="text-[14.5px] leading-[1.6] text-muted">{body}</p>
                   </div>
                 </Reveal>
               ))}
@@ -50,14 +48,13 @@ export default function ContactPage() {
       </section>
       </PageStart>
 
-      <section className="sec bg-paper text-ink">
+      <section className="theme-dark glow sec text-ink">
         <div className="wrap">
-          <Eyebrow>Direct lines</Eyebrow>
           <Split className="title-xl">Reach the right team</Split>
           <div className="mt-[50px] mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {company.departments.map((d, i) => (
               <Reveal key={d.title} data-spot delay={i * 0.06} className="spot grid content-start gap-3 rounded-[20px] p-7 ring-1 ring-line">
-                <h3 className="mb-2 font-display text-[22px] font-bold">{d.title}</h3>
+                <h3 className="mb-2 font-display text-[19px] font-bold">{d.title}</h3>
                 {d.phones.map((p) => (
                   <a key={p} href={tel(p)} className="inline-flex items-center gap-2.5 font-mono text-[15px] text-ink/75 hover:text-ink">
                     <Phone className="size-4 text-brand" /> {p}
@@ -70,10 +67,10 @@ export default function ContactPage() {
             ))}
           </div>
           <div className="flex flex-wrap items-center gap-x-[26px] gap-y-3.5 border-t border-line pt-[26px]">
-            <span className="font-mono text-[13px] tracking-[0.12em] text-brand uppercase">Our Branches</span>
+            <span className="text-[14px] font-semibold text-ink">Our Branches</span>
             <ul className="flex flex-wrap gap-2">
               {company.branches.map((b) => (
-                <li key={b} className="rounded-full bg-white px-4 py-2 text-[15px] text-ink/75 ring-1 ring-line">
+                <li key={b} className="rounded-full bg-surface px-3.5 py-1.5 text-[13.5px] text-ink/75 ring-1 ring-line">
                   {b}
                 </li>
               ))}
@@ -84,14 +81,13 @@ export default function ContactPage() {
 
       <section className="sec bg-white text-ink">
         <div className="wrap">
-          <Eyebrow>Find us</Eyebrow>
           <Split className="title-xl mb-9">Office &amp; factory</Split>
           <div className="grid gap-5 lg:grid-cols-2">
             {maps.map((m, i) => (
               <Reveal key={m.kicker} delay={i * 0.08} className="overflow-hidden rounded-[24px] bg-paper ring-1 ring-line">
                 <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-2 px-5 py-4">
                   <div>
-                    <p className="font-mono text-[12px] tracking-[0.1em] text-brand uppercase">{m.kicker}</p>
+                    <p className="text-[15px] font-semibold text-ink">{m.kicker}</p>
                     <p className="mt-1 max-w-[46ch] text-[15px] leading-relaxed text-muted">{m.address}</p>
                   </div>
                   <a href={m.link} target="_blank" rel="noopener" className="group inline-flex shrink-0 items-center gap-1.5 text-[15px] font-semibold">

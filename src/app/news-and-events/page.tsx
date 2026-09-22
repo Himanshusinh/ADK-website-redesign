@@ -7,7 +7,6 @@ import { PageStart } from '@/components/shared/PageStart';
 import { LightboxTrigger } from '@/components/layout/UI';
 import { Reveal } from '@/components/motion/Reveal';
 import { ArrowLabel } from '@/components/ui/ArrowLink';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 
 export const metadata: Metadata = { title: 'News & Events' };
 
@@ -17,7 +16,6 @@ export default function NewsPage() {
       <section className="sec text-ink">
         <div className="wrap">
           <h1 className="sr-only">News &amp; Events</h1>
-          <Eyebrow>Exhibitions &amp; trade shows</Eyebrow>
           <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {events.map((e, i) => {
               const imgs = listImages(`images/news-and-events/${e.dir}`);
@@ -37,7 +35,7 @@ export default function NewsPage() {
                         <Maximize2 className="size-3.5" /> {imgs.length} photos
                       </span>
                     </span>
-                    <span className="font-display text-[clamp(20px,1.7vw,26px)] leading-[1.15] font-bold tracking-[-0.02em]">{e.title}</span>
+                    <span className="font-display text-[clamp(17px,1.4vw,21px)] leading-[1.15] font-bold tracking-[-0.02em]">{e.title}</span>
                     <ArrowLabel className="self-start">View photos</ArrowLabel>
                   </LightboxTrigger>
                 </Reveal>

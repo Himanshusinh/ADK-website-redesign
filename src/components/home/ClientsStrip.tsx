@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { listImages, logoName } from '@/lib/media';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Button } from '@/components/ui/Button';
 import { Sweep } from '@/components/motion/Sweep';
 import { Marquee } from '@/components/motion/Marquee';
@@ -19,9 +18,8 @@ export function ClientsStrip() {
   const logos = listImages('images/clients');
   const half = Math.ceil(logos.length / 2);
   return (
-    <section className="sec bg-paper text-ink">
+    <section className="sec bg-white text-ink">
       <div className="wrap mb-[clamp(40px,5vw,70px)] max-w-[900px] text-center">
-        <Eyebrow>Trusted across India</Eyebrow>
         <Sweep className="title-xl">
           750+ happy customers, from job shops to <span className="accent">ISRO</span>
         </Sweep>

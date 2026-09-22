@@ -12,6 +12,9 @@
   --color-muted-d: #8b8b95;
   --color-line: rgb(17 17 20 / 0.1);
   --color-line-d: rgb(255 255 255 / 0.12);
+  /* card/button surface and the text colour that sits on `bg-ink` — both flip inside .theme-dark */
+  --color-surface: #ffffff;
+  --color-on-ink: #ffffff;
 
   --ease-expo: cubic-bezier(0.2, 0.7, 0, 1);
   --ease-io: cubic-bezier(0.77, 0, 0.18, 1);
@@ -23,12 +26,17 @@
   --animate-laser: laser 4.5s cubic-bezier(0.77, 0, 0.18, 1) infinite;
 
   --animate-rise: rise 0.9s cubic-bezier(0.2, 0.7, 0, 1) backwards;
+  --animate-bar: bar 6.5s linear forwards;
 
   @keyframes rise {
     from { opacity: 0; transform: translateY(26px); }
   }
   @keyframes lb-in {
     from { opacity: 0; transform: scale(0.97); }
+  }
+  @keyframes bar {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
   }
   @keyframes laser {
     0% { left: -30%; }
@@ -39,7 +47,8 @@
 @theme inline {
   --font-display: var(--font-archivo), "Arial Narrow", system-ui, sans-serif;
   --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: var(--font-jetbrains), ui-monospace, Menlo, monospace;
+  /* no monospace on this site — any leftover `font-mono` falls back to the body font */
+  --font-mono: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 /* ---------- utilities ---------- */
@@ -51,7 +60,7 @@
 }
 @utility sec {
   position: relative;
-  padding-block: clamp(80px, 10vw, 150px);
+  padding-block: clamp(64px, 8vw, 120px);
 }
 @utility font-display-x {
   font-family: var(--font-display);
@@ -61,8 +70,8 @@
   font-family: var(--font-display);
   font-stretch: 108%;
   letter-spacing: -0.035em;
-  font-size: clamp(40px, 5.4vw, 88px);
-  line-height: 1;
+  font-size: clamp(30px, 3.5vw, 56px);
+  line-height: 1.04;
   font-weight: 700;
   text-wrap: balance;
 }
@@ -70,12 +79,12 @@
   font-family: var(--font-display);
   font-stretch: 108%;
   letter-spacing: -0.03em;
-  font-size: clamp(28px, 2.8vw, 42px);
-  line-height: 1.05;
+  font-size: clamp(22px, 2vw, 32px);
+  line-height: 1.1;
   font-weight: 700;
 }
 @utility lead {
-  font-size: clamp(17px, 1.3vw, 20px);
+  font-size: clamp(15.5px, 1.05vw, 17.5px);
   line-height: 1.7;
 }
 @utility text-brand-gradient {
@@ -105,13 +114,39 @@
     background: #fff;
     color: var(--color-ink);
     font-family: var(--font-sans);
-    font-size: 17px;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     overflow-x: clip;
   }
   ::selection { background: var(--color-brand); color: #fff; }
   :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; }
   button, summary, select { cursor: pointer; }
+}
+
+/* ---------- black sections ----------
+   Re-scopes the colour tokens, so every text-ink / bg-paper / ring-line inside flips to the dark
+   palette without touching components. Machine cut-outs (mix-blend-multiply) must stay on light. */
+.theme-dark {
+  --color-ink: #f4f4f5;
+  --color-ink-2: #e4e4e7;
+  --color-paper: #141417;
+  --color-paper-2: #1c1c20;
+  --color-surface: #17171b;
+  --color-on-ink: #0b0b0d;
+  --color-muted: rgb(255 255 255 / 0.6);
+  --color-muted-d: rgb(255 255 255 / 0.42);
+  --color-line: rgb(255 255 255 / 0.12);
+  --sweep-off: #34343b;
+  --fill-off: #3a3a42;
+  background-color: #0b0b0d;
+  color: var(--color-ink);
+}
+/* black with a low red glow — for the bigger dark blocks */
+.theme-dark.glow {
+  background:
+    radial-gradient(900px 520px at 88% 0%, rgb(225 37 45 / 0.14), transparent 60%),
+    radial-gradient(700px 480px at 0% 100%, rgb(255 106 43 / 0.07), transparent 60%),
+    #0b0b0d;
 }
 
 /* lenis */
@@ -145,7 +180,7 @@ html.lenis, html.lenis body { height: auto; }
 
 /* headings whose colour sweeps in left→right when they enter the viewport (see <Sweep/>) */
 .sweep, .sweep .accent {
-  background-image: linear-gradient(90deg, var(--sweep-c, var(--color-ink)) 50%, #cfcfd4 50%);
+  background-image: linear-gradient(90deg, var(--sweep-c, var(--color-ink)) 50%, var(--sweep-off, #cfcfd4) 50%);
   background-size: 200% 100%;
   background-position: 100% 0;
   -webkit-background-clip: text;
@@ -165,5 +200,5 @@ html.lenis, html.lenis body { height: auto; }
 .spot {
   background:
     radial-gradient(380px circle at var(--x, 50%) var(--y, 0%), rgb(225 37 45 / 0.07), transparent 50%),
-    #fff;
+    var(--color-surface);
 }

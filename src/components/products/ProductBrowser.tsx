@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { useCallback, useState } from 'react';
 import { ArrowRight, ArrowUpRight, Plus } from 'lucide-react';
-import { pad } from '@/lib/utils';
 import { TLink } from '@/components/layout/Transition';
 import { QuoteButton } from '@/components/layout/UI';
 import { Button } from '@/components/ui/Button';
@@ -61,7 +60,6 @@ export function ProductBrowser({ lines }: { lines: BrowserLine[] }) {
                   k === i ? 'bg-ink text-white' : 'hover:bg-white/70',
                 )}
               >
-                <span className={clsx('font-mono text-[11px]', k === i ? 'text-white/55' : 'text-muted-d')}>{pad(k + 1)}</span>
                 <span className="font-display text-[17px] leading-tight font-semibold">{x.name}</span>
                 <ArrowRight className={clsx('ml-auto size-4 shrink-0 transition-colors', k === i ? 'text-brand' : 'text-transparent group-hover:text-brand')} />
               </button>
@@ -96,7 +94,7 @@ export function ProductBrowser({ lines }: { lines: BrowserLine[] }) {
                 )}
               >
                 {s.name}
-                {s.count > 0 && <sup className="ml-1.5 font-mono text-[11px] font-normal text-brand">{s.count}</sup>}
+                {s.count > 0 && <sup className="ml-1 text-[11px] font-semibold text-brand">{s.count}</sup>}
                 <span
                   className={clsx(
                     'absolute inset-x-0 -bottom-px h-0.5 origin-left bg-brand transition-transform duration-500 ease-expo',
@@ -156,7 +154,7 @@ export function ProductBrowser({ lines }: { lines: BrowserLine[] }) {
                     <dl className="grid w-full max-w-[46ch] grid-cols-[repeat(auto-fit,minmax(132px,1fr))] border-y border-line/70">
                       {active.highlights.map(([k, v], n) => (
                         <div key={k} className={clsx('py-3.5 pr-4', n > 0 && 'border-l border-line/70 pl-4')}>
-                          <dt className="mb-1 font-mono text-[11px] tracking-[0.1em] text-muted uppercase">{k}</dt>
+                          <dt className="mb-1 text-[12.5px] text-muted">{k}</dt>
                           <dd className="font-display text-[16px] leading-tight font-bold">{v}</dd>
                         </div>
                       ))}
@@ -166,7 +164,7 @@ export function ProductBrowser({ lines }: { lines: BrowserLine[] }) {
                   {!!active?.models?.length && (
                     <ul className="flex flex-wrap gap-2">
                       {active.models.map((m) => (
-                        <li key={m} className="rounded-full bg-white px-3.5 py-1.5 font-mono text-[13px] text-ink/70">
+                        <li key={m} className="rounded-full bg-white px-3.5 py-1.5 text-[13px] font-medium text-ink/70">
                           {m}
                         </li>
                       ))}
@@ -202,7 +200,7 @@ export function ProductBrowser({ lines }: { lines: BrowserLine[] }) {
               {(x.subs.length ? x.subs : []).map((s) => (
                 <TLink key={`${s.href}::${s.name}`} href={s.href} className="flex items-center gap-2 py-2 text-[15px] font-medium">
                   {s.name}
-                  {s.count > 0 && <span className="font-mono text-[11px] text-brand">{s.count}</span>}
+                  {s.count > 0 && <span className="text-[11px] font-semibold text-brand">{s.count}</span>}
                   <ArrowUpRight className="ml-auto size-4 text-brand" />
                 </TLink>
               ))}

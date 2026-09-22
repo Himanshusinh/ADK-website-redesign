@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Archivo, Inter, JetBrains_Mono } from 'next/font/google';
+import { Archivo, Inter } from 'next/font/google';
 import './globals.css';
 import { SmoothScroll } from '@/components/motion/SmoothScroll';
 import { UIProvider } from '@/components/layout/UI';
@@ -11,7 +11,6 @@ import { company } from '@/data/site';
 
 const archivo = Archivo({ subsets: ['latin'], variable: '--font-archivo', axes: ['wdth'], display: 'swap' });
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
-const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains', display: 'swap' });
 
 const description =
   'ADK Engineering PVT LTD, Ahmedabad — fiber laser cutting, CNC plasma cutting, CNC press brake, fiber laser welding, PEB machinery, shearing machines and spares with PAN India service support.';
@@ -37,7 +36,7 @@ export const viewport: Viewport = { themeColor: '#ffffff' };
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="en" className={`${archivo.variable} ${inter.variable} ${mono.variable}`}>
+    <html lang="en" className={`${archivo.variable} ${inter.variable}`}>
       <body>
         <UIProvider>
           <SmoothScroll />

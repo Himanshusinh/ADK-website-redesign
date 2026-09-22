@@ -4,7 +4,6 @@ import { listImages } from '@/lib/media';
 import { PageStart } from '@/components/shared/PageStart';
 import { LightboxTrigger } from '@/components/layout/UI';
 import { Reveal } from '@/components/motion/Reveal';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 
 export const metadata: Metadata = { title: 'Gallery' };
 
@@ -15,7 +14,6 @@ export default function GalleryPage() {
       <section className="sec text-ink">
         <div className="wrap">
           <h1 className="sr-only">Gallery</h1>
-          <Eyebrow>{imgs.length} photos</Eyebrow>
           <div className="columns-1 gap-[18px] sm:columns-2 lg:columns-3">
             {imgs.map((src, i) => (
               <Reveal key={src} delay={(i % 3) * 0.06} className="mb-[18px] break-inside-avoid">

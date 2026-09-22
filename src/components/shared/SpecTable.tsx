@@ -12,10 +12,10 @@ export function SpecTable({ t }: { t: Table }) {
   const cols = t.head ? t.head.length : Math.max(...t.rows.map((r) => r.length));
   const kv = cols === 2;
   return (
-    <Reveal>
-      <div className="mb-[22px] flex flex-wrap items-end justify-between gap-5">
-        <h2 className="title-lg">{t.title}</h2>
-        {cols > 3 && <span className="font-mono text-xs text-muted">Swipe to see all models →</span>}
+    <Reveal className={clsx(kv && 'mx-auto w-full max-w-[960px]')}>
+      <div className={clsx('mb-[22px] flex flex-wrap items-end gap-5', kv ? 'justify-center text-center' : 'justify-between')}>
+        <h2 className={kv ? 'title-xl' : 'title-lg'}>{t.title}</h2>
+        {cols > 3 && <span className="text-[13px] text-muted">Swipe to see all models →</span>}
       </div>
       <div className={frame} data-lenis-prevent>
         <table className={clsx('w-full border-separate border-spacing-0 text-[15px]', !kv && 'min-w-[640px]')}>

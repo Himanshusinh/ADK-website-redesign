@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { productHref, productTree } from '@/data/site';
-import { Breadcrumbs } from '@/components/shared/PageHero';
 import { ProductBrowser, type BrowserLine, type BrowserSub } from '@/components/products/ProductBrowser';
 
 export const metadata: Metadata = { title: 'Products' };
@@ -35,8 +34,7 @@ export default function ProductsPage() {
       <div className="wrap">
         <div className="mb-4 flex flex-wrap items-end justify-between gap-x-8 gap-y-1">
           <div>
-            <Breadcrumbs trail={[['Products', '/products']]} />
-            <h1 className="font-display-x mt-1 text-[clamp(30px,3.4vw,52px)] leading-[1.02] font-bold tracking-[-0.035em]">
+            <h1 className="font-display-x text-[clamp(26px,2.8vw,42px)] leading-[1.02] font-bold tracking-[-0.035em]">
               Every ADK machine, on one screen
             </h1>
           </div>

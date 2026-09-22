@@ -7,11 +7,13 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ChevronDown, Download, Mail, Phone, Plus } from 'lucide-react';
 import { TLink } from './Transition';
 import { QuoteButton } from './UI';
-import { company, moreLinks, navLinks, productHref, productTree } from '@/data/site';
-import { pad, tel } from '@/lib/utils';
+import { company, findNode, moreLinks, navLinks, productHref, productTree } from '@/data/site';
+import { tel } from '@/lib/utils';
 import { gsap, lenisRef, reducedMotion } from '@/components/motion/gsap';
 
 const LOGO = company.logo;
+/** white-text variant for the dark landing hero */
+const LOGO_LIGHT = '/adk-logo-light.png';
 
 export function Header() {
   const pathname = usePathname();
@@ -91,6 +93,10 @@ export function Header() {
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
   const isHidden = hidden && !mega && !menu;
   const solid = scrolled || mega || menu;
+  // floating over the black landing hero: white type until the bar turns solid
+  // pages that open on a black hero: home, and any machine page with a cinematic render
+  const darkTop = pathname === '/' || (pathname.startsWith('/products/') && !!findNode(pathname.split('/')[2] ?? '')?.node.cutout);
+  const onDark = darkTop && !solid;
   const h = scrolled ? 'h-[72px]' : 'h-[var(--hdr)]';
 
   return (
@@ -101,7 +107,8 @@ export function Header() {
 
       <header
         className={clsx(
-          'fixed inset-x-0 top-0 z-[60] border-b text-ink transition-[translate,background-color,border-color] duration-500 ease-expo',
+          'fixed inset-x-0 top-0 z-[60] border-b transition-[translate,background-color,border-color,color] duration-500 ease-expo',
+          onDark ? 'text-white' : 'text-ink',
           solid ? 'border-line bg-white/90 backdrop-blur-xl' : 'border-transparent',
           isHidden && '-translate-y-full',
         )}
@@ -109,17 +116,17 @@ export function Header() {
         <div className={clsx('mx-auto flex max-w-[1680px] items-center gap-[clamp(16px,2.4vw,40px)] px-[clamp(18px,4vw,64px)] transition-[height] duration-500 ease-expo', h)}>
           <TLink href="/" aria-label="ADK Engineering PVT LTD — Home" className="shrink-0">
             <Image
-              src={LOGO}
+              src={onDark ? LOGO_LIGHT : LOGO}
               alt="ADK Engineering PVT LTD"
               width={1201}
               height={450}
               priority
-              className={clsx('w-auto object-contain transition-[height] duration-500', scrolled ? 'h-10' : 'h-[44px] md:h-[50px]')}
+              className={clsx('w-auto object-contain transition-[height] duration-500', scrolled ? 'h-9' : 'h-[38px] md:h-[42px]')}
             />
           </TLink>
 
           <nav aria-label="Main" className="ml-auto hidden nav:block">
-            <ul className="flex gap-[clamp(24px,2.8vw,48px)]">
+            <ul className="flex gap-[clamp(22px,2.4vw,40px)]">
               {navLinks.map((l) => (
                 <li
                   key={l.href}
@@ -132,13 +139,15 @@ export function Header() {
                     // only the "Products" label itself can open the menu
                     onPointerMove={l.mega ? requestOpen : undefined}
                     className={clsx(
-                      'group relative flex items-center gap-1.5 text-[15.5px] font-medium whitespace-nowrap transition-colors',
+                      'group relative flex items-center gap-1.5 text-[14px] font-medium tracking-[0.01em] whitespace-nowrap transition-colors',
                       h,
-                      isActive(l.href) || (l.mega && mega) ? 'text-ink' : 'text-ink/65 hover:text-ink',
+                      isActive(l.href) || (l.mega && mega)
+                        ? onDark ? 'text-white' : 'text-ink'
+                        : onDark ? 'text-white/70 hover:text-white' : 'text-ink/65 hover:text-ink',
                     )}
                   >
                     {l.label}
-                    {l.mega && <ChevronDown className={clsx('size-4 transition-transform duration-300', mega && 'rotate-180')} />}
+                    {l.mega && <ChevronDown className={clsx('size-3.5 transition-transform duration-300', mega && 'rotate-180')} />}
                     <span
                       className={clsx(
                         'absolute inset-x-0 h-0.5 bg-brand transition-transform duration-500 ease-expo',
@@ -160,10 +169,10 @@ export function Header() {
               onClick={() => setMenu((m) => !m)}
               aria-label={menu ? 'Close menu' : 'Open menu'}
               aria-expanded={menu}
-              className="relative size-[46px] rounded-full bg-ink/[.06] nav:hidden"
+              className={clsx('relative size-[46px] rounded-full nav:hidden', onDark ? 'bg-white/10' : 'bg-ink/[.06]')}
             >
-              <span className={clsx('absolute inset-x-3.5 h-0.5 rounded bg-ink transition-all duration-500 ease-expo', menu ? 'top-[22px] rotate-45' : 'top-[18px]')} />
-              <span className={clsx('absolute inset-x-3.5 h-0.5 rounded bg-ink transition-all duration-500 ease-expo', menu ? 'top-[22px] -rotate-45' : 'top-[26px]')} />
+              <span className={clsx('absolute inset-x-3.5 h-0.5 rounded transition-all duration-500 ease-expo', onDark ? 'bg-white' : 'bg-ink', menu ? 'top-[22px] rotate-45' : 'top-[18px]')} />
+              <span className={clsx('absolute inset-x-3.5 h-0.5 rounded transition-all duration-500 ease-expo', onDark ? 'bg-white' : 'bg-ink', menu ? 'top-[22px] -rotate-45' : 'top-[26px]')} />
             </button>
           </div>
         </div>
@@ -220,7 +229,7 @@ export function Header() {
             ))}
           </div>
         </nav>
-        <div className="grid gap-3 pt-7 font-mono text-[15px] text-muted">
+        <div className="grid gap-3 pt-7 text-[15px] text-muted">
           <a href={tel(company.phone)} className="inline-flex items-center gap-2.5">
             <Phone className="size-4 text-brand" /> {company.phone}
           </a>
@@ -234,7 +243,7 @@ export function Header() {
   );
 }
 
-const mLink = 'flex w-full items-center justify-between py-3.5 font-display text-[clamp(28px,7vw,44px)] leading-[1.1] font-bold tracking-[-0.03em]';
+const mLink = 'flex w-full items-center justify-between py-3.5 font-display text-[clamp(24px,6vw,36px)] leading-[1.1] font-bold tracking-[-0.03em]';
 const MRow = ({ children }: { children: React.ReactNode }) => <div className="overflow-hidden border-b border-line">{children}</div>;
 
 function MegaMenu({ open, cat, setCat }: { open: boolean; cat: number; setCat: (i: number) => void }) {
@@ -259,7 +268,6 @@ function MegaMenu({ open, cat, setCat }: { open: boolean; cat: number; setCat: (
                   i === cat ? 'pl-2 text-ink' : 'text-ink/45',
                 )}
               >
-                <span className="font-mono text-xs font-normal text-muted-d">{pad(i + 1)}</span>
                 {c.name}
                 <ArrowRight className={clsx('ml-auto size-4 text-brand transition-all duration-500 ease-expo', i === cat ? 'opacity-100' : '-translate-x-2.5 opacity-0')} />
               </TLink>
@@ -283,7 +291,7 @@ function MegaMenu({ open, cat, setCat }: { open: boolean; cat: number; setCat: (
                   i === cat ? 'opacity-100' : 'pointer-events-none invisible translate-y-2 opacity-0',
                 )}
               >
-                <p className="mb-[18px] font-mono text-[13px] tracking-[0.12em] text-brand uppercase">{c.name}</p>
+                <p className="mb-[18px] text-[14px] font-semibold text-brand">{c.name}</p>
                 <ul className={clsx('mb-7', links.length > 6 && 'columns-2 gap-x-8')}>
                   {links.map((l) => (
                     <li key={l.name} className="break-inside-avoid">

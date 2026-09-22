@@ -4,11 +4,9 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { useState } from 'react';
 import { explorer, findNode, productHref } from '@/data/site';
-import { pad } from '@/lib/utils';
 import { TLink } from '@/components/layout/Transition';
 import { QuoteButton } from '@/components/layout/UI';
 import { Button } from '@/components/ui/Button';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Sweep } from '@/components/motion/Sweep';
 
 const lines = explorer.map((e) => {
@@ -36,7 +34,6 @@ export function Explorer() {
       <div className="wrap">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div>
-            <Eyebrow>What we sell</Eyebrow>
             <Sweep className="title-xl">
               Our machine <span className="accent">range</span>
             </Sweep>
@@ -53,7 +50,7 @@ export function Explorer() {
               aria-selected={k === i}
               onClick={() => setI(k)}
               className={clsx(
-                'shrink-0 rounded-full px-5 py-3 text-[15.5px] font-medium transition-colors duration-300',
+                'shrink-0 rounded-full px-4.5 py-2.5 text-[14px] font-medium transition-colors duration-300',
                 k === i ? 'bg-ink text-white' : 'bg-paper text-ink/70 ring-1 ring-line hover:text-ink',
               )}
             >
@@ -80,18 +77,15 @@ export function Explorer() {
           </div>
 
           <div key={l.slug} className="animate-rise">
-            <p className="font-mono text-sm text-brand">
-              {pad(i + 1)} / {pad(lines.length)}
-            </p>
-            <h3 className="font-display-x mt-3 text-[clamp(32px,3.4vw,52px)] leading-[1.02] font-bold tracking-[-0.03em]">{l.name}</h3>
+            <h3 className="font-display-x text-[clamp(26px,2.5vw,38px)] leading-[1.05] font-bold tracking-[-0.03em]">{l.name}</h3>
             {l.desc && <p className="lead mt-4 text-muted">{l.desc}</p>}
 
             {l.highlights && (
               <dl className="my-7 grid grid-cols-3 border-y border-line">
                 {l.highlights.map(([k, v], n) => (
                   <div key={k} className={clsx('py-4 pr-3', n > 0 && 'border-l border-line pl-4')}>
-                    <dt className="mb-1.5 font-mono text-[11.5px] tracking-[0.1em] text-muted uppercase">{k}</dt>
-                    <dd className="font-display text-[clamp(16px,1.4vw,21px)] leading-tight font-bold">{v}</dd>
+                    <dt className="mb-1 text-[13px] text-muted">{k}</dt>
+                    <dd className="font-display text-[clamp(15px,1.2vw,18px)] leading-tight font-bold">{v}</dd>
                   </div>
                 ))}
               </dl>
@@ -99,11 +93,11 @@ export function Explorer() {
 
             {l.models.length > 0 && (
               <div className="mb-8">
-                <p className="mb-3 font-mono text-[12px] tracking-[0.1em] text-muted uppercase">Ranges</p>
+                <p className="mb-3 text-[13px] font-semibold text-muted">Ranges</p>
                 <ul className="flex flex-wrap gap-2">
                   {l.models.map((m) => (
                     <li key={m.name}>
-                      <TLink href={m.href} className="inline-block rounded-full bg-white px-4 py-2 text-[15px] ring-1 ring-line transition-colors hover:text-brand hover:ring-brand">
+                      <TLink href={m.href} className="inline-block rounded-full bg-white px-3.5 py-1.5 text-[14px] ring-1 ring-line transition-colors hover:text-brand hover:ring-brand">
                         {m.name}
                       </TLink>
                     </li>

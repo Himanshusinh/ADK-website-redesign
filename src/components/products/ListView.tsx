@@ -1,7 +1,7 @@
 import { Mail, Phone } from 'lucide-react';
 import { childInfo, productHref, type Node } from '@/data/site';
 import { tel } from '@/lib/utils';
-import { PageHero, type Trail } from '@/components/shared/PageHero';
+import { PageHero } from '@/components/shared/PageHero';
 import { ProductCard } from '@/components/shared/ProductCard';
 import { OtherCategories } from '@/components/shared/OtherCategories';
 import { ProductSections } from './ProductSections';
@@ -9,19 +9,13 @@ import { Reveal } from '@/components/motion/Reveal';
 
 /** A category or sub-category: its ranges as cards, plus any specs that belong to the range itself. */
 export function ListView({ node, parents }: { node: Node; parents: Node[] }) {
-  const trail: Trail = [
-    ['Products', '/products'],
-    ...parents.map((p) => [p.title ?? p.name, productHref(p.slug)] as [string, string]),
-    [node.title ?? node.name, productHref(node.slug)],
-  ];
   const cards = (node.children ?? []).map(childInfo);
   const parts = (node.parts ?? []).map((p) => ({ name: p.name, img: p.img, href: null }));
   const items = [...cards, ...parts];
-  const kicker = cards.length ? `${cards.length} ${cards.length === 1 ? 'range' : 'ranges'}` : `${parts.length} items`;
 
   return (
     <>
-      <PageHero title={node.title ?? node.name} trail={trail} kicker={kicker} sub={node.desc?.[0]} />
+      <PageHero title={node.title ?? node.name} sub={node.desc?.[0]} />
       <section className="sec bg-white text-ink">
         {node.contact && (
           <div className="wrap mb-9">

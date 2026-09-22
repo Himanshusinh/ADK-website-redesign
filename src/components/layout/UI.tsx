@@ -8,7 +8,6 @@ import { company } from '@/data/site';
 import { tel } from '@/lib/utils';
 import { lenisRef } from '@/components/motion/gsap';
 import { InquiryForm } from '@/components/shared/InquiryForm';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { BtnBody, btnClass, type BtnIcon, type BtnSize, type BtnVariant } from '@/components/ui/Button';
 
 type Mode = 'quote' | 'catalogue';
@@ -91,8 +90,7 @@ export function UIProvider({ children }: { children: ReactNode }) {
           >
             <X className="size-5" />
           </button>
-          <Eyebrow>ADK Engineering PVT LTD</Eyebrow>
-          <h2 id="quote-title" className="font-display-x mb-[18px] pr-16 text-[clamp(30px,3.4vw,46px)] leading-none font-bold tracking-[-0.03em]">
+          <h2 id="quote-title" className="font-display-x mb-[18px] pr-16 text-[clamp(24px,2.4vw,34px)] leading-none font-bold tracking-[-0.03em]">
             {quote.mode === 'catalogue' ? 'Catalogue Request Form…!' : 'Get Your Free Quote…!'}
           </h2>
           <div className="mb-8 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[13px] text-muted">

@@ -3,11 +3,9 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { Plus } from 'lucide-react';
 import { about, industries, timeline } from '@/data/site';
-import { pad } from '@/lib/utils';
 import { PageStart } from '@/components/shared/PageStart';
 import { Stats } from '@/components/shared/Stats';
 import { Tile } from '@/components/shared/Tile';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Button } from '@/components/ui/Button';
 import { Split } from '@/components/motion/Split';
 import { FillText } from '@/components/motion/FillText';
@@ -23,7 +21,6 @@ function SplitBlock({ img, alt, eyebrow, title, children, reverse }: { img: stri
         <Image src={img} alt={alt} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
       </RevealImage>
       <div>
-        <Eyebrow>{eyebrow}</Eyebrow>
         <Split className="title-xl mb-[26px]">{title}</Split>
         {children}
       </div>
@@ -38,11 +35,10 @@ export default function AboutPage() {
       <section className="sec bg-white text-ink">
         <div className="wrap grid items-start gap-[clamp(32px,6vw,110px)] lg:grid-cols-[1fr_1.05fr]">
           <div>
-            <Eyebrow>ADK Engineering PVT LTD</Eyebrow>
             <Split as="h1" className="title-xl">Shaping the future of sheet metal industries</Split>
           </div>
           <div>
-            <FillText className="mb-7 text-[clamp(21px,2.1vw,32px)] leading-[1.4] font-medium tracking-[-0.015em]">{about.intro[0]}</FillText>
+            <FillText className="mb-7 text-[clamp(18px,1.6vw,24px)] leading-[1.4] font-medium tracking-[-0.015em]">{about.intro[0]}</FillText>
             {about.intro.slice(1).map((p) => (
               <Reveal as="p" key={p} className="lead mt-4 text-muted">
                 {p}
@@ -57,12 +53,11 @@ export default function AboutPage() {
       </PageStart>
 
       <HScroll
-        className="bg-paper text-ink"
+        className="theme-dark glow text-ink"
         trackClassName="relative gap-0 pt-2.5 before:absolute before:inset-x-[clamp(18px,4vw,64px)] before:top-[163px] before:h-px before:bg-line"
         head={
           <div className="wrap mb-[clamp(36px,4vw,60px)] flex flex-wrap items-end justify-between gap-7">
             <div>
-              <Eyebrow>2015 — 2026</Eyebrow>
               <Split className="title-xl">Expeditions To Success</Split>
             </div>
             <p className="lead max-w-[320px] text-muted">Scroll through a decade of milestones.</p>
@@ -71,11 +66,11 @@ export default function AboutPage() {
       >
         {timeline.map(([year, text]) => (
           <article key={year} data-hs-item data-on="true" className="group/tl relative w-[78vw] shrink-0 snap-start pr-[clamp(24px,3vw,50px)] min-[900px]:w-[clamp(280px,26vw,380px)]">
-            <span className="font-display-x block h-[140px] text-[clamp(80px,9vw,140px)] leading-none font-extrabold tracking-[-0.05em] text-transparent transition-colors duration-500 [-webkit-text-stroke:1.5px_rgba(17,17,20,.22)] group-hover/tl:text-ink group-data-[on=true]/tl:text-ink">
+            <span className="font-display-x block h-[140px] text-[clamp(56px,6vw,96px)] leading-none font-extrabold tracking-[-0.05em] text-transparent transition-colors duration-500 [-webkit-text-stroke:1.5px_rgba(255,255,255,.22)] group-hover/tl:text-ink group-data-[on=true]/tl:text-ink">
               {year}
             </span>
-            <span className="mt-[13px] mb-7 block size-3.5 rounded-full bg-white shadow-[0_0_0_2px_#e1252d] transition-[background-color,box-shadow] duration-500 group-hover/tl:bg-brand group-data-[on=true]/tl:bg-brand group-data-[on=true]/tl:shadow-[0_0_0_5px_rgba(225,37,45,.18)]" />
-            <p className="max-w-[32ch] text-[17px] leading-relaxed text-muted">{text}</p>
+            <span className="mt-[13px] mb-7 block size-3.5 rounded-full bg-[#0b0b0d] shadow-[0_0_0_2px_#e1252d] transition-[background-color,box-shadow] duration-500 group-hover/tl:bg-brand group-data-[on=true]/tl:bg-brand group-data-[on=true]/tl:shadow-[0_0_0_5px_rgba(225,37,45,.18)]" />
+            <p className="max-w-[32ch] text-[15px] leading-relaxed text-muted">{text}</p>
           </article>
         ))}
       </HScroll>
@@ -96,10 +91,9 @@ export default function AboutPage() {
         </SplitBlock>
       </section>
 
-      <section className="sec bg-paper text-ink">
+      <section className="theme-dark glow sec text-ink">
         <div className="wrap grid items-start gap-[clamp(40px,7vw,110px)] lg:grid-cols-[1fr_1.1fr]">
           <div>
-            <Eyebrow>After sales</Eyebrow>
             <Split className="title-xl">Comprehensive Support</Split>
             <Reveal as="p" className="lead mt-[22px] mb-9 text-muted">
               {about.supportLead}
@@ -111,14 +105,13 @@ export default function AboutPage() {
           <Reveal className="border-t border-line">
             {about.support.map(([title, body], i) => (
               <details key={title} open={i === 0} className="group border-b border-line">
-                <summary className="grid cursor-pointer list-none grid-cols-[50px_1fr_44px] items-center gap-2.5 py-[26px] [&::-webkit-details-marker]:hidden">
-                  <span className="font-mono text-sm text-brand">{pad(i + 1)}</span>
-                  <span className="font-display text-[clamp(21px,2vw,28px)] leading-tight font-semibold tracking-[-0.02em] transition-colors group-hover:text-brand">{title}</span>
+                <summary className="grid cursor-pointer list-none grid-cols-[1fr_44px] items-center gap-2.5 py-[26px] [&::-webkit-details-marker]:hidden">
+                  <span className="font-display text-[clamp(17px,1.5vw,22px)] leading-tight font-semibold tracking-[-0.02em] transition-colors group-hover:text-brand">{title}</span>
                   <span className="grid size-11 place-items-center rounded-full ring-1 ring-line transition-[rotate,background-color,color] duration-500 ease-expo group-open:rotate-45 group-open:bg-brand group-open:text-white group-open:ring-brand">
                     <Plus className="size-5" />
                   </span>
                 </summary>
-                <p className="pb-7 pl-[60px] text-[17px] leading-relaxed text-muted md:pr-[54px]">{body}</p>
+                <p className="pb-7 text-[15px] leading-relaxed text-muted md:pr-[54px]">{body}</p>
               </details>
             ))}
           </Reveal>
@@ -128,7 +121,6 @@ export default function AboutPage() {
       <section className="sec bg-white text-ink">
         <div className="wrap mb-[clamp(40px,5vw,70px)] flex flex-wrap items-end justify-between gap-7">
           <div>
-            <Eyebrow>Industries</Eyebrow>
             <Split className="title-xl">Industries We Serve</Split>
           </div>
           <Button href="/application" label="All applications" variant="dark" />

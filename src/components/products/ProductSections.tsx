@@ -1,8 +1,6 @@
 import clsx from 'clsx';
 import type { Node } from '@/data/site';
-import { pad } from '@/lib/utils';
 import { SpecTable, CompareTable } from '@/components/shared/SpecTable';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Split } from '@/components/motion/Split';
 import { Reveal } from '@/components/motion/Reveal';
 
@@ -23,13 +21,12 @@ export function ProductSections({ node }: { node: Node }) {
         <section key={l.title} className={clsx('sec text-ink', li % 2 ? 'bg-white' : 'bg-paper')}>
           <div className="wrap grid items-start gap-[clamp(36px,6vw,100px)] lg:grid-cols-[.8fr_1.2fr]">
             <div className="lg:sticky lg:top-[120px]">
-              <Eyebrow>{node.name}</Eyebrow>
               <Split className="title-xl">{l.title}</Split>
             </div>
             <ol className="border-t border-line">
               {l.items.map((it, i) => (
-                <Reveal as="li" key={it} className="grid grid-cols-[56px_1fr] gap-4 border-b border-line py-[22px] text-lg">
-                  <span className="pt-1 font-mono text-sm text-brand">{pad(i + 1)}</span>
+                <Reveal as="li" key={it} className="grid grid-cols-[14px_1fr] gap-3 border-b border-line py-[18px] text-[16px]">
+                  <span className="mt-[9px] size-1.5 rounded-full bg-brand" />
                   <p>{it}</p>
                 </Reveal>
               ))}
@@ -39,9 +36,8 @@ export function ProductSections({ node }: { node: Node }) {
       ))}
 
       {node.components && (
-        <section className="sec bg-paper text-ink">
+        <section className="theme-dark glow sec text-ink">
           <div className="wrap">
-            <Eyebrow>Built with</Eyebrow>
             <Split className="title-xl">Machine Components</Split>
             <div className="mt-[50px] grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-3.5">
               {node.components.map((c, i) => (
@@ -49,9 +45,9 @@ export function ProductSections({ node }: { node: Node }) {
                   key={c}
                   data-spot
                   delay={(i % 4) * 0.06}
-                  className="spot grid gap-[26px] rounded-[18px] px-6 py-[26px] font-display text-xl leading-tight font-semibold ring-1 ring-line transition-shadow duration-500 hover:ring-brand/40"
+                  className="spot grid gap-[26px] rounded-[18px] px-6 py-[26px] font-display text-[17px] leading-tight font-semibold ring-1 ring-line transition-shadow duration-500 hover:ring-brand/40"
                 >
-                  <span className="font-mono text-[13px] font-normal text-brand">{pad(i + 1)}</span>
+                  <span className="h-[3px] w-8 rounded-full bg-brand" />
                   {c}
                 </Reveal>
               ))}
@@ -63,7 +59,6 @@ export function ProductSections({ node }: { node: Node }) {
       {node.apps && (
         <section className="sec bg-white text-ink">
           <div className="wrap">
-            <Eyebrow>Where it works</Eyebrow>
             <Split className="title-xl">Application</Split>
             <ul className="mt-11 flex flex-wrap gap-2.5">
               {node.apps.map((a, i) => (

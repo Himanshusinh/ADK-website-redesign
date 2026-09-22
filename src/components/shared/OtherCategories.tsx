@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { productHref, productTree } from '@/data/site';
 import { TLink } from '@/components/layout/Transition';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 
 /** Swipeable rail of the other product lines, shown at the bottom of product pages. */
 export function OtherCategories({ exclude }: { exclude?: string }) {
@@ -10,7 +9,6 @@ export function OtherCategories({ exclude }: { exclude?: string }) {
   return (
     <section className="sec bg-white text-ink">
       <div className="wrap mb-[30px]">
-        <Eyebrow>Keep exploring</Eyebrow>
         <h2 className="title-lg">Other product lines</h2>
       </div>
       <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-[clamp(18px,4vw,64px)] pt-1 pb-5 [scrollbar-width:thin]" data-lenis-prevent>
