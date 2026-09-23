@@ -7,7 +7,7 @@ import { Split } from '@/components/motion/Split';
 import { Reveal } from '@/components/motion/Reveal';
 import { ProductGallery } from './ProductGallery';
 import { ProductSections, SheetNote } from './ProductSections';
-import { AppGrid, CinemaHero, Samples, Sources, Views } from './SeriesSections';
+import { AppGrid, CinemaHero, Features, Samples } from './SeriesSections';
 
 /** A single machine / series page. */
 export function ProductView({ node, parents }: { node: Node; parents: Node[] }) {
@@ -74,8 +74,7 @@ export function ProductView({ node, parents }: { node: Node; parents: Node[] }) 
       </section>
       )}
 
-      {node.sources && <Sources node={node} />}
-      {node.cutout && <Views node={node} />}
+      {node.features && <Features node={node} />}
       {samples && <Samples imgs={samples} name={parents[0]?.name ?? node.name} />}
       {/* applications render as photo tiles below, not as the pill list */}
       <ProductSections node={{ ...node, apps: undefined }} />

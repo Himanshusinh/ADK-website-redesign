@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import Image from 'next/image';
-import { Maximize2 } from 'lucide-react';
 import { appPhoto, type Node } from '@/data/site';
 import { LightboxTrigger, QuoteButton } from '@/components/layout/UI';
 import { Split } from '@/components/motion/Split';
@@ -59,68 +58,42 @@ export function CinemaHero({ node }: { node: Node }) {
   );
 }
 
-/** The fiber laser sources a machine can be ordered with. */
-export function Sources({ node }: { node: Node }) {
+/** Feature panels in the reference's rhythm: centred title and one line, then a wide close-up. */
+export function Features({ node }: { node: Node }) {
   return (
-    <section className="sec bg-white text-ink">
-      <div className="wrap grid items-center gap-[clamp(36px,6vw,100px)] lg:grid-cols-[1.1fr_1fr]">
-        <Reveal className="relative aspect-[2000/1211]">
-          <Image src={node.img} alt={`${node.name} front view`} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-contain mix-blend-multiply" />
-        </Reveal>
-        <div>
-          <Split className="title-xl">Choose your laser source</Split>
-          <Reveal as="p" className="lead mt-4 max-w-[46ch] text-muted">
-            The {node.name} can be configured with any of these fiber laser sources.
-          </Reveal>
-          <ul className="mt-8 grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
-            {node.sources!.map((s, i) => (
-              <Reveal
-                as="li"
-                key={s}
-                delay={i * 0.08}
-                className="group relative overflow-hidden rounded-2xl bg-paper px-5 py-6 ring-1 ring-line transition-colors duration-500 hover:bg-ink hover:text-on-ink"
-              >
-                <span className="absolute top-0 left-5 h-[3px] w-8 bg-brand transition-[width] duration-700 ease-expo group-hover:w-[calc(100%-40px)]" />
-                <span className="font-display-x block text-[clamp(17px,1.4vw,21px)] font-bold tracking-[-0.02em]">{s}</span>
-                <span className="mt-1 block text-[13px] opacity-60">Fiber laser source</span>
+    <>
+      {node.features!.map((f, i) => (
+        <section key={f.title} className={clsx('sec text-ink', i % 2 ? 'bg-soft' : 'bg-white')}>
+          <div className="wrap">
+            <div className="mx-auto mb-[clamp(28px,4vw,48px)] max-w-[760px] text-center">
+              <Split className="title-xl">{f.title}</Split>
+              <Reveal as="p" className="lead mt-4 text-muted">
+                {f.text}
               </Reveal>
-            ))}
-          </ul>
-          <Reveal className="mt-8">
-            <QuoteButton product={node.name} label="Ask which source fits you" variant="dark" size="sm" />
-          </Reveal>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/** Product photos from every side; click to open full screen. */
-export function Views({ node }: { node: Node }) {
-  const imgs = node.imgs ?? [node.img];
-  return (
-    <section className="bg-soft sec text-ink">
-      <div className="wrap">
-        <Split className="title-xl mb-[clamp(28px,4vw,48px)]">Every angle</Split>
-        <div className="grid gap-5 md:grid-cols-2">
-          {imgs.map((src, k) => (
-            <Reveal key={src} delay={k * 0.08}>
-              <LightboxTrigger
-                images={imgs}
-                index={k}
-                label={`View ${node.name} image ${k + 1} full screen`}
-                className="group relative block aspect-[2000/1211] w-full cursor-zoom-in overflow-hidden rounded-[24px] bg-white ring-1 ring-line"
-              >
-                <Image src={src} alt={`${node.name} view ${k + 1}`} fill sizes="(min-width:768px) 48vw, 100vw" className="object-contain p-4 transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]" />
-                <span className="absolute right-4 bottom-4 grid size-10 place-items-center rounded-full bg-ink text-on-ink opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <Maximize2 className="size-4" />
-                </span>
-              </LightboxTrigger>
+            </div>
+            <Reveal
+              className="relative mx-auto overflow-hidden rounded-[28px] bg-[#0b0b0d]"
+              style={{ maxWidth: (f.ratio ?? 2.35) < 1.8 ? 980 : undefined }}
+            >
+              <Parallax amount={5} scale={[1.1, 1]} className="relative max-md:!aspect-[4/3]" style={{ aspectRatio: f.ratio ?? 2.35 }}>
+                <Image src={f.img} alt={`${node.name} — ${f.title}`} fill sizes="(min-width:1480px) 1352px, 100vw" className="object-cover" />
+              </Parallax>
+              {f.points && <div aria-hidden className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0b0b0d]/85 to-transparent" />}
+              {f.points && (
+                <ul className="absolute bottom-[clamp(14px,2.4vw,28px)] left-[clamp(14px,2.4vw,28px)] flex flex-wrap gap-2">
+                  {f.points.map((pt) => (
+                    <li key={pt} className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[13.5px] font-medium text-white ring-1 ring-white/20 backdrop-blur-md">
+                      <span className="size-1.5 rounded-full bg-brand" />
+                      {pt}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
+          </div>
+        </section>
+      ))}
+    </>
   );
 }
 

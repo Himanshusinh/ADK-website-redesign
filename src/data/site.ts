@@ -27,8 +27,8 @@ export type Node = {
   sheetOnRequest?: boolean;
   /** transparent render of the machine — switches the page to the dark cinematic hero */
   cutout?: string;
-  /** laser sources the machine can be ordered with */
-  sources?: string[];
+  /** feature panels shown under the hero: close-up image + short explanation */
+  features?: { title: string; text: string; img: string; points?: string[]; /** image width ÷ height, default 2.35 */ ratio?: number }[];
   /** cut-part photos; inherited by every product below the node that sets it */
   samples?: string[];
   children?: Node[];
@@ -164,7 +164,20 @@ export const productTree: Node[] = [
             cutout: '/images/series/e-ii/cutout.webp',
             imgs: ['/images/series/e-ii/front.jpg', '/images/series/e-ii/side.jpg'],
             highlights: [['Working area', '3000 × 1500 mm'], ['Speed', '80 m/min'], ['Accuracy', '±0.03 mm'], ['Machine capacity', 'Up to 60 kW']],
-            sources: ['RAYCUS', 'IPG', 'MAX PHOTONICS'],
+            features: [
+              {
+                title: 'Precision Assurance',
+                text: 'Servo motors, reducers, racks and the other motion components come from leading brands — for high build quality, precise machine operation and a long service life.',
+                img: '/images/series/e-ii/precision.jpg',
+                points: ['Servo motors', 'Reducers', 'Racks'],
+              },
+              {
+                title: 'Intelligent Operating System',
+                text: 'Easy to learn with a low entry barrier, and compatible with common drafting, drawing and management software for efficient coordination.',
+                img: '/images/series/e-ii/controller.jpg',
+                ratio: 4 / 3,
+              },
+            ],
             tables: [
               {
                 title: 'Technical Parameters',
@@ -547,11 +560,11 @@ export const lineup = [
  * To use footage instead of a photo, drop an .mp4 in /public/video and set `video` on that slide;
  * `img` then becomes its poster frame. `fit: 'contain'` keeps a studio render on black whole; `fit: 'frame'` shows a small factory photo whole with feathered edges (give its `ratio`).
  */
-export const heroSlides: { name: string; tag: string; href: string; img: string; video?: string; verb: 0 | 1 | 2; pos?: string; fit?: 'contain' | 'frame'; ratio?: number }[] = [
-  { name: 'Fiber Laser Cutting', tag: 'Sheet metal · tube · robot · 19 series', href: productHref('fiber-laser-cutting-machine'), img: '/images/hero-stage/laser.jpg', verb: 0, fit: 'contain' },
-  { name: 'CNC Press Brake', tag: 'CNC & NC · 40T – 800T', href: productHref('cnc-press-brake-machine'), img: '/images/hero-stage/press-brake.jpg', verb: 1, pos: '30% 45%' },
-  { name: 'Laser Welding', tag: 'Handheld · 1500 – 3000 W', href: productHref('fiber-laser-welding-machine-main'), img: '/images/hero-stage/welding.jpg', verb: 2, pos: '78% 55%' },
-  { name: 'Shearing Machine', tag: 'Swing beam & guillotine', href: productHref('shearing-machine'), img: '/images/hero-stage/shearing.jpg', verb: 0, fit: 'frame', ratio: 1052 / 622 },
+export const heroSlides: { name: string; href: string; img: string; video?: string; verb: 0 | 1 | 2; pos?: string; fit?: 'contain' | 'frame'; ratio?: number }[] = [
+  { name: 'Fiber Laser Cutting', href: productHref('fiber-laser-cutting-machine'), img: '/images/hero-stage/laser.jpg', verb: 0, fit: 'contain' },
+  { name: 'CNC Press Brake', href: productHref('cnc-press-brake-machine'), img: '/images/hero-stage/press-brake.jpg', verb: 1, pos: '30% 45%' },
+  { name: 'Laser Welding', href: productHref('fiber-laser-welding-machine-main'), img: '/images/hero-stage/welding.jpg', verb: 2, pos: '78% 55%' },
+  { name: 'Shearing Machine', href: productHref('shearing-machine'), img: '/images/hero-stage/shearing.jpg', verb: 0, fit: 'frame', ratio: 1052 / 622 },
 ];
 
 /** Home "machine range" explorer: tab label, category, and (optionally) the product whose specs represent it. */

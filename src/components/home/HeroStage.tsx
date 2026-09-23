@@ -3,9 +3,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useState, type ReactNode } from 'react';
-import { ArrowUpRight } from 'lucide-react';
 import { company, heroSlides } from '@/data/site';
-import { TLink } from '@/components/layout/Transition';
 import { QuoteButton } from '@/components/layout/UI';
 import { Button } from '@/components/ui/Button';
 import { reducedMotion } from '@/components/motion/gsap';
@@ -122,20 +120,6 @@ export function HeroStage() {
           ))}
         </dl>
 
-        {/* what's on stage right now */}
-        <TLink
-          key={slide.href}
-          href={slide.href}
-          className="animate-rise group absolute right-[clamp(18px,4vw,64px)] bottom-10 hidden items-center gap-4 rounded-2xl bg-white/8 py-3 pr-3 pl-5 ring-1 ring-white/15 backdrop-blur-md transition-colors hover:bg-white/14 lg:flex"
-        >
-          <span>
-            <span className="block text-[12px] text-white/55">{slide.tag}</span>
-            <span className="block font-display text-[15px] font-semibold">{slide.name}</span>
-          </span>
-          <span className="grid size-10 place-items-center rounded-full bg-brand transition-transform duration-500 ease-expo group-hover:rotate-45">
-            <ArrowUpRight className="size-4" />
-          </span>
-        </TLink>
       </div>
 
       {/* rail: one tab per line, bar fills while it's on stage */}
