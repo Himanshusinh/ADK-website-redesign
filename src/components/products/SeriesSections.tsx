@@ -41,7 +41,21 @@ export function CinemaHero({ node }: { node: Node }) {
         <div className="relative mx-auto mt-[clamp(12px,2.5vh,32px)] w-full max-w-[min(1480px,calc((100svh-var(--hdr)-360px)*2.4))] px-[clamp(8px,3vw,40px)]">
           <div className="relative aspect-[24/10] overflow-hidden rounded-[28px] max-md:aspect-[4/3]">
             <Parallax amount={4} scale={[1.08, 1]} className="absolute inset-0">
-              <Image src={node.heroImg!} alt={node.name} fill preload sizes="100vw" className="object-cover" />
+              {node.heroVideo ? (
+                <video
+                  src={node.heroVideo}
+                  poster={node.heroImg}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={node.name}
+                  className="size-full object-cover"
+                />
+              ) : (
+                <Image src={node.heroImg!} alt={node.name} fill preload sizes="100vw" className="object-cover" />
+              )}
             </Parallax>
             <div aria-hidden className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(11,11,13,.65)_100%)]" />
           </div>
@@ -109,11 +123,21 @@ export function Features({ node }: { node: Node }) {
                   </Reveal>
                 )}
               </div>
+              {f.videos ? (
+                <Reveal className={clsx('grid gap-4 sm:grid-cols-2', !split && 'mx-auto')}>
+                  {f.videos.map((v) => (
+                    <video key={v} src={v} autoPlay muted loop playsInline preload="none" className="aspect-video w-full rounded-[22px] bg-[#0b0b0d] object-cover" />
+                  ))}
+                </Reveal>
+              ) : (
               <Reveal
                 className={clsx('relative overflow-hidden rounded-[28px] bg-[#0b0b0d]', !split && 'mx-auto')}
                 style={!split && (f.ratio ?? 2.35) < 1.8 ? { maxWidth: 980 } : undefined}
               >
                 <Parallax amount={5} scale={[1.1, 1]} className="relative max-md:!aspect-[4/3]" style={{ aspectRatio: f.ratio ?? 2.35 }}>
+                  {f.video ? (
+                    <video src={f.video} poster={f.img} autoPlay muted loop playsInline preload="none" className="size-full object-cover" />
+                  ) : (
                   <Image
                     src={f.img}
                     alt={`${node.name} — ${f.title}`}
@@ -121,6 +145,7 @@ export function Features({ node }: { node: Node }) {
                     sizes={split ? '(min-width:1024px) 50vw, 100vw' : '(min-width:1480px) 1352px, 100vw'}
                     className="object-cover"
                   />
+                  )}
                 </Parallax>
                 {f.points && <div aria-hidden className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0b0b0d]/85 to-transparent" />}
                 {f.points && (
@@ -134,6 +159,7 @@ export function Features({ node }: { node: Node }) {
                   </ul>
                 )}
               </Reveal>
+              )}
             </div>
           </section>
         );

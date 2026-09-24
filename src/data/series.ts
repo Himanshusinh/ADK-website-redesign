@@ -4,6 +4,92 @@
 import type { Node } from './site';
 
 export const seriesExtras: Record<string, Partial<Node>> = {
+  'gv-series': {
+    sheetOnRequest: false,
+    heroImg: '/images/series/gv-series/hero.jpg',
+    heroVideo: '/video/gv-hero.mp4',
+    highlights: [['Max acceleration', '3G'], ['Max rapid speed', '200 m/min'], ['Positioning accuracy', '±0.03 mm'], ['Repeat accuracy', '±0.02 mm']],
+    features: [
+      {
+        title: '3G ultra-high-speed fiber laser cutting',
+        text: 'The optimized combination of 3G acceleration and 10 Hz low-pass filtering delivers rapid traverse up to 200 m/min, for faster cutting of the same sheet.',
+        img: '/images/series/gv-series/f1.jpg',
+        ratio: 1.9,
+        layout: 'split',
+        stats: [['3', 'G', 'Max acceleration'], ['10', 'Hz', 'Low-pass filter'], ['200', 'm/min', 'Max rapid speed']],
+      },
+      {
+        title: 'Optimized cutting paths',
+        text: 'Corner paths are optimized to cut idle travel and ineffective movement, lifting overall processing efficiency by more than 50%.',
+        img: '/images/series/gv-series/f1.jpg',
+        videos: ['/video/gv-path-a.mp4', '/video/gv-path-b.mp4'],
+      },
+      {
+        title: 'High-stability structure for high-speed cutting',
+        text: 'Core components use a German-engineered structural design — from the bed to the beam and transmission, every detail supports high-speed motion.',
+        img: '/images/series/gv-series/f2.jpg',
+        ratio: 2.3,
+      },
+      {
+        title: 'Lightweight hollow honeycomb beam',
+        text: 'A high specific-stiffness design arrived at by topology optimization: more torsional stiffness at the same weight, or the same stiffness for less weight.',
+        img: '/images/series/gv-series/f3.jpg',
+        ratio: 1.9,
+        layout: 'split',
+        stats: [['18', '%', 'More torsional stiffness at the same weight'], ['25', '%', 'Weight reduction at the same stiffness']],
+      },
+      {
+        title: 'Low-centre-of-gravity heavy-duty bed',
+        text: 'Widened side ribs improve bending and torsion resistance, and a mortise-and-tenon integral welding process removes the micro-deformation that stress release would otherwise cause.',
+        img: '/images/series/gv-series/f7.jpg',
+        ratio: 2.3,
+      },
+      {
+        title: 'BLT intelligent laser cutting head',
+        text: 'Narrower kerf and a smaller heat-affected zone. Full-body water cooling covers over 90% of the optical path, suppressing thermal drift.',
+        img: '/images/series/gv-series/f4.jpg',
+        ratio: 1.9,
+        layout: 'split',
+        stats: [['90', '%+', 'Of the optical path water-cooled']],
+      },
+      {
+        title: 'High-speed high-torque servo motor',
+        text: 'Up to 300% torque output, 5000 rpm peak speed and 136.6 kg·cm² of rotor inertia give instantaneous, precise response.',
+        img: '/images/series/gv-series/f5.jpg',
+        ratio: 2.3,
+        stats: [['300', '%', 'Torque output'], ['5000', 'rpm', 'Peak speed'], ['136.6', 'kg·cm²', 'Rotor inertia']],
+      },
+      {
+        title: 'German-style integrated reducer',
+        text: 'Output shaft and gear are integrated and optimized, with key components in 42CrMo alloy steel for rigidity and a longer service life.',
+        img: '/images/series/gv-series/f6.jpg',
+        ratio: 2.3,
+      },
+      {
+        title: 'Automatic loading for high-speed production',
+        text: 'Connects to loading and unloading systems for fully automated processing, reducing how much labour the line needs.',
+        img: '/images/series/gv-series/f2.jpg',
+        video: '/video/gv-loading.mp4',
+        ratio: 1.78,
+      },
+    ],
+    tables: [
+      {
+        title: 'Technical Parameters',
+        head: ['Model', 'LF-3015GV', 'LF-4020GV', 'LF-6020GV'],
+        rows: [
+          ['Processing format', '3050*1530mm', '4050*2030mm', '6030*2030mm'],
+          ['Laser power', '3000W / 6000W / 12000W (optional)'],
+          ['Max X/Y axis speed', '200m/min'],
+          ['X/Y axis positioning accuracy', '±0.03mm'],
+          ['X/Y axis repeat positioning accuracy', '±0.02mm'],
+          ['Max cutting acceleration / low-pass filtering', '3G / 10Hz'],
+          ['Max table load capacity', '1200kg', '2300kg', '3200kg'],
+          ['Rated voltage & frequency', '380V 50Hz/60Hz'],
+        ],
+      },
+    ],
+  },
   'ln-ii-series': {
     sheetOnRequest: false,
     tables: [

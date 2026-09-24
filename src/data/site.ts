@@ -30,11 +30,17 @@ export type Node = {
   cutout?: string;
   /** full-bleed photo behind the dark hero (used when there is no cutout) */
   heroImg?: string;
+  /** looping clip shown in place of `heroImg` (which becomes its poster) */
+  heroVideo?: string;
   /** feature panels shown under the hero: close-up image + short explanation */
   features?: {
     title: string;
     text?: string;
     img: string;
+    /** clip instead of the still; `img` is its poster */
+    video?: string;
+    /** two clips side by side (e.g. a before/after comparison) */
+    videos?: [string, string];
     points?: string[];
     /** figures shown under the text, e.g. [['1.5', 'G', 'Acceleration']] */
     stats?: [value: string, unit: string, label: string][];
