@@ -35,7 +35,7 @@ export function Footer() {
       <div className="wrap grid gap-10 pt-[70px] pb-[50px] md:grid-cols-2 xl:grid-cols-[1.3fr_.8fr_1.1fr_1.3fr]">
         <div>
           <Image
-            src="/adk-logo-light.png"
+            src="/brand/adk-logo-light.png"
             alt="ADK Engineering PVT LTD"
             width={1201}
             height={450}

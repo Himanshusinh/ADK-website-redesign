@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
     // photos replaced under the same filename carry ?v=N (see IMG_V) to bust image caches
     localPatterns: [
       { pathname: '/**', search: '' },
-      { pathname: '/images/**', search: '?v=3' },
+      { pathname: '/**', search: '?v=3' },
     ],
   },
   async redirects() {

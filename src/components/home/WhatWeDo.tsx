@@ -12,14 +12,14 @@ const steps = [
   {
     Icon: Package,
     title: 'Supply',
-    img: '/images/what-we-do/supply.jpg',
+    img: '/home/what-we-do/supply.jpg',
     text: 'CNC fiber laser cutting, plasma cutting, press brake, laser welding, shearing, panel bender and PEB machines — plus the spares and consumables to run them.',
   },
-  { Icon: GraduationCap, title: 'Install & Train', img: '/images/what-we-do/install.jpg', text: about.support[0][1] },
+  { Icon: GraduationCap, title: 'Install & Train', img: '/home/what-we-do/install.jpg', text: about.support[0][1] },
   {
     Icon: Wrench,
     title: 'Service & Spares',
-    img: '/images/what-we-do/spares.jpg',
+    img: '/home/what-we-do/spares.jpg',
     text: '24*7 online service support, on-time delivery of service and a comprehensive inventory of spare parts, so your machine keeps running.',
   },
 ];

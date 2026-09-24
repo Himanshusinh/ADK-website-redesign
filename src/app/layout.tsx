@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     template: '%s | ADK Engineering PVT LTD',
   },
   description,
-  openGraph: { type: 'website', siteName: company.name, description, images: ['/images/home-page/banners/adk-b1.webp'] },
+  openGraph: { type: 'website', siteName: company.name, description, images: ['/home/banners/adk-b1.webp'] },
   icons: {
     icon: [
-      { url: '/adk pvt ltd logo final.png', type: 'image/png' },
+      { url: '/brand/adk-logo.png', type: 'image/png' },
       { url: '/favicon.ico' },
     ],
     apple: '/icon.png',

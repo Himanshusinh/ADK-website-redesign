@@ -18,7 +18,7 @@ export default function NewsPage() {
           <h1 className="sr-only">News &amp; Events</h1>
           <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {events.map((e, i) => {
-              const imgs = listImages(`images/news-and-events/${e.dir}`);
+              const imgs = listImages(`shared/events/${e.dir}`);
               if (!imgs.length) return null;
               return (
                 <Reveal key={e.dir} delay={(i % 3) * 0.08}>

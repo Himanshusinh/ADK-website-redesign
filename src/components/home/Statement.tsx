@@ -8,7 +8,7 @@ export function Statement() {
   return (
     <section className="theme-dark relative isolate flex min-h-[78svh] items-end overflow-hidden text-ink">
       <Parallax className="absolute inset-[-8%_0] -z-10">
-        <Image src="/images/hero-stage/cover-line.jpg" alt="ADK press brakes lined up at the factory" fill sizes="100vw" className="object-cover" />
+        <Image src="/home/hero/cover-line.jpg" alt="ADK press brakes lined up at the factory" fill sizes="100vw" className="object-cover" />
       </Parallax>
       <div aria-hidden className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(11,11,13,.35)_0%,rgba(11,11,13,.55)_45%,#0b0b0d_100%)]" />
       <div aria-hidden className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(11,11,13,.85)_0%,rgba(11,11,13,.2)_65%,transparent_100%)]" />

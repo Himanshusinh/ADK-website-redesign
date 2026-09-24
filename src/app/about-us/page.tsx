@@ -76,12 +76,12 @@ export default function AboutPage() {
       </HScroll>
 
       <section className="sec grid gap-[clamp(80px,10vw,150px)] bg-white text-ink">
-        <SplitBlock img="/images/about-us/who-we-are.webp" alt="Who we are" eyebrow="Welcome to ADK Engineering PVT LTD" title="Who We Are">
+        <SplitBlock img="/shared/about/who-we-are.webp" alt="Who we are" eyebrow="Welcome to ADK Engineering PVT LTD" title="Who We Are">
           <Reveal as="p" className="lead text-muted">
             {about.who}
           </Reveal>
         </SplitBlock>
-        <SplitBlock img="/images/about-us/what-we-do.webp" alt="What we do" eyebrow="Time bound services" title="What We Do" reverse>
+        <SplitBlock img="/shared/about/what-we-do.webp" alt="What we do" eyebrow="Time bound services" title="What We Do" reverse>
           <Reveal as="p" className="lead mb-4 font-medium text-ink">
             {about.whatLead}
           </Reveal>
@@ -99,7 +99,7 @@ export default function AboutPage() {
               {about.supportLead}
             </Reveal>
             <RevealImage fill={false} className="rounded-3xl ring-1 ring-line">
-              <Image src="/images/comprehensive-support.webp" alt="Comprehensive support" width={900} height={700} sizes="(min-width:1024px) 45vw, 100vw" className="h-auto w-full" />
+              <Image src="/shared/about/comprehensive-support.webp" alt="Comprehensive support" width={900} height={700} sizes="(min-width:1024px) 45vw, 100vw" className="h-auto w-full" />
             </RevealImage>
           </div>
           <Reveal className="border-t border-line">

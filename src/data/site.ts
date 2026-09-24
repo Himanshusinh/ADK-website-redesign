@@ -69,7 +69,7 @@ export const company = {
   factory: ['Block No. 2100, Paiki-2,', 'Beside Umiya Industries Estate,', 'Santej, Ahmedabad-382721,', 'Gujarat, India'],
   branches: ['Nagpur', 'Pune', 'Nashik', 'Kolhapur', 'Bhopal', 'Jaipur', 'Surat', 'Mumbai', 'Indore'],
   goal: 'Our goal is to offer broad capabilities, competitive pricing, exceptional quality and outstanding service to each and every customer.',
-  logo: '/adk pvt ltd logo final.png',
+  logo: '/brand/adk-logo.png',
   catalogue: '/pdf/ADK-CATALOGUE.pdf',
   socials: [
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/ankit-patel-1a4687250/' },
@@ -110,41 +110,41 @@ export const stats = [
 export const IMG_V = '?v=3';
 
 export const industries = [
-  { name: 'Aerospace', img: `/images/home-page/industries-we-serve/aerospace.webp${IMG_V}` },
-  { name: 'Agriculture Industry', img: `/images/home-page/industries-we-serve/agriculture-industry.webp${IMG_V}` },
-  { name: 'Architecture', img: `/images/home-page/industries-we-serve/architecture.webp${IMG_V}` },
-  { name: 'Automobile', img: `/images/home-page/industries-we-serve/automobile.webp${IMG_V}` },
-  { name: 'Sheet Metal Work', img: `/images/home-page/industries-we-serve/sheet-metal-work.webp${IMG_V}` },
-  { name: 'Steel Furniture', img: `/images/home-page/industries-we-serve/steel-furniture.webp${IMG_V}` },
+  { name: 'Aerospace', img: `/home/industries/aerospace.webp${IMG_V}` },
+  { name: 'Agriculture Industry', img: `/home/industries/agriculture-industry.webp${IMG_V}` },
+  { name: 'Architecture', img: `/home/industries/architecture.webp${IMG_V}` },
+  { name: 'Automobile', img: `/home/industries/automobile.webp${IMG_V}` },
+  { name: 'Sheet Metal Work', img: `/home/industries/sheet-metal-work.webp${IMG_V}` },
+  { name: 'Steel Furniture', img: `/home/industries/steel-furniture.webp${IMG_V}` },
 ];
 
 /* ---------- images ---------- */
 const IMG = {
-  sheetLaser: '/images/inner-product/cnc-fiber-laser-cutting-machines/industrial-pioneer-series/industrial-pioneer-series.webp',
-  largeLaser: '/images/inner-product/cnc-fiber-laser-cutting-machines/futuristic-laser-series/futuristic-laser-series.webp',
-  exchangeLaser: '/images/inner-product/cnc-fiber-laser-cutting-machines/dual-position-exchange-table/dual-position-exchange-table.webp',
-  tubeLaser: '/images/inner-product/cnc-fiber-laser-cutting-machines/professional-tube-cutting-machine/01.webp',
-  robotLaser: '/images/inner-product/newly-launched-products/cnc-fiber-laser-cutting-machine-robot.webp',
-  cncPressBrake: '/images/inner-product/cnc-nc-press-brake/cnc-press-brake/cnc-press-brake.webp',
-  ncPressBrake: '/images/inner-product/cnc-nc-press-brake/nc-press-brake/nc-press-brake.webp',
-  handheld: '/images/inner-product/cnc-fiber-laser-welding-machines/01.webp',
-  weldSample: '/images/inner-product/cnc-fiber-laser-welding-machines/03.webp',
-  weldJoint: '/images/inner-product/cnc-fiber-laser-welding-machines/05.webp',
-  cleanSample: '/images/inner-product/cnc-fiber-laser-welding-machines/07.webp',
-  cleanSample2: '/images/inner-product/cnc-fiber-laser-welding-machines/08.webp',
-  weldRobot: '/images/inner-product/newly-launched-products/3d-fiber-laser-welding-machine-robot.webp',
-  gantry: '/images/inner-product/cnc-plasma-cutting-machine/gantry-type/gantry-type.webp',
-  tableType: '/images/inner-product/cnc-plasma-cutting-machine/table-type/table-type.webp',
-  portable: '/images/inner-product/cnc-plasma-cutting-machine/portable-type/portable-type.webp',
-  hBeam: '/images/inner-product/peb-machinery/h-beam/h-beam-welding-machine-ptw.webp',
-  sawGantry: '/images/inner-product/peb-machinery/saw-gantry-welding-machine/saw-gantry-welding-machine.webp',
-  shear1: '/images/inner-product/shearing-machines/shearing-machines-1.webp',
-  shear2: '/images/inner-product/shearing-machines/shearing-machines-2.webp',
-  shear3: '/images/inner-product/shearing-machines/shearing-machines-3.webp',
-  panel1: '/images/inner-product/panel-bender/panel-bender-1.webp',
-  panel2: '/images/inner-product/panel-bender/panel-bender-2.webp',
-  panel3: '/images/inner-product/panel-bender/panel-bender-3.webp',
-  spares: '/images/inner-product/spares-consumables/consumables.webp',
+  sheetLaser: '/products/thumbs/cnc-fiber-laser-cutting-machines/industrial-pioneer-series/industrial-pioneer-series.webp',
+  largeLaser: '/products/thumbs/cnc-fiber-laser-cutting-machines/futuristic-laser-series/futuristic-laser-series.webp',
+  exchangeLaser: '/products/thumbs/cnc-fiber-laser-cutting-machines/dual-position-exchange-table/dual-position-exchange-table.webp',
+  tubeLaser: '/products/thumbs/cnc-fiber-laser-cutting-machines/professional-tube-cutting-machine/01.webp',
+  robotLaser: '/products/thumbs/newly-launched-products/cnc-fiber-laser-cutting-machine-robot.webp',
+  cncPressBrake: '/products/thumbs/cnc-nc-press-brake/cnc-press-brake/cnc-press-brake.webp',
+  ncPressBrake: '/products/thumbs/cnc-nc-press-brake/nc-press-brake/nc-press-brake.webp',
+  handheld: '/products/thumbs/cnc-fiber-laser-welding-machines/01.webp',
+  weldSample: '/products/thumbs/cnc-fiber-laser-welding-machines/03.webp',
+  weldJoint: '/products/thumbs/cnc-fiber-laser-welding-machines/05.webp',
+  cleanSample: '/products/thumbs/cnc-fiber-laser-welding-machines/07.webp',
+  cleanSample2: '/products/thumbs/cnc-fiber-laser-welding-machines/08.webp',
+  weldRobot: '/products/thumbs/newly-launched-products/3d-fiber-laser-welding-machine-robot.webp',
+  gantry: '/products/thumbs/cnc-plasma-cutting-machine/gantry-type/gantry-type.webp',
+  tableType: '/products/thumbs/cnc-plasma-cutting-machine/table-type/table-type.webp',
+  portable: '/products/thumbs/cnc-plasma-cutting-machine/portable-type/portable-type.webp',
+  hBeam: '/products/thumbs/peb-machinery/h-beam/h-beam-welding-machine-ptw.webp',
+  sawGantry: '/products/thumbs/peb-machinery/saw-gantry-welding-machine/saw-gantry-welding-machine.webp',
+  shear1: '/products/thumbs/shearing-machines/shearing-machines-1.webp',
+  shear2: '/products/thumbs/shearing-machines/shearing-machines-2.webp',
+  shear3: '/products/thumbs/shearing-machines/shearing-machines-3.webp',
+  panel1: '/products/thumbs/panel-bender/panel-bender-1.webp',
+  panel2: '/products/thumbs/panel-bender/panel-bender-2.webp',
+  panel3: '/products/thumbs/panel-bender/panel-bender-3.webp',
+  spares: '/products/thumbs/spares-consumables/consumables.webp',
 };
 
 const laserApps = ['Heavy Fabrication', 'Elevators', 'Automobile Industries', 'Chemical Plant Equipments Mfg', 'Road Construction Machinery Mfg', 'Job Work', 'Profile Cutting', 'Control Panel Mfg', 'Food Machinery Mfg', 'Agriculture Machinery Mfg', 'Steel Furniture', 'Sheet Metal Work', 'Architecture', 'Aero Space', 'Textile Machinery Mfg'];
@@ -178,7 +178,7 @@ export const productTree: Node[] = [
     name: 'Fiber Laser Cutting Machines',
     img: IMG.sheetLaser,
     apps: laserApps,
-    samples: ['/images/gallery/03.webp', '/images/gallery/04.webp', '/images/gallery/05.webp', '/images/gallery/06.webp', '/images/gallery/07.webp'],
+    samples: ['/shared/gallery/03.webp', '/shared/gallery/04.webp', '/shared/gallery/05.webp', '/shared/gallery/06.webp', '/shared/gallery/07.webp'],
     children: [
       {
         slug: 'sheet-metal-laser-cutting-machine',
@@ -186,22 +186,22 @@ export const productTree: Node[] = [
         img: IMG.sheetLaser,
         children: [
           {
-            ...series('e-ii-series', 'E II Series', '/images/series/e-ii/front.jpg', 'Economical single-platform fiber laser cutting machine.'),
+            ...series('e-ii-series', 'E II Series', '/products/series/e-ii/front.jpg', 'Economical single-platform fiber laser cutting machine.'),
             sheetOnRequest: false,
-            cutout: '/images/series/e-ii/cutout.webp',
-            imgs: ['/images/series/e-ii/front.jpg', '/images/series/e-ii/side.jpg'],
+            cutout: '/products/series/e-ii/cutout.webp',
+            imgs: ['/products/series/e-ii/front.jpg', '/products/series/e-ii/side.jpg'],
             highlights: [['Working area', '3000 × 1500 mm'], ['Speed', '80 m/min'], ['Accuracy', '±0.03 mm'], ['Machine capacity', 'Up to 60 kW']],
             features: [
               {
                 title: 'Precision Assurance',
                 text: 'Servo motors, reducers, racks and the other motion components come from leading brands — for high build quality, precise machine operation and a long service life.',
-                img: '/images/series/e-ii/precision.jpg',
+                img: '/products/series/e-ii/precision.jpg',
                 points: ['Servo motors', 'Reducers', 'Racks'],
               },
               {
                 title: 'Intelligent Operating System',
                 text: 'Easy to learn with a low entry barrier, and compatible with common drafting, drawing and management software for efficient coordination.',
-                img: '/images/series/e-ii/controller.jpg',
+                img: '/products/series/e-ii/controller.jpg',
                 ratio: 4 / 3,
               },
             ],
@@ -551,7 +551,7 @@ export const productTree: Node[] = [
       ['Nozzle', 'consumables'], ['Lens', 'consumables-2'], ['Cutting Head', 'cutting-head'], ['Punch Die', 'punch-die'],
       ['Laser Power Source', 'laser-power-source-1'], ['Gear Box', 'gear-box'], ['Limit Sensor', 'limit-sensor'], ['Rack & Pinion', 'rack-pinion'],
       ['LM Guide', 'lm-guide'], ['Bellows', 'bellows'], ['Drive Motors', 'drive-motors'], ['Gas Regulator', 'gas-regulator'],
-    ] as const).map(([name, f]) => ({ name, img: `/images/inner-product/spares-consumables/${f}.webp` })),
+    ] as const).map(([name, f]) => ({ name, img: `/products/thumbs/spares-consumables/${f}.webp` })),
   },
 ];
 
@@ -596,10 +596,10 @@ export const lineup = [
  * `img` then becomes its poster frame. `fit: 'contain'` keeps a studio render on black whole; `fit: 'frame'` shows a small factory photo whole with feathered edges (give its `ratio`).
  */
 export const heroSlides: { name: string; href: string; img: string; video?: string; verb: 0 | 1 | 2; pos?: string; fit?: 'contain' | 'frame'; ratio?: number }[] = [
-  { name: 'Fiber Laser Cutting', href: productHref('fiber-laser-cutting-machine'), img: '/images/hero-stage/laser.jpg', verb: 0, fit: 'contain' },
-  { name: 'CNC Press Brake', href: productHref('cnc-press-brake-machine'), img: '/images/hero-stage/press-brake.jpg', verb: 1, pos: '30% 45%' },
-  { name: 'Laser Welding', href: productHref('fiber-laser-welding-machine-main'), img: '/images/hero-stage/welding.jpg', verb: 2, pos: '78% 55%' },
-  { name: 'Shearing Machine', href: productHref('shearing-machine'), img: '/images/hero-stage/shearing.jpg', verb: 0, fit: 'frame', ratio: 1052 / 622 },
+  { name: 'Fiber Laser Cutting', href: productHref('fiber-laser-cutting-machine'), img: '/home/hero/laser.jpg', verb: 0, fit: 'contain' },
+  { name: 'CNC Press Brake', href: productHref('cnc-press-brake-machine'), img: '/home/hero/press-brake.jpg', verb: 1, pos: '30% 45%' },
+  { name: 'Laser Welding', href: productHref('fiber-laser-welding-machine-main'), img: '/home/hero/welding.jpg', verb: 2, pos: '78% 55%' },
+  { name: 'Shearing Machine', href: productHref('shearing-machine'), img: '/home/hero/shearing.jpg', verb: 0, fit: 'frame', ratio: 1052 / 622 },
 ];
 
 /** Home "machine range" explorer: tab label, category, and (optionally) the product whose specs represent it. */
@@ -668,14 +668,14 @@ const appKeywords: [match: string, photo: string][] = [
   ['chemical', 'chemical-plant'], ['food', 'food-machinery'], ['job work', 'job-work'], ['profile', 'profile-cutting'],
 ];
 export const appPhoto = (name: string) => {
-  if (appPhotos[name]) return `/images/application/${appPhotos[name]}.webp${IMG_V}`;
+  if (appPhotos[name]) return `/shared/applications/${appPhotos[name]}.webp${IMG_V}`;
   const n = name.toLowerCase();
   const hit = appKeywords.find(([k]) => n.includes(k));
-  return hit ? `/images/application/${hit[1]}.webp${IMG_V}` : undefined;
+  return hit ? `/shared/applications/${hit[1]}.webp${IMG_V}` : undefined;
 };
 
 export const applications = ['aerospace', 'agriculture', 'architecture', 'automobile', 'chemical plant', 'control panel', 'elevators', 'food machinery', 'heavy fabrication', 'hydraulic machinery', 'job work', 'material handling equipments', 'pre engineering building', 'profile cutting', 'road construction', 'steel furniture', 'steel metal work', 'tank manufacturing', 'textile machinery', 'tower manufacturing']
-  .map((n) => ({ name: n.replace(/\b\w/g, (c) => c.toUpperCase()), img: `/images/application/${n.replace(/ /g, '-')}.webp${IMG_V}` }));
+  .map((n) => ({ name: n.replace(/\b\w/g, (c) => c.toUpperCase()), img: `/shared/applications/${n.replace(/ /g, '-')}.webp${IMG_V}` }));
 
 export const events = [
   ['BLECH India - 2025', 'blech-India-2025'],
@@ -693,9 +693,9 @@ export const events = [
 ].map(([title, dir]) => ({ title, dir }));
 
 export const careers = [
-  { title: 'Back Office Executive', img: '/images/career/Back-Office-Executive.jpeg' },
-  { title: 'Sales Engineer', img: '/images/career/Sales-Engineer.jpeg' },
-  { title: 'Service Engineer', img: '/images/career/Service-Engineer.jpeg' },
+  { title: 'Back Office Executive', img: '/shared/career/Back-Office-Executive.jpeg' },
+  { title: 'Sales Engineer', img: '/shared/career/Sales-Engineer.jpeg' },
+  { title: 'Service Engineer', img: '/shared/career/Service-Engineer.jpeg' },
 ];
 
 /** Main navigation — kept short on purpose; the rest lives in the footer (and under the mobile menu). */

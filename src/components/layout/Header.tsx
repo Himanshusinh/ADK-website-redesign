@@ -13,7 +13,7 @@ import { gsap, lenisRef, reducedMotion } from '@/components/motion/gsap';
 
 const LOGO = company.logo;
 /** white-text variant for the dark landing hero */
-const LOGO_LIGHT = '/adk-logo-light.png';
+const LOGO_LIGHT = '/brand/adk-logo-light.png';
 
 export function Header() {
   const pathname = usePathname();

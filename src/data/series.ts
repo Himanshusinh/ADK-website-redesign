@@ -7,30 +7,30 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   'tf-series': {
     apps: ['Office Furniture', 'Fitness Equipment', 'Hardware & Sanitary Ware', 'Guardrail Industries', 'Piping Industries'],
     sheetOnRequest: false,
-    heroImg: '/images/series/tf-series/hero.jpg',
+    heroImg: '/products/series/tf-series/hero.jpg',
     features: [
       {
         title: 'Front Chuck Offset Stable Cutting',
         text: 'With front chuck offset, ultra-short remnant processing can be achieved for tubes of any length. The final cut is performed with dual-chuck clamping, ensuring more stable cutting.',
-        img: '/images/series/tf-series/f1.jpg',
+        img: '/products/series/tf-series/f1.jpg',
         ratio: 2.021,
       },
       {
         title: 'Ultra-Short Remnant Challenging Zero Waste',
         text: 'The minimum remnant length can be as low as 30 mm. An optional servo-driven auxiliary gripper enables zero-remnant cutting.',
-        img: '/images/series/tf-series/f2.jpg',
+        img: '/products/series/tf-series/f2.jpg',
         ratio: 2.021,
       },
       {
         title: '90° Side-Mounted Machine Bed Stable and Convenient',
         text: 'Lowering the center of gravity of the machine bed results in more stable cutting, more convenient loading and unloading, and easier operation and maintenance.',
-        img: '/images/series/tf-series/f3.jpg',
+        img: '/products/series/tf-series/f3.jpg',
         ratio: 2.021,
       },
       {
         title: 'Efficiency Leap Always One Step Ahead',
         text: 'With a maximum chuck rotation speed of 200 r/min, production capacity is doubled, significantly shortening delivery lead times for customers.',
-        img: '/images/series/tf-series/f4.jpg',
+        img: '/products/series/tf-series/f4.jpg',
         ratio: 2.021,
       },
     ],
@@ -52,28 +52,28 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   't2-series': {
     apps: ['Medical Machinery', 'Pipeline Industry', 'Guardrail Industry', 'Office Furniture', 'Fitness Equipment'],
     sheetOnRequest: false,
-    heroImg: '/images/series/t2-series/hero.jpg',
+    heroImg: '/products/series/t2-series/hero.jpg',
     features: [
       {
         title: 'Professional Pneumatic Chuck',
         text: 'Precision pneumatic chuck, four-jaw automatic centering clamping, stable clamping without damaging the workpiece.',
-        img: '/images/series/t2-series/f1.jpg',
+        img: '/products/series/t2-series/f1.jpg',
         ratio: 2.248,
       },
       {
         title: 'Modular Design',
         text: 'Can be freely matched with fully automatic loading machines, semi-automatic loading machines,bevel cutting heads,and other optional modules to meet diverse usage scenarios',
-        img: '/images/series/t2-series/f2.jpg',
+        img: '/products/series/t2-series/f2.jpg',
         ratio: 2.949,
       },
       {
         title: 'Universal for Various Pipes',
         text: 'Capable of cutting round pipes, square pipes, rectangular pipes, channel steel, angle steel, I-beams, and other profiled steel.',
-        img: '/images/series/t2-series/f3.jpg',
+        img: '/products/series/t2-series/f3.jpg',
         ratio: 1.968,
       },
     ],
-    samples: ['/images/series/t2-series/sample1.jpg'],
+    samples: ['/products/series/t2-series/sample1.jpg'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -92,34 +92,34 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   't3-series': {
     apps: ['Construction Machinery', 'Steel Structure Construction', 'Heavy Machinery', 'Bridge Engineering', 'Oil Pipelines', 'Greenhouse Structures'],
     sheetOnRequest: false,
-    heroImg: '/images/series/t3-series/hero.jpg',
+    heroImg: '/products/series/t3-series/hero.jpg',
     features: [
       {
         title: 'Three-chuck full stroke for more stable cutting',
         text: 'The three chucks are all positioned on the left side of the cutting head to jointly clamp the pipe, preventing sagging and bending of thin-walled pipes in the middle and ensuring high machining accuracy.',
-        img: '/images/series/t3-series/f1.jpg',
+        img: '/products/series/t3-series/f1.jpg',
         ratio: 2.259,
       },
       {
         title: 'Side-hung bed frame with high-low rail layout',
         text: 'The side-hung machine bed lowers the center of gravity for easier loading. The high-low rail arrangement ensures more reasonable.',
-        img: '/images/series/t3-series/f2.jpg',
+        img: '/products/series/t3-series/f2.jpg',
         ratio: 2.0,
       },
       {
         title: 'Independent servo- driven support',
         text: 'At the loading and unloading end supports the pipe in both vertical and horizontal directionssimultaneously, ensuring a secure grip on slender pipes.',
-        img: '/images/series/t3-series/f3.jpg',
+        img: '/products/series/t3-series/f3.jpg',
         ratio: 2.37,
       },
       {
         title: '350 pneumatic chuck, zero tailings cutting',
         text: 'Heavy-duty pneumatic chuck ensures stable and non-damaging clamping of workpieces, achieving zero tailings cutting through the movement of three chucks.',
-        img: '/images/series/t3-series/f4.jpg',
+        img: '/products/series/t3-series/f4.jpg',
         ratio: 2.37,
       },
     ],
-    samples: ['/images/series/t3-series/sample1.jpg'],
+    samples: ['/products/series/t3-series/sample1.jpg'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -137,34 +137,34 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   },
   't4-series': {
     sheetOnRequest: false,
-    heroImg: '/images/series/t4-series/hero.webp',
+    heroImg: '/products/series/t4-series/hero.webp',
     features: [
       {
         title: 'Dual Procedure in Parallel',
         text: 'It ensures unloading for the last round or loading for the next round, while carrying out pipe cutting. Seamless collaboration, remarkable efficiency.',
-        img: '/images/series/t4-series/f1.webp',
+        img: '/products/series/t4-series/f1.webp',
         ratio: 2.37,
       },
       {
         title: 'Intelligent Full-mobility Chucks',
         text: 'Flexible & Diverse combinations for automatic switch between 3+1, 2+2, and 1+3 modes to adapt to various working conditions, solving the problems of bending and deformation in extra-long heavy pipe processing.',
-        img: '/images/series/t4-series/f2.webp',
+        img: '/products/series/t4-series/f2.webp',
         ratio: 2.954,
       },
       {
         title: '500 Heavy-duty Chucks, Cut with Zero Tailing',
         text: '500 heavy-duty pneumatic chucks, process round tubes with a diameter of 50 - 500mm and square tubes with a side length of 50x50 - 350x350mm. The Four-chuck flexible system achieves true tailing-free cutting.',
-        img: '/images/series/t4-series/f3.webp',
+        img: '/products/series/t4-series/f3.webp',
         ratio: 2.373,
       },
       {
         title: 'Full Pipe Processing, Superior Load-bearing Capacity',
         text: 'Supports up to 2000kg single heavy tube and 12m long tube loading, cutting, unloading.',
-        img: '/images/series/t4-series/f4.webp',
+        img: '/products/series/t4-series/f4.webp',
         ratio: 2.37,
       },
     ],
-    samples: ['/images/series/t4-series/sample1.webp'],
+    samples: ['/products/series/t4-series/sample1.webp'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -183,30 +183,30 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   'tm-ii-series': {
     apps: ['Office Furniture', 'Medical Devices', 'Fitness Equipment', 'Hardware & Sanitary Ware', 'Guardrail Industries', 'Piping Industries'],
     sheetOnRequest: false,
-    heroImg: '/images/series/tm-ii-series/hero.jpg',
+    heroImg: '/products/series/tm-ii-series/hero.jpg',
     features: [
       {
         title: 'Ultra-Short Remnant – Maximum Material Saving',
         text: 'The minimum remnant length can be as low as 30 mm, delivering real material savings and further increasing profit.',
-        img: '/images/series/tm-ii-series/f1.jpg',
+        img: '/products/series/tm-ii-series/f1.jpg',
         ratio: 2.02,
       },
       {
         title: 'Front Chuck Offset – Stable Cutting',
         text: 'The front chuck offset enables ultra-short remnant processing for tubes of any length. The final cut is performed with dual-chuck clamping, ensuring more stable cutting.',
-        img: '/images/series/tm-ii-series/f2.jpg',
+        img: '/products/series/tm-ii-series/f2.jpg',
         ratio: 2.08,
       },
       {
         title: '90° Side-Mounted Machine Bed – Stable and Convenient',
         text: 'Lowering the center of gravity of the machine bed ensures more stable cutting, more convenient loading and unloading, and easier operation and maintenance.',
-        img: '/images/series/tm-ii-series/f3.jpg',
+        img: '/products/series/tm-ii-series/f3.jpg',
         ratio: 1.922,
       },
       {
         title: 'Efficiency Leap – Always One Step Ahead',
         text: 'With a maximum chuck rotation speed of 200 r/min, production capacity is doubled, significantly shortening delivery lead times for customers.',
-        img: '/images/series/tm-ii-series/f4.jpg',
+        img: '/products/series/tm-ii-series/f4.jpg',
         ratio: 1.778,
       },
     ],
@@ -228,30 +228,30 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   'tg-e-series': {
     apps: ['Office Furniture', 'Medical Devices', 'Fitness Equipment', 'Hardware & Sanitary Ware', 'Guardrail Industries', 'Piping Industries'],
     sheetOnRequest: false,
-    heroImg: '/images/series/tg-e-series/hero.jpg',
+    heroImg: '/products/series/tg-e-series/hero.jpg',
     features: [
       {
         title: 'Front Chuck Offset – Stable Cutting',
         text: 'The front chuck offset enables ultra-short remnant processing for tubes of any length. The final cut is performed with dual-chuck clamping, ensuring more stable cutting.',
-        img: '/images/series/tg-e-series/f1.jpg',
+        img: '/products/series/tg-e-series/f1.jpg',
         ratio: 2.131,
       },
       {
         title: 'Ultra-Short Remnant Maximum Material Saving',
         text: 'The minimum remnant length can be as low as 30mm, Delivering real material savings and further increasing profit.',
-        img: '/images/series/tg-e-series/f2.jpg',
+        img: '/products/series/tg-e-series/f2.jpg',
         ratio: 2.261,
       },
       {
         title: 'Highly Integrated – Space Saving',
         text: 'The electrical cabinet, laser source, and pneumatic system are integrated into the machine bed, reducing the footprint by 30% for easier transportation and high cost-effectiveness.',
-        img: '/images/series/tg-e-series/f3.jpg',
+        img: '/products/series/tg-e-series/f3.jpg',
         ratio: 1.922,
       },
       {
         title: 'Bus System – Powerful Functions',
         text: 'The intelligent bus system is easy to operate and convenient to deploy, supporting multiple functions such as flying cutting and drawing-free operation.',
-        img: '/images/series/tg-e-series/f4.jpg',
+        img: '/products/series/tg-e-series/f4.jpg',
         ratio: 2.278,
       },
     ],
@@ -273,25 +273,25 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   'cpl-series': {
     apps: ['Automotive Manufacturing', 'Office Furniture', 'Electrical Industry', 'Chassis Cabinets', 'Elevator Manufacturing', 'Kitchenware', 'Decorative Curtain Walls', 'Machinery Manufacturing', 'Mold Industry', 'Rail Transportation', 'Medical Equipment'],
     sheetOnRequest: false,
-    heroImg: '/images/series/cpl-series/hero.jpg',
+    heroImg: '/products/series/cpl-series/hero.jpg',
     features: [
       {
         title: 'Flexible and Efficient',
         text: 'Through intelligent control, different products can be produced by importing processing drawings, meeting the batch production needs of different shapes and variable workpieces.',
-        img: '/images/series/cpl-series/f1.jpg',
+        img: '/products/series/cpl-series/f1.jpg',
         ratio: 2.37,
         layout: 'split',
       },
       {
         title: 'Highly automated',
         text: 'Unwinding, leveling, cutting, intelligent and automated material handling, continuous operation, reducing manual dependency.',
-        img: '/images/series/cpl-series/f2.jpg',
+        img: '/products/series/cpl-series/f2.jpg',
         ratio: 2.37,
       },
       {
         title: 'Continuous Operation',
         text: 'The coil material conveying equipment continuously transports materials, with synchronous feeding and unloading, seamless cutting connections, further enhancing efficiency.',
-        img: '/images/series/cpl-series/f3.jpg',
+        img: '/products/series/cpl-series/f3.jpg',
         ratio: 2.37,
         layout: 'split',
       },
@@ -322,14 +322,14 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   'gv-series': {
     apps: ['Electrical Cabinets & Enclosures', 'Construction Machinery', 'Sheet Metal Fabrication', 'Automotive Manufacturing', 'Elevator Manufacturing', 'Kitchenware & Cabinetry'],
     sheetOnRequest: false,
-    heroImg: '/images/series/gv-series/hero.jpg',
+    heroImg: '/products/series/gv-series/hero.jpg',
     heroVideo: '/video/gv-hero.mp4',
     highlights: [['Max acceleration', '3G'], ['Max rapid speed', '200 m/min'], ['Positioning accuracy', '±0.03 mm'], ['Repeat accuracy', '±0.02 mm']],
     features: [
       {
         title: '3G ultra-high-speed fiber laser cutting',
         text: 'The optimized combination of 3G acceleration and 10 Hz low-pass filtering delivers rapid traverse up to 200 m/min, for faster cutting of the same sheet.',
-        img: '/images/series/gv-series/f1.jpg',
+        img: '/products/series/gv-series/f1.jpg',
         ratio: 1.9,
         layout: 'split',
         stats: [['3', 'G', 'Max acceleration'], ['10', 'Hz', 'Low-pass filter'], ['200', 'm/min', 'Max rapid speed']],
@@ -337,19 +337,19 @@ export const seriesExtras: Record<string, Partial<Node>> = {
       {
         title: 'Optimized cutting paths',
         text: 'Corner paths are optimized to cut idle travel and ineffective movement, lifting overall processing efficiency by more than 50%.',
-        img: '/images/series/gv-series/f1.jpg',
+        img: '/products/series/gv-series/f1.jpg',
         videos: ['/video/gv-path-a.mp4', '/video/gv-path-b.mp4'],
       },
       {
         title: 'High-stability structure for high-speed cutting',
         text: 'Core components use a German-engineered structural design — from the bed to the beam and transmission, every detail supports high-speed motion.',
-        img: '/images/series/gv-series/f2.jpg',
+        img: '/products/series/gv-series/f2.jpg',
         ratio: 2.3,
       },
       {
         title: 'Lightweight hollow honeycomb beam',
         text: 'A high specific-stiffness design arrived at by topology optimization: more torsional stiffness at the same weight, or the same stiffness for less weight.',
-        img: '/images/series/gv-series/f3.jpg',
+        img: '/products/series/gv-series/f3.jpg',
         ratio: 1.9,
         layout: 'split',
         stats: [['18', '%', 'More torsional stiffness at the same weight'], ['25', '%', 'Weight reduction at the same stiffness']],
@@ -357,13 +357,13 @@ export const seriesExtras: Record<string, Partial<Node>> = {
       {
         title: 'Low-centre-of-gravity heavy-duty bed',
         text: 'Widened side ribs improve bending and torsion resistance, and a mortise-and-tenon integral welding process removes the micro-deformation that stress release would otherwise cause.',
-        img: '/images/series/gv-series/f7.jpg',
+        img: '/products/series/gv-series/f7.jpg',
         ratio: 2.3,
       },
       {
         title: 'BLT intelligent laser cutting head',
         text: 'Narrower kerf and a smaller heat-affected zone. Full-body water cooling covers over 90% of the optical path, suppressing thermal drift.',
-        img: '/images/series/gv-series/f4.jpg',
+        img: '/products/series/gv-series/f4.jpg',
         ratio: 1.9,
         layout: 'split',
         stats: [['90', '%+', 'Of the optical path water-cooled']],
@@ -371,20 +371,20 @@ export const seriesExtras: Record<string, Partial<Node>> = {
       {
         title: 'High-speed high-torque servo motor',
         text: 'Up to 300% torque output, 5000 rpm peak speed and 136.6 kg·cm² of rotor inertia give instantaneous, precise response.',
-        img: '/images/series/gv-series/f5.jpg',
+        img: '/products/series/gv-series/f5.jpg',
         ratio: 2.3,
         stats: [['300', '%', 'Torque output'], ['5000', 'rpm', 'Peak speed'], ['136.6', 'kg·cm²', 'Rotor inertia']],
       },
       {
         title: 'German-style integrated reducer',
         text: 'Output shaft and gear are integrated and optimized, with key components in 42CrMo alloy steel for rigidity and a longer service life.',
-        img: '/images/series/gv-series/f6.jpg',
+        img: '/products/series/gv-series/f6.jpg',
         ratio: 2.3,
       },
       {
         title: 'Automatic loading for high-speed production',
         text: 'Connects to loading and unloading systems for fully automated processing, reducing how much labour the line needs.',
-        img: '/images/series/gv-series/f2.jpg',
+        img: '/products/series/gv-series/f2.jpg',
         video: '/video/gv-loading.mp4',
         ratio: 1.78,
       },
@@ -409,14 +409,14 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   'ln-series': {
     sheetOnRequest: false,
     // ADK's own render, composited onto a dark studio stage (machine.webp + backdrop)
-    heroImg: '/images/series/ln-series/hero-studio.jpg',
-    reveal: { value: '1.5G', label: 'Maximum acceleration', img: '/images/series/ln-series/reveal.webp' },
+    heroImg: '/products/series/ln-series/hero-studio.jpg',
+    reveal: { value: '1.5G', label: 'Maximum acceleration', img: '/products/series/ln-series/reveal.webp' },
     highlights: [['Maximum acceleration', '1.5G'], ['Dry running speed', '120 m/min'], ['Positioning accuracy', '±0.05 mm'], ['Repeat accuracy', '±0.03 mm']],
     features: [
       {
         title: 'Dual Bus Servo Motor — dynamic performance improved by 30%',
         text: 'The whole machine is equipped with dual bus motors, with a dry running speed of 120 m/min and an acceleration of 1.5G, achieving leading dynamic performance.',
-        img: '/images/series/ln-series/f1.webp',
+        img: '/products/series/ln-series/f1.webp',
         ratio: 2.03,
         layout: 'split',
         stats: [['1.5', 'G', 'Acceleration'], ['120', 'm/min', 'Dry running speed']],
@@ -424,25 +424,25 @@ export const seriesExtras: Record<string, Partial<Node>> = {
       {
         title: 'Modular tabletop',
         text: 'Ease of transportation while reducing later maintenance costs.',
-        img: '/images/series/ln-series/f2.webp',
+        img: '/products/series/ln-series/f2.webp',
         ratio: 1.921,
       },
       {
         title: 'Aviation Aluminum Beam',
         text: 'Manufactured to aerospace standards and formed by 4300-ton press extrusion moulding. After aging treatment its strength reaches 6061 T6 — light weight, high strength.',
-        img: '/images/series/ln-series/f3.webp',
+        img: '/products/series/ln-series/f3.webp',
         ratio: 1.92,
         layout: 'split',
         stats: [['28', '%', 'Increased intensity'], ['30', '%', 'Reduce weight']],
       },
     ],
     switcher: [
-      { title: 'Air pressure DA correction', text: 'The outlet air pressure can accurately reach the set value.', img: '/images/series/ln-series/sw1.webp' },
-      { title: 'Automatic nozzle replacement', text: 'Automatically completes nozzle replacement, helping automatic processing.', img: '/images/series/ln-series/sw2.webp' },
-      { title: 'Intelligent vibration suppression', text: 'Z-axis real-time automatic adjustment reduces abnormal cutting jitter.', img: '/images/series/ln-series/sw3.anim.webp' },
-      { title: 'Collision avoidance during movement', text: 'Flexible cutting avoids collisions with protruding parts, reducing collision risks.', img: '/images/series/ln-series/sw4.webp' },
+      { title: 'Air pressure DA correction', text: 'The outlet air pressure can accurately reach the set value.', img: '/products/series/ln-series/sw1.webp' },
+      { title: 'Automatic nozzle replacement', text: 'Automatically completes nozzle replacement, helping automatic processing.', img: '/products/series/ln-series/sw2.webp' },
+      { title: 'Intelligent vibration suppression', text: 'Z-axis real-time automatic adjustment reduces abnormal cutting jitter.', img: '/products/series/ln-series/sw3.anim.webp' },
+      { title: 'Collision avoidance during movement', text: 'Flexible cutting avoids collisions with protruding parts, reducing collision risks.', img: '/products/series/ln-series/sw4.webp' },
     ],
-    samples: ['/images/series/ln-series/sample1.webp'],
+    samples: ['/products/series/ln-series/sample1.webp'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -458,28 +458,28 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   },
   'ga-series': {
     sheetOnRequest: false,
-    heroImg: '/images/series/ga-series/hero.webp',
+    heroImg: '/products/series/ga-series/hero.webp',
     features: [
       {
         title: 'Mortise and rivet welded bed',
         text: 'The bed is made of super-heavy steel sheet mortise and rivet welded, utilizing stress-relief annealing technology, internal reinforcement ribs + transverse tube support, ensuring high strength and stability.',
-        img: '/images/series/ga-series/f1.webp',
+        img: '/products/series/ga-series/f1.webp',
         ratio: 1.92,
       },
       {
         title: 'Dual-position exchange table',
         text: '15 seconds quick exchange, significantly improving production efficiency, saving labor costs.',
-        img: '/images/series/ga-series/f2.webp',
+        img: '/products/series/ga-series/f2.webp',
         ratio: 2.18,
       },
       {
         title: 'Matrix exhaust structure',
         text: 'Double-row multi-row independent, high-sealing partition smoke exhaust, effectively filtering harmful gases, smoke, dust, making the production process more environmentally friendly.',
-        img: '/images/series/ga-series/f3.webp',
+        img: '/products/series/ga-series/f3.webp',
         ratio: 2.056,
       },
     ],
-    samples: ['/images/series/ga-series/sample1.webp', '/images/series/ga-series/sample2.webp', '/images/series/ga-series/sample3.webp', '/images/series/ga-series/sample4.webp'],
+    samples: ['/products/series/ga-series/sample1.webp', '/products/series/ga-series/sample2.webp', '/products/series/ga-series/sample3.webp', '/products/series/ga-series/sample4.webp'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -498,34 +498,34 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   },
   'gh-series': {
     sheetOnRequest: false,
-    heroImg: '/images/series/gh-series/hero.webp',
+    heroImg: '/products/series/gh-series/hero.webp',
     features: [
       {
         title: 'Enhanced processing capability for thick sheets',
         text: 'Enhanced processing capability for thick sheets Capable of 12-meter whole sheet thick cutting, with improved dynamic performance, faster cutting speed, and stronger cutting ability.',
-        img: '/images/series/gh-series/f1.webp',
+        img: '/products/series/gh-series/f1.webp',
         ratio: 2.056,
       },
       {
         title: 'Mortise and rivet welded bed',
         text: 'The bed is made of super-heavy steel sheet mortise and rivet welded, utilizing stress-relief annealing technology, internal reinforcement ribs + transverse tube support, ensuring high strength and stability.',
-        img: '/images/series/gh-series/f2.webp',
+        img: '/products/series/gh-series/f2.webp',
         ratio: 1.92,
       },
       {
         title: 'Matrix exhaust structure',
         text: 'Double-row multi-row independent, high-sealing partition smoke exhaust, effectively filtering harmful gases, smoke, dust, making the production process more environmentally friendly.',
-        img: '/images/series/gh-series/f3.webp',
+        img: '/products/series/gh-series/f3.webp',
         ratio: 2.056,
       },
       {
         title: 'Bus System + Bus Motor',
         text: 'Real-time adjustment, efficient coordination, powerful functions, and easy deployment.',
-        img: '/images/series/gh-series/f4.webp',
+        img: '/products/series/gh-series/f4.webp',
         ratio: 1.954,
       },
     ],
-    samples: ['/images/series/gh-series/sample1.webp'],
+    samples: ['/products/series/gh-series/sample1.webp'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -545,33 +545,33 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   'sl-series': {
     apps: ['Agricultural Machinery', 'Steel Structures', 'Tower Industry', 'Shipbuilding', 'Mining Machinery', 'Sheet Metal Processing', 'Mechanical Equipment', 'Construction Machinery'],
     sheetOnRequest: false,
-    heroImg: '/images/series/sl-series/hero.jpg',
+    heroImg: '/products/series/sl-series/hero.jpg',
     features: [
       {
         title: 'Modular bed',
         text: 'Modular lathe bed realizes customized length as required, and the lathe bed and workbench are designed separately. Large-section rectangular pipes are welded and finished after annealing, which is stable, reliable and convenient for transportation.',
-        img: '/images/series/sl-series/f1.jpg',
+        img: '/products/series/sl-series/f1.jpg',
         ratio: 2.37,
       },
       {
         title: 'Customized format',
-        img: '/images/series/sl-series/f2.jpg',
+        img: '/products/series/sl-series/f2.jpg',
         ratio: 2.37,
       },
       {
         title: 'Ventilation by Zones',
         text: 'Zone ventilation, right-side blowing and left-side suction, low-carbon and smoke-free, clean operation.',
-        img: '/images/series/sl-series/f3.webp',
+        img: '/products/series/sl-series/f3.webp',
         ratio: 1.467,
       },
       {
         title: 'Safety Light Curtain Protection',
         text: 'Safety light curtains installed on both sides of the crossbeam provide all-around protection for equipment operators, effectively preventing safety accidents.',
-        img: '/images/series/sl-series/f4.jpg',
+        img: '/products/series/sl-series/f4.jpg',
         ratio: 2.37,
       },
     ],
-    samples: ['/images/series/sl-series/sample1.jpg'],
+    samples: ['/products/series/sl-series/sample1.jpg'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -587,28 +587,28 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   'lnr-series': {
     apps: ['Elevator Manufacturing', 'Automobile Manufacturing', 'Engineering Machinery', 'Fitness Equipment', 'Oil Pipelines', 'Sheet Metal Processing'],
     sheetOnRequest: false,
-    heroImg: '/images/series/lnr-series/hero.jpg',
+    heroImg: '/products/series/lnr-series/hero.jpg',
     features: [
       {
         title: 'Mortise-riveted welding bed',
         text: 'Mortise-riveted welding bed with internal reinforcement and stress-relief annealing technology, enhancing bed strength and tensile resistance.',
-        img: '/images/series/lnr-series/f1.jpg',
+        img: '/products/series/lnr-series/f1.jpg',
         ratio: 2.37,
       },
       {
         title: 'Economical and practical',
         text: 'One device meets the dual requirements of cutting pipes and sheets, saving costs and space.',
-        img: '/images/series/lnr-series/f2.jpg',
+        img: '/products/series/lnr-series/f2.jpg',
         ratio: 2.37,
       },
       {
         title: 'Intelligent operating system',
         text: 'User-friendly interface, powerful system functions, easy deployment, and convenient operation, significantly lowering the human entry threshold.',
-        img: '/images/series/lnr-series/f3.jpg',
+        img: '/products/series/lnr-series/f3.jpg',
         ratio: 2.37,
       },
     ],
-    samples: ['/images/series/lnr-series/sample1.jpg'],
+    samples: ['/products/series/lnr-series/sample1.jpg'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -628,28 +628,28 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   'gar-series': {
     apps: ['Elevator Manufacturing', 'Automobile Manufacturing', 'Engineering Machinery', 'Fitness Equipment', 'Oil Pipelines', 'Sheet Metal Processing'],
     sheetOnRequest: false,
-    heroImg: '/images/series/gar-series/hero.jpg',
+    heroImg: '/products/series/gar-series/hero.jpg',
     features: [
       {
         title: 'Dual workstation exchange table',
         text: '15-second rapid exchange of dual workstation platforms greatly reduces standby time, significantly improves production efficiency, and saves labor costs.',
-        img: '/images/series/gar-series/f1.jpg',
+        img: '/products/series/gar-series/f1.jpg',
         ratio: 2.37,
       },
       {
         title: 'Sheet-tube dual cutting',
         text: 'Combines sheet and tube cutting functions into one, easily handling diverse processing needs. Small footprint, low investment, truly worry-free and labor-saving.',
-        img: '/images/series/gar-series/f2.jpg',
+        img: '/products/series/gar-series/f2.jpg',
         ratio: 2.373,
       },
       {
         title: 'Intelligent operating system',
         text: 'User-friendly interface, powerful system functions, easy deployment, and convenient operation, significantly lowering the human entry threshold.',
-        img: '/images/series/gar-series/f3.jpg',
+        img: '/products/series/gar-series/f3.jpg',
         ratio: 2.37,
       },
     ],
-    samples: ['/images/series/gar-series/sample1.jpg'],
+    samples: ['/products/series/gar-series/sample1.jpg'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -668,22 +668,22 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   },
   'lf1800-series': {
     sheetOnRequest: false,
-    heroImg: '/images/series/lf1800-series/hero.jpg',
+    heroImg: '/products/series/lf1800-series/hero.jpg',
     features: [
       {
         title: 'Japan imported Yaskawa robot arm',
         text: 'Utilizing JJapan imported Yaskawa robot arm for stability and efficiency.',
-        img: '/images/series/lf1800-series/f1.jpg',
+        img: '/products/series/lf1800-series/f1.jpg',
         ratio: 2.373,
       },
       {
         title: 'Precise and Flexible Cutting',
         text: 'Supports 360-degree cutting, capable of accurately cutting non-standard shaped materials.',
-        img: '/images/series/lf1800-series/f2.jpg',
+        img: '/products/series/lf1800-series/f2.jpg',
         ratio: 2.37,
       },
     ],
-    samples: ['/images/series/lf1800-series/sample1.jpg'],
+    samples: ['/products/series/lf1800-series/sample1.jpg'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -701,28 +701,28 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   'm3015g-series': {
     apps: ['Automotive Manufacturing', 'Aerospace', 'Prototype Mold Making', 'Rail Transportation', 'Engineering Machinery'],
     sheetOnRequest: false,
-    heroImg: '/images/series/m3015g-series/hero.jpg',
+    heroImg: '/products/series/m3015g-series/hero.jpg',
     features: [
       {
         title: 'Good dynamic performance',
         text: 'Rotation Worktable with Single Rotation Time < 3s, Single Column Cutting Time Within 50 Seconds',
-        img: '/images/series/m3015g-series/f1.jpg',
+        img: '/products/series/m3015g-series/f1.jpg',
         ratio: 1.778,
       },
       {
         title: 'Independently developed three-dimensional five-axis linked cutting head',
         text: 'Combining optical principles, mathematical algorithms, etc., it can achieve N*360° rotation, ±135° swing. Stable optical characteristics, 360-degree collision prevention to protect the cutting head safety.',
-        img: '/images/series/m3015g-series/f2.jpg',
+        img: '/products/series/m3015g-series/f2.jpg',
         ratio: 2.37,
       },
       {
         title: 'Safety and Reliability',
         text: 'Incorporates safety features like safety light curtains, external protective covers, monitoring devices, observation windows, ensuring operator safety.',
-        img: '/images/series/m3015g-series/f3.jpg',
+        img: '/products/series/m3015g-series/f3.jpg',
         ratio: 1.778,
       },
     ],
-    samples: ['/images/series/m3015g-series/sample1.jpg'],
+    samples: ['/products/series/m3015g-series/sample1.jpg'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -744,28 +744,28 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   },
   'handheld-laser-welding-machine': {
     sheetOnRequest: false,
-    heroImg: '/images/series/handheld-laser-welding-machine/hero.jpg',
+    heroImg: '/products/series/handheld-laser-welding-machine/hero.jpg',
     features: [
       {
         title: 'One Against Three',
         text: 'Combines welding, cleaning, and cutting functions into one, powerful and versatile.',
-        img: '/images/series/handheld-laser-welding-machine/f1.jpg',
+        img: '/products/series/handheld-laser-welding-machine/f1.jpg',
         ratio: 2.37,
       },
       {
         title: 'Compact and Flexible',
         text: 'Small footprint, high flexibility, more efficient for cutting small parts.',
-        img: '/images/series/handheld-laser-welding-machine/f2.jpg',
+        img: '/products/series/handheld-laser-welding-machine/f2.jpg',
         ratio: 2.37,
       },
       {
         title: 'Efficient Welding',
         text: 'Smooth and aesthetically pleasing weld seams, 2-10 times faster than traditional welding machines, saving labor and improving quality.',
-        img: '/images/series/handheld-laser-welding-machine/f3.jpg',
+        img: '/products/series/handheld-laser-welding-machine/f3.jpg',
         ratio: 2.37,
       },
     ],
-    samples: ['/images/series/handheld-laser-welding-machine/sample1.jpg'],
+    samples: ['/products/series/handheld-laser-welding-machine/sample1.jpg'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -784,28 +784,28 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   },
   'handheld-laser-cleaning-machine': {
     sheetOnRequest: false,
-    heroImg: '/images/series/handheld-laser-cleaning-machine/hero.jpg',
+    heroImg: '/products/series/handheld-laser-cleaning-machine/hero.jpg',
     features: [
       {
         title: 'Easy to operate',
         text: 'No need for professional welders, simple training is sufficient, significantly lowering the difficulty of personnel recruitment.',
-        img: '/images/series/handheld-laser-cleaning-machine/f1.jpg',
+        img: '/products/series/handheld-laser-cleaning-machine/f1.jpg',
         ratio: 2.37,
       },
       {
         title: 'Non-destructive Operations',
         text: 'Capable of cleaning sensitive materials such as aluminum, carbon, stainless steel, carbon fiber-reinforced polymers, or coated materials without damaging them, able to clean even fine gaps.',
-        img: '/images/series/handheld-laser-cleaning-machine/f2.jpg',
+        img: '/products/series/handheld-laser-cleaning-machine/f2.jpg',
         ratio: 2.373,
       },
       {
         title: 'Green and Energy-efficient',
         text: 'Allows precise positioning for cleaning, effectively removing micrometer-level contaminant particles while protecting the surface of fragile materials, reducing costs by 80% compared to chemical cleaning.',
-        img: '/images/series/handheld-laser-cleaning-machine/f3.jpg',
+        img: '/products/series/handheld-laser-cleaning-machine/f3.jpg',
         ratio: 2.37,
       },
     ],
-    samples: ['/images/series/handheld-laser-cleaning-machine/sample1.jpg'],
+    samples: ['/products/series/handheld-laser-cleaning-machine/sample1.jpg'],
     tables: [
       {
         title: 'Technical Parameters',
@@ -823,22 +823,22 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   },
   '3d-fiber-laser-welding-machine-robot': {
     sheetOnRequest: false,
-    heroImg: '/images/series/3d-fiber-laser-welding-machine-robot/hero.jpg',
+    heroImg: '/products/series/3d-fiber-laser-welding-machine-robot/hero.jpg',
     features: [
       {
         title: 'Flexible welding Aesthetic welds',
         text: 'Three-dimensional welding is formed in just one step, with aesthetic welds and minimal deformation.',
-        img: '/images/series/3d-fiber-laser-welding-machine-robot/f1.jpg',
+        img: '/products/series/3d-fiber-laser-welding-machine-robot/f1.jpg',
         ratio: 2.37,
       },
       {
         title: 'Flexible processing Powerful functions',
         text: 'Fiber laser and industrial robot are highly integrated. It enables flexible processing of 1-8mm complex multi-specification workpieces.',
-        img: '/images/series/3d-fiber-laser-welding-machine-robot/f2.jpg',
+        img: '/products/series/3d-fiber-laser-welding-machine-robot/f2.jpg',
         ratio: 2.37,
       },
     ],
-    samples: ['/images/series/3d-fiber-laser-welding-machine-robot/sample1.jpg'],
+    samples: ['/products/series/3d-fiber-laser-welding-machine-robot/sample1.jpg'],
     tables: [
       {
         title: 'Technical Parameters',

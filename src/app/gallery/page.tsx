@@ -8,7 +8,7 @@ import { Reveal } from '@/components/motion/Reveal';
 export const metadata: Metadata = { title: 'Gallery' };
 
 export default function GalleryPage() {
-  const imgs = listImages('images/gallery');
+  const imgs = listImages('shared/gallery');
   return (
     <PageStart>
       <section className="sec text-ink">

@@ -7,7 +7,7 @@ import { Reveal } from '@/components/motion/Reveal';
 export const metadata: Metadata = { title: 'Clients' };
 
 export default function ClientsPage() {
-  const logos = listImages('images/clients');
+  const logos = listImages('shared/clients');
   return (
     <PageStart>
       <section className="sec text-ink">

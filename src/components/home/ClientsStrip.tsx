@@ -15,7 +15,7 @@ export function LogoTile({ src, className = 'w-[190px]' }: { src: string; classN
 }
 
 export function ClientsStrip() {
-  const logos = listImages('images/clients');
+  const logos = listImages('shared/clients');
   const half = Math.ceil(logos.length / 2);
   return (
     <section className="sec bg-white text-ink">
