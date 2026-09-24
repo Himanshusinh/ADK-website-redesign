@@ -8,11 +8,14 @@ export type BtnIcon = 'arrow' | 'download' | 'arrowUR';
 
 const icons = { arrow: ArrowRight, download: Download, arrowUR: ArrowUpRight };
 
+// The hover fill and its label must NOT use `ink`/`white` tokens that flip inside .theme-dark —
+// a white fill under white text is invisible. Literal hexes (Tailwind only sees literals) keep
+// both themes legible.
 const variants: Record<BtnVariant, string> = {
-  red: 'bg-brand text-white before:bg-ink hover:shadow-[0_14px_40px_-12px_rgba(225,37,45,.7)]',
+  red: 'bg-brand text-white before:bg-[#111114] hover:text-white hover:shadow-[0_14px_40px_-12px_rgba(225,37,45,.7)]',
   dark: 'bg-ink text-on-ink before:bg-brand hover:text-white',
-  ghost: 'text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,.28)] before:bg-white hover:text-ink',
-  light: 'bg-white text-ink before:bg-brand hover:text-white',
+  ghost: 'text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,.28)] before:bg-white hover:text-[#111114]',
+  light: 'bg-white text-[#111114] before:bg-brand hover:text-white',
   outline: 'bg-surface text-ink shadow-[inset_0_0_0_1px_var(--color-line)] before:bg-ink hover:text-on-ink',
 };
 

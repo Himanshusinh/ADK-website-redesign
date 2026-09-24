@@ -1,4 +1,5 @@
 // All site content. Product hierarchy: category → sub-category → series/model.
+import { seriesExtras } from './series';
 
 export type Table = { title: string; head?: string[]; rows: string[][] };
 export type Compare = { title: string; note: string; head: string[]; rows: string[] };
@@ -27,8 +28,25 @@ export type Node = {
   sheetOnRequest?: boolean;
   /** transparent render of the machine — switches the page to the dark cinematic hero */
   cutout?: string;
+  /** full-bleed photo behind the dark hero (used when there is no cutout) */
+  heroImg?: string;
   /** feature panels shown under the hero: close-up image + short explanation */
-  features?: { title: string; text: string; img: string; points?: string[]; /** image width ÷ height, default 2.35 */ ratio?: number }[];
+  features?: {
+    title: string;
+    text?: string;
+    img: string;
+    points?: string[];
+    /** figures shown under the text, e.g. [['1.5', 'G', 'Acceleration']] */
+    stats?: [value: string, unit: string, label: string][];
+    /** 'split' puts the picture beside the text (alternating sides); default is full width */
+    layout?: 'split';
+    /** image width ÷ height, default 2.35 */
+    ratio?: number;
+  }[];
+  /** tabbed feature carousel: pick a tab, its picture cross-fades in */
+  switcher?: { title: string; text: string; img: string }[];
+  /** headline figure cut out of a photo, revealed on scroll */
+  reveal?: { value: string; label: string; img: string };
   /** cut-part photos; inherited by every product below the node that sets it */
   samples?: string[];
   children?: Node[];
@@ -531,6 +549,16 @@ export const productTree: Node[] = [
 ];
 
 /* ---------- lookups ---------- */
+/** merge in the photos and specs imported from the manufacturer's product pages */
+const applyExtras = (nodes: Node[]) => {
+  for (const n of nodes) {
+    const extra = seriesExtras[n.slug];
+    if (extra) Object.assign(n, extra);
+    if (n.children) applyExtras(n.children);
+  }
+};
+applyExtras(productTree);
+
 const index = new Map<string, { node: Node; parents: Node[] }>();
 (function walk(nodes: Node[], parents: Node[]) {
   for (const n of nodes) {

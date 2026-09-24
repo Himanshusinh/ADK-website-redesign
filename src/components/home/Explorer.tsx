@@ -32,15 +32,6 @@ export function Explorer() {
   return (
     <section id="range" className="sec scroll-mt-16 bg-white text-ink">
       <div className="wrap">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <Sweep className="title-xl">
-              Our machine <span className="accent">range</span>
-            </Sweep>
-          </div>
-          <p className="lead max-w-[380px] text-muted">Eight product lines — every machine installed, trained and serviced by ADK engineers.</p>
-        </div>
-
         <div role="tablist" aria-label="Product lines" className="no-scrollbar -mx-1 mb-6 flex gap-2 overflow-x-auto px-1 pb-1">
           {lines.map((x, k) => (
             <button

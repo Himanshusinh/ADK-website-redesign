@@ -149,6 +149,58 @@
     #0b0b0d;
 }
 
+/* ---------- animated ambience for the dark hero ----------
+   Two slow red/ember glows drifting behind the content, a thin laser beam sweeping across,
+   and a breathing pool of light under the machine. All CSS — no canvas, no JS. */
+.aura::before,
+.aura::after,
+.aura-pool {
+  pointer-events: none;
+}
+.aura::before,
+.aura::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 9999px;
+  filter: blur(90px);
+  will-change: transform;
+}
+.aura::before {
+  width: 54vw; height: 54vw; left: -14vw; top: -20vw;
+  background: radial-gradient(circle, rgb(225 37 45 / 0.30), transparent 70%);
+  animation: drift-a 26s ease-in-out infinite alternate;
+}
+.aura::after {
+  width: 48vw; height: 48vw; right: -16vw; top: 6vw;
+  background: radial-gradient(circle, rgb(255 106 43 / 0.17), transparent 68%);
+  animation: drift-b 34s ease-in-out infinite alternate;
+}
+@keyframes drift-a { to { transform: translate3d(14vw, 9vw, 0) scale(1.18); } }
+@keyframes drift-b { to { transform: translate3d(-11vw, -7vw, 0) scale(1.12); } }
+
+
+.aura-pool { animation: pool 7s ease-in-out infinite; }
+@keyframes pool {
+  0%, 100% { opacity: 0.55; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.09); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aura::before, .aura::after, .aura-pool { animation: none !important; }
+}
+
+/* ---------- product stage ---------- */
+.stage-cone {
+  background: radial-gradient(60% 45% at 50% 0%, rgb(255 255 255 / 0.13), transparent 70%);
+  filter: blur(14px);
+}
+.stage-float { animation: float-stage 9s ease-in-out infinite; will-change: transform; }
+@keyframes float-stage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@media (prefers-reduced-motion: reduce) { .stage-float { animation: none !important; } }
+
 /* lenis */
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }

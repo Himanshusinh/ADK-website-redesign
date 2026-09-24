@@ -7,7 +7,8 @@ import { Split } from '@/components/motion/Split';
 import { Reveal } from '@/components/motion/Reveal';
 import { ProductGallery } from './ProductGallery';
 import { ProductSections, SheetNote } from './ProductSections';
-import { AppGrid, CinemaHero, Features, Samples } from './SeriesSections';
+import { AppGrid, CinemaHero, Features, Samples, Switcher } from './SeriesSections';
+import { RevealNumber } from './RevealNumber';
 
 /** A single machine / series page. */
 export function ProductView({ node, parents }: { node: Node; parents: Node[] }) {
@@ -20,7 +21,7 @@ export function ProductView({ node, parents }: { node: Node; parents: Node[] }) 
 
   return (
     <>
-      {node.cutout ? (
+      {node.cutout || node.heroImg ? (
         <CinemaHero node={node} />
       ) : (
       <section className="bg-soft relative overflow-hidden pt-[calc(var(--hdr)+48px)] pb-[clamp(70px,8vw,120px)] text-ink">
@@ -74,7 +75,9 @@ export function ProductView({ node, parents }: { node: Node; parents: Node[] }) 
       </section>
       )}
 
+      {node.reveal && <RevealNumber {...node.reveal} />}
       {node.features && <Features node={node} />}
+      {node.switcher && <Switcher items={node.switcher} name={node.name} />}
       {samples && <Samples imgs={samples} name={parents[0]?.name ?? node.name} />}
       {/* applications render as photo tiles below, not as the pill list */}
       <ProductSections node={{ ...node, apps: undefined }} />

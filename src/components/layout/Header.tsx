@@ -95,7 +95,7 @@ export function Header() {
   const solid = scrolled || mega || menu;
   // floating over the black landing hero: white type until the bar turns solid
   // pages that open on a black hero: home, and any machine page with a cinematic render
-  const darkTop = pathname === '/' || (pathname.startsWith('/products/') && !!findNode(pathname.split('/')[2] ?? '')?.node.cutout);
+  const darkTop = pathname === '/' || (pathname.startsWith('/products/') && !!(findNode(pathname.split('/')[2] ?? '')?.node.cutout || findNode(pathname.split('/')[2] ?? '')?.node.heroImg));
   const onDark = darkTop && !solid;
   const h = scrolled ? 'h-[72px]' : 'h-[var(--hdr)]';
 
