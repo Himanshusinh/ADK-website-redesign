@@ -68,7 +68,7 @@ export function WhatWeDo() {
 
                 <div className="absolute inset-x-0 bottom-0 p-[clamp(20px,2.4vw,34px)]">
                   <span className={clsx('mb-4 block h-[3px] rounded-full bg-brand transition-all duration-700 ease-expo', on ? 'w-14 opacity-100' : 'w-7 opacity-60')} />
-                  <h3 className="font-display-x text-[clamp(21px,2vw,30px)] leading-tight font-bold tracking-[-0.025em]">{title}</h3>
+                  <h3 className="font-display-x text-[clamp(21px,2vw,30px)] leading-tight font-semibold tracking-[-0.014em]">{title}</h3>
                   <p
                     className={clsx(
                       'max-w-[46ch] text-[15px] leading-relaxed text-white/70 transition-[opacity,max-height,margin] duration-700 ease-expo lg:overflow-hidden',

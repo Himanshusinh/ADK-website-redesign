@@ -35,7 +35,7 @@ export default function NewsPage() {
                         <Maximize2 className="size-3.5" /> {imgs.length} photos
                       </span>
                     </span>
-                    <span className="font-display text-[clamp(17px,1.4vw,21px)] leading-[1.15] font-bold tracking-[-0.02em]">{e.title}</span>
+                    <span className="font-display text-[clamp(17px,1.4vw,21px)] leading-[1.15] font-semibold tracking-[-0.012em]">{e.title}</span>
                     <ArrowLabel className="self-start">View photos</ArrowLabel>
                   </LightboxTrigger>
                 </Reveal>

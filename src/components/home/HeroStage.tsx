@@ -97,7 +97,7 @@ export function HeroStage() {
       {/* copy */}
       <div className="wrap relative flex flex-1 flex-col justify-center pt-[calc(var(--hdr)+clamp(24px,5vh,56px))] pb-10">
         <h1
-          className="animate-rise font-display-x max-w-[12ch] text-[clamp(36px,4.4vw,72px)] leading-[1] font-extrabold tracking-[-0.04em]"
+          className="animate-rise font-display-x max-w-[13ch] text-[clamp(36px,4.8vw,78px)] leading-[1.04] font-semibold tracking-[-0.022em] text-balance"
           style={{ animationDelay: '0.08s' }}
         >
           Machines that <Verb on={slide.verb === 0}>cut</Verb>, <Verb on={slide.verb === 1}>bend</Verb> &amp;{' '}
@@ -114,7 +114,7 @@ export function HeroStage() {
         <dl className="animate-rise mt-[clamp(36px,7vh,72px)] grid max-w-[560px] grid-cols-2 gap-x-8 gap-y-5 sm:grid-cols-4" style={{ animationDelay: '0.32s' }}>
           {trust.map(([n, label]) => (
             <div key={label}>
-              <dt className="font-display-x text-[clamp(20px,1.7vw,27px)] leading-none font-bold tracking-[-0.03em]">{n}</dt>
+              <dt className="font-display-x text-[clamp(20px,1.7vw,27px)] leading-none font-semibold tracking-[-0.016em]">{n}</dt>
               <dd className="mt-1.5 text-[12.5px] leading-snug text-white/50">{label}</dd>
             </div>
           ))}

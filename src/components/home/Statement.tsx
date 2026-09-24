@@ -14,7 +14,7 @@ export function Statement() {
       <div aria-hidden className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(11,11,13,.85)_0%,rgba(11,11,13,.2)_65%,transparent_100%)]" />
 
       <div className="wrap py-[clamp(64px,9vw,120px)]">
-        <FillText className="font-display-x max-w-[26ch] text-[clamp(24px,2.7vw,42px)] leading-[1.18] font-bold tracking-[-0.025em]">
+        <FillText className="font-display-x max-w-[26ch] text-[clamp(24px,2.7vw,42px)] leading-[1.18] font-semibold tracking-[-0.014em]">
           Your machine is your capital. That&apos;s why our relationship never ends at the sale — technical assistance, spare parts and customer care, all over
           India.
         </FillText>

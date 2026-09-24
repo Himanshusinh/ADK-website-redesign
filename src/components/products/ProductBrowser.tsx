@@ -69,7 +69,7 @@ export function ProductBrowser({ lines }: { lines: BrowserLine[] }) {
 
         <div role="tabpanel" className="flex min-h-0 flex-col gap-3.5 rounded-[28px] bg-white/70 px-7 pt-6 pb-4">
           <div className="flex shrink-0 flex-wrap items-center gap-x-5 gap-y-2">
-            <h2 className="font-display-x text-[clamp(23px,2.1vw,34px)] leading-[1.05] font-bold tracking-[-0.03em]">{line.name}</h2>
+            <h2 className="font-display-x text-[clamp(23px,2.1vw,34px)] leading-[1.05] font-semibold tracking-[-0.016em]">{line.name}</h2>
             <span className="text-[15px] text-muted">{line.blurb}</span>
             <div className="ml-auto flex items-center gap-5">
               <TLink href={line.href} className="group inline-flex items-center gap-1.5 text-[15px] font-semibold">
@@ -147,7 +147,7 @@ export function ProductBrowser({ lines }: { lines: BrowserLine[] }) {
                   <Image src={active?.img ?? line.img} alt={active?.name ?? line.name} fill sizes="45vw" className="object-contain mix-blend-multiply" />
                 </span>
                 <div className="flex min-w-0 flex-col items-start gap-5">
-                  <h3 className="font-display-x text-[clamp(26px,2.4vw,40px)] leading-[1.05] font-bold tracking-[-0.03em]">{active?.name ?? line.name}</h3>
+                  <h3 className="font-display-x text-[clamp(26px,2.4vw,40px)] leading-[1.05] font-semibold tracking-[-0.016em]">{active?.name ?? line.name}</h3>
                   {active?.desc && <p className="max-w-[44ch] text-[16.5px] leading-relaxed text-muted">{active.desc}</p>}
 
                   {!!active?.highlights?.length && (
@@ -155,7 +155,7 @@ export function ProductBrowser({ lines }: { lines: BrowserLine[] }) {
                       {active.highlights.map(([k, v], n) => (
                         <div key={k} className={clsx('py-3.5 pr-4', n > 0 && 'border-l border-line/70 pl-4')}>
                           <dt className="mb-1 text-[12.5px] text-muted">{k}</dt>
-                          <dd className="font-display text-[16px] leading-tight font-bold">{v}</dd>
+                          <dd className="font-display text-[16px] leading-tight font-semibold">{v}</dd>
                         </div>
                       ))}
                     </dl>

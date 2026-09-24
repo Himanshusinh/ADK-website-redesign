@@ -72,7 +72,7 @@ export function RevealNumber({ img, value, label }: Props) {
 
           <div ref={cap} className="invisible absolute inset-x-0 top-[18%] text-center">
             <p className="text-[clamp(15px,1.5vw,22px)] font-medium text-white/85">{label}</p>
-            <p className="font-display-x mt-2 text-[clamp(44px,6vw,96px)] leading-none font-extrabold tracking-[-0.04em] text-white drop-shadow-[0_8px_30px_rgba(0,0,0,.6)]">
+            <p className="font-display-x mt-2 text-[clamp(44px,6vw,96px)] leading-none font-semibold tracking-[-0.018em] text-white drop-shadow-[0_8px_30px_rgba(0,0,0,.6)]">
               {value}
             </p>
           </div>
@@ -84,7 +84,7 @@ export function RevealNumber({ img, value, label }: Props) {
         <Image src={img} alt={`${label} ${value}`} fill sizes="100vw" className="object-cover" />
         <div className="absolute inset-x-0 top-[12%] text-center">
           <p className="text-[15px] font-medium text-white/85">{label}</p>
-          <p className="font-display-x mt-1.5 text-[clamp(40px,13vw,72px)] leading-none font-extrabold tracking-[-0.04em] text-white">{value}</p>
+          <p className="font-display-x mt-1.5 text-[clamp(40px,13vw,72px)] leading-none font-semibold tracking-[-0.018em] text-white">{value}</p>
         </div>
       </section>
     </>

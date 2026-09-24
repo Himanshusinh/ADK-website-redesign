@@ -90,7 +90,7 @@ export function UIProvider({ children }: { children: ReactNode }) {
           >
             <X className="size-5" />
           </button>
-          <h2 id="quote-title" className="font-display-x mb-[18px] pr-16 text-[clamp(24px,2.4vw,34px)] leading-none font-bold tracking-[-0.03em]">
+          <h2 id="quote-title" className="font-display-x mb-[18px] pr-16 text-[clamp(24px,2.4vw,34px)] leading-none font-semibold tracking-[-0.016em]">
             {quote.mode === 'catalogue' ? 'Catalogue Request Form…!' : 'Get Your Free Quote…!'}
           </h2>
           <div className="mb-8 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[13px] text-muted">

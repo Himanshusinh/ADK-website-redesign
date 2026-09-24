@@ -28,7 +28,7 @@ export function ProductView({ node, parents }: { node: Node; parents: Node[] }) 
         <div className="wrap relative grid items-center gap-[clamp(36px,5vw,90px)] lg:grid-cols-[1.15fr_1fr]">
           <ProductGallery imgs={node.imgs ?? [node.img]} name={node.name} />
           <div>
-            <Split as="h1" onLoad delay={0.15} className="font-display-x mb-6 text-[clamp(32px,3.6vw,56px)] leading-[0.98] font-extrabold tracking-[-0.045em]">
+            <Split as="h1" onLoad delay={0.15} className="font-display-x mb-6 text-[clamp(32px,3.6vw,56px)] leading-[0.98] font-semibold tracking-[-0.012em]">
               {node.name}
             </Split>
             {node.desc?.map((d) => (
@@ -55,7 +55,7 @@ export function ProductView({ node, parents }: { node: Node; parents: Node[] }) 
                 {node.highlights.map(([k, v], i) => (
                   <div key={k} className={clsx('py-5 pr-4', i > 0 && 'max-sm:border-t max-sm:border-line sm:border-l sm:border-line sm:pl-[18px]')}>
                     <dt className="mb-1.5 text-[13px] text-muted">{k}</dt>
-                    <dd className="font-display text-[clamp(16px,1.3vw,20px)] leading-tight font-bold tracking-[-0.02em]">{v}</dd>
+                    <dd className="font-display text-[clamp(16px,1.3vw,20px)] leading-tight font-semibold tracking-[-0.012em]">{v}</dd>
                   </div>
                 ))}
               </Reveal>

@@ -28,7 +28,7 @@ export function SwitcherBody({ items, name }: { items: NonNullable<Node['switche
         ))}
         <div aria-hidden className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0b0b0d] via-[#0b0b0d]/45 to-transparent" />
         <div key={i} className="animate-rise absolute inset-x-0 bottom-0 p-[clamp(18px,2.4vw,34px)]">
-          <h3 className="font-display-x text-[clamp(19px,1.9vw,28px)] leading-tight font-bold tracking-[-0.025em]">{items[i].title}</h3>
+          <h3 className="font-display-x text-[clamp(19px,1.9vw,28px)] leading-tight font-semibold tracking-[-0.014em]">{items[i].title}</h3>
           <p className="mt-2 max-w-[52ch] text-[15px] leading-relaxed text-white/70">{items[i].text}</p>
         </div>
       </div>

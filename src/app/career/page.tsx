@@ -31,7 +31,7 @@ export default function CareerPage() {
                   />
                 </LightboxTrigger>
                 <div className="flex items-center justify-between gap-4 px-6 py-[22px]">
-                  <h2 className="font-display text-[22px] leading-[1.15] font-bold tracking-[-0.02em]">{j.title}</h2>
+                  <h2 className="font-display text-[22px] leading-[1.15] font-semibold tracking-[-0.012em]">{j.title}</h2>
                   <a href={`mailto:${company.email}?subject=${encodeURIComponent(`Application: ${j.title}`)}`} className={btnClass('red', 'sm')}>
                     <BtnBody label="Apply now" size="sm" />
                   </a>

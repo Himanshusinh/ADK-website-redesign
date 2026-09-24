@@ -23,7 +23,7 @@ export function ProductCard({ item, i, total }: { item: ItemInfo; i: number; tot
         />
       </div>
       <div className="relative flex flex-1 flex-col gap-2.5 border-t border-line p-6 before:absolute before:inset-x-0 before:-top-px before:h-[3px] before:origin-left before:scale-x-0 before:bg-brand before:transition-transform before:duration-700 before:ease-expo group-hover:before:scale-x-100">
-        <h3 className="mb-2 font-display text-[clamp(18px,1.4vw,22px)] leading-[1.15] font-bold tracking-[-0.02em]">{item.name}</h3>
+        <h3 className="mb-2 font-display text-[clamp(18px,1.4vw,22px)] leading-[1.15] font-semibold tracking-[-0.012em]">{item.name}</h3>
         <div className="mt-auto flex items-center justify-between gap-3">
           {item.href ? <ArrowLabel>View details</ArrowLabel> : <span className="text-[13px] text-muted">Available on request</span>}
           <QuoteButton product={item.name} className={chipClass}>

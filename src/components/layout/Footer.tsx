@@ -22,7 +22,7 @@ export function Footer() {
     <footer className="theme-dark glow relative overflow-hidden pt-[clamp(64px,8vw,110px)] text-ink">
       <div className="wrap flex flex-wrap items-end justify-between gap-10 border-b border-line pb-[clamp(60px,7vw,100px)]">
         <div>
-          <Split className="font-display-x max-w-[14ch] text-[clamp(32px,4.2vw,64px)] leading-[1] font-extrabold tracking-[-0.04em]">
+          <Split className="font-display-x max-w-[15ch] text-[clamp(32px,4.2vw,64px)] leading-[1.06] font-semibold tracking-[-0.02em]">
             Your machine is your <em className="text-brand not-italic">capital.</em>
           </Split>
         </div>

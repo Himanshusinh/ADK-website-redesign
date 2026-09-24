@@ -38,7 +38,7 @@ export function Industries() {
               >
                 <span
                   className={clsx(
-                    'font-display-x text-[clamp(21px,2.3vw,36px)] leading-[1.08] font-bold tracking-[-0.025em] transition-[color,translate] duration-500 ease-expo',
+                    'font-display-x text-[clamp(21px,2.3vw,36px)] leading-[1.08] font-semibold tracking-[-0.014em] transition-[color,translate] duration-500 ease-expo',
                     i === active ? 'translate-x-2 text-ink' : 'text-ink/35 group-hover:text-ink',
                   )}
                 >

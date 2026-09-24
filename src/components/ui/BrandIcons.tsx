@@ -29,4 +29,10 @@ export const YouTubeIcon = (p: P) => (
   </svg>
 );
 
-export const socialIcons = { LinkedIn: LinkedInIcon, Instagram: InstagramIcon, YouTube: YouTubeIcon };
+export const XIcon = (p: P) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...p}>
+    <path d="M17.53 3h3.2l-6.99 7.99L22 21h-6.44l-5.05-6.6L4.74 21H1.53l7.48-8.55L1.3 3h6.6l4.56 6.03L17.53 3zm-1.12 16.08h1.77L7.68 4.82H5.78l10.63 14.26z" />
+  </svg>
+);
+
+export const socialIcons = { LinkedIn: LinkedInIcon, Instagram: InstagramIcon, YouTube: YouTubeIcon, X: XIcon };

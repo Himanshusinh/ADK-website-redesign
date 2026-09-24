@@ -15,7 +15,7 @@ export function ProductGallery({ imgs, name }: { imgs: string[]; name: string })
       <div className="relative aspect-[4/3] overflow-hidden rounded-[28px] bg-[radial-gradient(circle_at_50%_42%,#fff_0%,#e9e8e3_70%,#d8d6cf_100%)]">
         <span
           aria-hidden
-          className="font-display-x pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[clamp(120px,18vw,300px)] leading-none font-black tracking-[-0.06em] text-ink/[.045]"
+          className="font-display-x pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[clamp(120px,18vw,300px)] leading-none font-semibold tracking-[-0.06em] text-ink/[.045]"
         >
           ADK
         </span>

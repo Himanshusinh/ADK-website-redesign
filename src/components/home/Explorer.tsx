@@ -68,7 +68,7 @@ export function Explorer() {
           </div>
 
           <div key={l.slug} className="animate-rise">
-            <h3 className="font-display-x text-[clamp(26px,2.5vw,38px)] leading-[1.05] font-bold tracking-[-0.03em]">{l.name}</h3>
+            <h3 className="font-display-x text-[clamp(26px,2.5vw,38px)] leading-[1.05] font-semibold tracking-[-0.016em]">{l.name}</h3>
             {l.desc && <p className="lead mt-4 text-muted">{l.desc}</p>}
 
             {l.highlights && (
@@ -76,7 +76,7 @@ export function Explorer() {
                 {l.highlights.map(([k, v], n) => (
                   <div key={k} className={clsx('py-4 pr-3', n > 0 && 'border-l border-line pl-4')}>
                     <dt className="mb-1 text-[13px] text-muted">{k}</dt>
-                    <dd className="font-display text-[clamp(15px,1.2vw,18px)] leading-tight font-bold">{v}</dd>
+                    <dd className="font-display text-[clamp(15px,1.2vw,18px)] leading-tight font-semibold">{v}</dd>
                   </div>
                 ))}
               </dl>

@@ -66,7 +66,7 @@ export default function AboutPage() {
       >
         {timeline.map(([year, text]) => (
           <article key={year} data-hs-item data-on="true" className="group/tl relative w-[78vw] shrink-0 snap-start pr-[clamp(24px,3vw,50px)] min-[900px]:w-[clamp(280px,26vw,380px)]">
-            <span className="font-display-x block h-[140px] text-[clamp(56px,6vw,96px)] leading-none font-extrabold tracking-[-0.05em] text-transparent transition-colors duration-500 [-webkit-text-stroke:1.5px_rgba(255,255,255,.22)] group-hover/tl:text-ink group-data-[on=true]/tl:text-ink">
+            <span className="font-display-x block h-[140px] text-[clamp(56px,6vw,96px)] leading-none font-semibold tracking-[-0.05em] text-transparent transition-colors duration-500 [-webkit-text-stroke:1.5px_rgba(255,255,255,.22)] group-hover/tl:text-ink group-data-[on=true]/tl:text-ink">
               {year}
             </span>
             <span className="mt-[13px] mb-7 block size-3.5 rounded-full bg-[#0b0b0d] shadow-[0_0_0_2px_#e1252d] transition-[background-color,box-shadow] duration-500 group-hover/tl:bg-brand group-data-[on=true]/tl:bg-brand group-data-[on=true]/tl:shadow-[0_0_0_5px_rgba(225,37,45,.18)]" />
@@ -106,7 +106,7 @@ export default function AboutPage() {
             {about.support.map(([title, body], i) => (
               <details key={title} open={i === 0} className="group border-b border-line">
                 <summary className="grid cursor-pointer list-none grid-cols-[1fr_44px] items-center gap-2.5 py-[26px] [&::-webkit-details-marker]:hidden">
-                  <span className="font-display text-[clamp(17px,1.5vw,22px)] leading-tight font-semibold tracking-[-0.02em] transition-colors group-hover:text-brand">{title}</span>
+                  <span className="font-display text-[clamp(17px,1.5vw,22px)] leading-tight font-semibold tracking-[-0.012em] transition-colors group-hover:text-brand">{title}</span>
                   <span className="grid size-11 place-items-center rounded-full ring-1 ring-line transition-[rotate,background-color,color] duration-500 ease-expo group-open:rotate-45 group-open:bg-brand group-open:text-white group-open:ring-brand">
                     <Plus className="size-5" />
                   </span>

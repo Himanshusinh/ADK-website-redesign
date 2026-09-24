@@ -34,7 +34,7 @@ export default function ProductsPage() {
       <div className="wrap">
         <div className="mb-4 flex flex-wrap items-end justify-between gap-x-8 gap-y-1">
           <div>
-            <h1 className="font-display-x text-[clamp(26px,2.8vw,42px)] leading-[1.02] font-bold tracking-[-0.035em]">
+            <h1 className="font-display-x text-[clamp(26px,2.8vw,42px)] leading-[1.02] font-semibold tracking-[-0.018em]">
               Every ADK machine, on one screen
             </h1>
           </div>

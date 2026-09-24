@@ -54,7 +54,7 @@ export default function ContactPage() {
           <div className="mt-[50px] mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {company.departments.map((d, i) => (
               <Reveal key={d.title} data-spot delay={i * 0.06} className="spot grid content-start gap-3 rounded-[20px] p-7 ring-1 ring-line">
-                <h3 className="mb-2 font-display text-[19px] font-bold">{d.title}</h3>
+                <h3 className="mb-2 font-display text-[19px] font-semibold">{d.title}</h3>
                 {d.phones.map((p) => (
                   <a key={p} href={tel(p)} className="inline-flex items-center gap-2.5 font-mono text-[15px] text-ink/75 hover:text-ink">
                     <Phone className="size-4 text-brand" /> {p}

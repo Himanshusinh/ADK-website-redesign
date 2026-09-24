@@ -15,7 +15,7 @@ export function CinemaHero({ node }: { node: Node }) {
   return (
     <section className="theme-dark glow aura relative isolate overflow-hidden pt-[calc(var(--hdr)+clamp(28px,5vh,56px))] text-ink">
       <div className="wrap relative text-center">
-        <Split as="h1" onLoad delay={0.1} className="font-display-x text-[clamp(34px,4.2vw,64px)] leading-[1] font-extrabold tracking-[-0.04em]">
+        <Split as="h1" onLoad delay={0.1} className="font-display-x text-[clamp(34px,4.2vw,64px)] leading-[1] font-semibold tracking-[-0.018em]">
           {node.name}
         </Split>
         {node.desc?.[0] && (
@@ -70,7 +70,7 @@ export function CinemaHero({ node }: { node: Node }) {
               delay={i * 0.06}
               className={clsx('py-[clamp(22px,3vw,36px)] pr-4', i % 2 && 'max-md:border-l max-md:border-line max-md:pl-5', i > 0 && 'md:border-l md:border-line md:pl-7', i > 1 && 'max-md:border-t max-md:border-line')}
             >
-              <dd className="font-display-x text-[clamp(20px,2vw,30px)] leading-tight font-bold tracking-[-0.03em]">{v}</dd>
+              <dd className="font-display-x text-[clamp(20px,2vw,30px)] leading-tight font-semibold tracking-[-0.016em]">{v}</dd>
               <dt className="mt-1.5 text-[13.5px] text-muted">{k}</dt>
             </Reveal>
           ))}
@@ -89,7 +89,7 @@ export function CinemaHero({ node }: { node: Node }) {
 function Stat({ value, unit, label, onImage }: { value: string; unit: string; label: string; onImage?: boolean }) {
   return (
     <div className="min-w-0">
-      <p className={clsx('font-display-x leading-none font-semibold tracking-[-0.03em]', onImage ? 'text-[clamp(26px,2.6vw,40px)] text-white' : 'text-[clamp(26px,3vw,44px)]')}>
+      <p className={clsx('font-display-x leading-none font-semibold tracking-[-0.016em]', onImage ? 'text-[clamp(26px,2.6vw,40px)] text-white' : 'text-[clamp(26px,3vw,44px)]')}>
         <Counter value={Number(value)} decimals={value.includes('.') ? 1 : 0} />
         <span className="ml-0.5 text-[0.5em] font-semibold text-brand">{unit}</span>
       </p>
@@ -120,7 +120,7 @@ export function Features({ node }: { node: Node }) {
             <section className="sec bg-[#0b0b0d] text-white">
               <div className="wrap">
                 <div className="mx-auto mb-[clamp(24px,3.5vw,44px)] max-w-[820px] text-center">
-                  <Split className="font-display-x text-[clamp(25px,3vw,46px)] leading-[1.06] font-semibold tracking-[-0.03em]">{f.title}</Split>
+                  <Split className="font-display-x text-[clamp(25px,3vw,46px)] leading-[1.06] font-semibold tracking-[-0.016em]">{f.title}</Split>
                   {f.text && (
                     <Reveal as="p" className="mt-4 text-[clamp(15px,1.25vw,19px)] leading-relaxed font-medium text-white/80">
                       {f.text}
@@ -148,7 +148,7 @@ export function Features({ node }: { node: Node }) {
               <div className="absolute inset-x-0 bottom-0 px-[clamp(18px,4vw,64px)] pb-[clamp(30px,5vw,72px)]">
                 <div className={clsx('mx-auto w-full max-w-[1480px]', i % 2 ? 'lg:flex lg:justify-end lg:text-right' : '')}>
                   <div className="max-w-[46ch]">
-                    <Split className="font-display-x text-[clamp(26px,3.4vw,52px)] leading-[1.05] font-semibold tracking-[-0.03em] text-white">{f.title}</Split>
+                    <Split className="font-display-x text-[clamp(26px,3.4vw,52px)] leading-[1.05] font-semibold tracking-[-0.016em] text-white">{f.title}</Split>
                     {f.text && (
                       <Reveal as="p" className="mt-4 text-[clamp(15px,1.25vw,19px)] leading-relaxed font-medium text-white/85">
                         {f.text}

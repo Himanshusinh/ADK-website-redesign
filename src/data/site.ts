@@ -72,9 +72,11 @@ export const company = {
   logo: '/brand/adk-logo.png',
   catalogue: '/pdf/ADK-CATALOGUE.pdf',
   socials: [
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/ankit-patel-1a4687250/' },
+    // public company page — the /admin/dashboard/ URL only works for page admins
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/85646806/' },
     { name: 'Instagram', href: 'https://www.instagram.com/adk_eng/' },
     { name: 'YouTube', href: 'https://www.youtube.com/@ADKEngineeringSolutions2015' },
+    { name: 'X', href: 'https://x.com/adk_engineering' },
   ],
   departments: [
     { title: 'For Inquiry', phones: ['+91 63526 44186'], email: 'inquiry1@adkeng.com' },

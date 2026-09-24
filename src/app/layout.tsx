@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Archivo, Inter } from 'next/font/google';
+import { Inter, Manrope } from 'next/font/google';
 import './globals.css';
 import { SmoothScroll } from '@/components/motion/SmoothScroll';
 import { UIProvider } from '@/components/layout/UI';
@@ -9,7 +9,7 @@ import { Dock } from '@/components/layout/Dock';
 import { Effects } from '@/components/layout/Effects';
 import { company } from '@/data/site';
 
-const archivo = Archivo({ subsets: ['latin'], variable: '--font-archivo', axes: ['wdth'], display: 'swap' });
+const display = Manrope({ subsets: ['latin'], variable: '--font-manrope', display: 'swap' });
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 
 const description =
@@ -36,7 +36,7 @@ export const viewport: Viewport = { themeColor: '#ffffff' };
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="en" className={`${archivo.variable} ${inter.variable}`}>
+    <html lang="en" className={`${display.variable} ${inter.variable}`}>
       <body>
         <UIProvider>
           <SmoothScroll />

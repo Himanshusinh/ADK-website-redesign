@@ -243,7 +243,7 @@ export function Header() {
   );
 }
 
-const mLink = 'flex w-full items-center justify-between py-3.5 font-display text-[clamp(24px,6vw,36px)] leading-[1.1] font-bold tracking-[-0.03em]';
+const mLink = 'flex w-full items-center justify-between py-3.5 font-display text-[clamp(24px,6vw,36px)] leading-[1.1] font-semibold tracking-[-0.016em]';
 const MRow = ({ children }: { children: React.ReactNode }) => <div className="overflow-hidden border-b border-line">{children}</div>;
 
 function MegaMenu({ open, cat, setCat }: { open: boolean; cat: number; setCat: (i: number) => void }) {
