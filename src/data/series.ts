@@ -4,7 +4,323 @@
 import type { Node } from './site';
 
 export const seriesExtras: Record<string, Partial<Node>> = {
+  'tf-series': {
+    apps: ['Office Furniture', 'Fitness Equipment', 'Hardware & Sanitary Ware', 'Guardrail Industries', 'Piping Industries'],
+    sheetOnRequest: false,
+    heroImg: '/images/series/tf-series/hero.jpg',
+    features: [
+      {
+        title: 'Front Chuck Offset Stable Cutting',
+        text: 'With front chuck offset, ultra-short remnant processing can be achieved for tubes of any length. The final cut is performed with dual-chuck clamping, ensuring more stable cutting.',
+        img: '/images/series/tf-series/f1.jpg',
+        ratio: 2.021,
+      },
+      {
+        title: 'Ultra-Short Remnant Challenging Zero Waste',
+        text: 'The minimum remnant length can be as low as 30 mm. An optional servo-driven auxiliary gripper enables zero-remnant cutting.',
+        img: '/images/series/tf-series/f2.jpg',
+        ratio: 2.021,
+      },
+      {
+        title: '90° Side-Mounted Machine Bed Stable and Convenient',
+        text: 'Lowering the center of gravity of the machine bed results in more stable cutting, more convenient loading and unloading, and easier operation and maintenance.',
+        img: '/images/series/tf-series/f3.jpg',
+        ratio: 2.021,
+      },
+      {
+        title: 'Efficiency Leap Always One Step Ahead',
+        text: 'With a maximum chuck rotation speed of 200 r/min, production capacity is doubled, significantly shortening delivery lead times for customers.',
+        img: '/images/series/tf-series/f4.jpg',
+        ratio: 2.021,
+      },
+    ],
+    tables: [
+      {
+        title: 'Technical Parameters',
+        head: ['Model', '6012TF', '6016TF'],
+        rows: [
+          ['Laser Power', '1500W/3000W/6000W', '1500W/3000W/6000W'],
+          ['Clamping range', 'Φ10-120mm；□10X10-120X120mm', 'Φ10-160mm；□10X10-160X160mm'],
+          ['Maximum rotating speed', '200m/min', '140m/min'],
+          ['Effective cutting length of pipe', '6500mm', '6500mm'],
+          ['Single pipe load-bearing', '80KG', '80KG'],
+          ['Chuck Structure', '120 Pneumatic Chuck', '160 Pneumatic Chuck'],
+        ],
+      },
+    ],
+  },
+  't2-series': {
+    apps: ['Medical Machinery', 'Pipeline Industry', 'Guardrail Industry', 'Office Furniture', 'Fitness Equipment'],
+    sheetOnRequest: false,
+    heroImg: '/images/series/t2-series/hero.jpg',
+    features: [
+      {
+        title: 'Professional Pneumatic Chuck',
+        text: 'Precision pneumatic chuck, four-jaw automatic centering clamping, stable clamping without damaging the workpiece.',
+        img: '/images/series/t2-series/f1.jpg',
+        ratio: 2.248,
+      },
+      {
+        title: 'Modular Design',
+        text: 'Can be freely matched with fully automatic loading machines, semi-automatic loading machines,bevel cutting heads,and other optional modules to meet diverse usage scenarios',
+        img: '/images/series/t2-series/f2.jpg',
+        ratio: 2.949,
+      },
+      {
+        title: 'Universal for Various Pipes',
+        text: 'Capable of cutting round pipes, square pipes, rectangular pipes, channel steel, angle steel, I-beams, and other profiled steel.',
+        img: '/images/series/t2-series/f3.jpg',
+        ratio: 1.968,
+      },
+    ],
+    samples: ['/images/series/t2-series/sample1.jpg'],
+    tables: [
+      {
+        title: 'Technical Parameters',
+        head: ['Model', 'GKS-6024T2', 'GKS-6036T2'],
+        rows: [
+          ['(Optional) Laser power', '3000W/4000W/6000W', '3000W/6000W'],
+          ['Clamping range', 'Round pipe Φ20-240mm Square pipe 口20-240mm I-beams 10#-22#', 'Round pipe Φ20-350mm Square pipe 口20-250mm I-beams 10#-22#'],
+          ['r/min Maximum rotating speed', '100', '60'],
+          ['Effective cutting length of pipe', '6500mm', '6500mm'],
+          ['Single pipe load-bearing', '300KG', '500KG'],
+          ['Pneumatic Chuck Chuck structure', '240', '360'],
+        ],
+      },
+    ],
+  },
+  't3-series': {
+    apps: ['Construction Machinery', 'Steel Structure Construction', 'Heavy Machinery', 'Bridge Engineering', 'Oil Pipelines', 'Greenhouse Structures'],
+    sheetOnRequest: false,
+    heroImg: '/images/series/t3-series/hero.jpg',
+    features: [
+      {
+        title: 'Three-chuck full stroke for more stable cutting',
+        text: 'The three chucks are all positioned on the left side of the cutting head to jointly clamp the pipe, preventing sagging and bending of thin-walled pipes in the middle and ensuring high machining accuracy.',
+        img: '/images/series/t3-series/f1.jpg',
+        ratio: 2.259,
+      },
+      {
+        title: 'Side-hung bed frame with high-low rail layout',
+        text: 'The side-hung machine bed lowers the center of gravity for easier loading. The high-low rail arrangement ensures more reasonable.',
+        img: '/images/series/t3-series/f2.jpg',
+        ratio: 2.0,
+      },
+      {
+        title: 'Independent servo- driven support',
+        text: 'At the loading and unloading end supports the pipe in both vertical and horizontal directionssimultaneously, ensuring a secure grip on slender pipes.',
+        img: '/images/series/t3-series/f3.jpg',
+        ratio: 2.37,
+      },
+      {
+        title: '350 pneumatic chuck, zero tailings cutting',
+        text: 'Heavy-duty pneumatic chuck ensures stable and non-damaging clamping of workpieces, achieving zero tailings cutting through the movement of three chucks.',
+        img: '/images/series/t3-series/f4.jpg',
+        ratio: 2.37,
+      },
+    ],
+    samples: ['/images/series/t3-series/sample1.jpg'],
+    tables: [
+      {
+        title: 'Technical Parameters',
+        head: ['Model', '12050T3', '12065T3', '36T3'],
+        rows: [
+          ['Laser power', '6000W-30000W', '6000W-30000W', '3000W-12000W'],
+          ['Clamping range', 'Round pipe Φ40-500mm Square pipe 口40-500mm', 'Round pipe Φ50-600mm Square pipe 口50-600mm', 'Round pipe Φ30-350mm Square pipe 口30-350mm'],
+          ['r/min Maximum rotating speed', '30', '30', '60'],
+          ['Effective cutting length of pipe', '6500mm', '12500mm', '6500mm/9500mm/12500mm'],
+          ['Single pipe load-bearing', '2000KG', '3000KG', '1200KG'],
+          ['Pneumatic Chuck Chuck structure', '520', '650', '360'],
+        ],
+      },
+    ],
+  },
+  't4-series': {
+    sheetOnRequest: false,
+    heroImg: '/images/series/t4-series/hero.webp',
+    features: [
+      {
+        title: 'Dual Procedure in Parallel',
+        text: 'It ensures unloading for the last round or loading for the next round, while carrying out pipe cutting. Seamless collaboration, remarkable efficiency.',
+        img: '/images/series/t4-series/f1.webp',
+        ratio: 2.37,
+      },
+      {
+        title: 'Intelligent Full-mobility Chucks',
+        text: 'Flexible & Diverse combinations for automatic switch between 3+1, 2+2, and 1+3 modes to adapt to various working conditions, solving the problems of bending and deformation in extra-long heavy pipe processing.',
+        img: '/images/series/t4-series/f2.webp',
+        ratio: 2.954,
+      },
+      {
+        title: '500 Heavy-duty Chucks, Cut with Zero Tailing',
+        text: '500 heavy-duty pneumatic chucks, process round tubes with a diameter of 50 - 500mm and square tubes with a side length of 50x50 - 350x350mm. The Four-chuck flexible system achieves true tailing-free cutting.',
+        img: '/images/series/t4-series/f3.webp',
+        ratio: 2.373,
+      },
+      {
+        title: 'Full Pipe Processing, Superior Load-bearing Capacity',
+        text: 'Supports up to 2000kg single heavy tube and 12m long tube loading, cutting, unloading.',
+        img: '/images/series/t4-series/f4.webp',
+        ratio: 2.37,
+      },
+    ],
+    samples: ['/images/series/t4-series/sample1.webp'],
+    tables: [
+      {
+        title: 'Technical Parameters',
+        head: ['Machine model', '12050T4'],
+        rows: [
+          ['Laser power', '6000W-20000W'],
+          ['Clamping range', 'Round tube (φ50-φ500mm) Square tube (□50X50-□350X350mm)'],
+          ['Max. rotation rate', '30r/min (decreases with increased weight of the pipes)'],
+          ['Effective cutting length', '12500mm'],
+          ['Single pipe load-bearing', '2000KG'],
+          ['Chuck structure', '500 Pneumatic Chuck'],
+        ],
+      },
+    ],
+  },
+  'tm-ii-series': {
+    apps: ['Office Furniture', 'Medical Devices', 'Fitness Equipment', 'Hardware & Sanitary Ware', 'Guardrail Industries', 'Piping Industries'],
+    sheetOnRequest: false,
+    heroImg: '/images/series/tm-ii-series/hero.jpg',
+    features: [
+      {
+        title: 'Ultra-Short Remnant – Maximum Material Saving',
+        text: 'The minimum remnant length can be as low as 30 mm, delivering real material savings and further increasing profit.',
+        img: '/images/series/tm-ii-series/f1.jpg',
+        ratio: 2.02,
+      },
+      {
+        title: 'Front Chuck Offset – Stable Cutting',
+        text: 'The front chuck offset enables ultra-short remnant processing for tubes of any length. The final cut is performed with dual-chuck clamping, ensuring more stable cutting.',
+        img: '/images/series/tm-ii-series/f2.jpg',
+        ratio: 2.08,
+      },
+      {
+        title: '90° Side-Mounted Machine Bed – Stable and Convenient',
+        text: 'Lowering the center of gravity of the machine bed ensures more stable cutting, more convenient loading and unloading, and easier operation and maintenance.',
+        img: '/images/series/tm-ii-series/f3.jpg',
+        ratio: 1.922,
+      },
+      {
+        title: 'Efficiency Leap – Always One Step Ahead',
+        text: 'With a maximum chuck rotation speed of 200 r/min, production capacity is doubled, significantly shortening delivery lead times for customers.',
+        img: '/images/series/tm-ii-series/f4.jpg',
+        ratio: 1.778,
+      },
+    ],
+    tables: [
+      {
+        title: 'Technical Parameters',
+        head: ['Model', '6012TM II', '6016TM II'],
+        rows: [
+          ['Laser power', '1500W/3000W/6000W', '1500W/3000W/6000W'],
+          ['Clamping range', 'Φ10-Φ120mm □10X10-□120X120mm', 'Φ10-Φ160mm □10X10-□160X160mm'],
+          ['r/min Maximum rotating speed', '200', '140'],
+          ['Effective cutting length of pipe', '6500mm', '6500mm'],
+          ['Single pipe load-bearing', '80KG', '80KG'],
+          ['Pneumatic Chuck Chuck Structure', '120', '160'],
+        ],
+      },
+    ],
+  },
+  'tg-e-series': {
+    apps: ['Office Furniture', 'Medical Devices', 'Fitness Equipment', 'Hardware & Sanitary Ware', 'Guardrail Industries', 'Piping Industries'],
+    sheetOnRequest: false,
+    heroImg: '/images/series/tg-e-series/hero.jpg',
+    features: [
+      {
+        title: 'Front Chuck Offset – Stable Cutting',
+        text: 'The front chuck offset enables ultra-short remnant processing for tubes of any length. The final cut is performed with dual-chuck clamping, ensuring more stable cutting.',
+        img: '/images/series/tg-e-series/f1.jpg',
+        ratio: 2.131,
+      },
+      {
+        title: 'Ultra-Short Remnant Maximum Material Saving',
+        text: 'The minimum remnant length can be as low as 30mm, Delivering real material savings and further increasing profit.',
+        img: '/images/series/tg-e-series/f2.jpg',
+        ratio: 2.261,
+      },
+      {
+        title: 'Highly Integrated – Space Saving',
+        text: 'The electrical cabinet, laser source, and pneumatic system are integrated into the machine bed, reducing the footprint by 30% for easier transportation and high cost-effectiveness.',
+        img: '/images/series/tg-e-series/f3.jpg',
+        ratio: 1.922,
+      },
+      {
+        title: 'Bus System – Powerful Functions',
+        text: 'The intelligent bus system is easy to operate and convenient to deploy, supporting multiple functions such as flying cutting and drawing-free operation.',
+        img: '/images/series/tg-e-series/f4.jpg',
+        ratio: 2.278,
+      },
+    ],
+    tables: [
+      {
+        title: 'Technical Parameters',
+        head: ['Model', 'GKS-6012TG', 'GKS-6016TG'],
+        rows: [
+          ['Laser power', '1500W/3000W', '1500W/3000W'],
+          ['Clamping range', 'Φ10-Φ120mm □10X10-□120X120mm', 'Φ10-Φ160mm □10X10-□160X160mm'],
+          ['r/min Maximum rotating speed', '140', '140'],
+          ['Effective cutting length of pipe', '6500mm', '6500mm'],
+          ['Max. Load Capacity per Pipe', '80KG', '80KG'],
+          ['Pneumatic Chuck High-Performance Chuck Design', '120', '160'],
+        ],
+      },
+    ],
+  },
+  'cpl-series': {
+    apps: ['Automotive Manufacturing', 'Office Furniture', 'Electrical Industry', 'Chassis Cabinets', 'Elevator Manufacturing', 'Kitchenware', 'Decorative Curtain Walls', 'Machinery Manufacturing', 'Mold Industry', 'Rail Transportation', 'Medical Equipment'],
+    sheetOnRequest: false,
+    heroImg: '/images/series/cpl-series/hero.jpg',
+    features: [
+      {
+        title: 'Flexible and Efficient',
+        text: 'Through intelligent control, different products can be produced by importing processing drawings, meeting the batch production needs of different shapes and variable workpieces.',
+        img: '/images/series/cpl-series/f1.jpg',
+        ratio: 2.37,
+        layout: 'split',
+      },
+      {
+        title: 'Highly automated',
+        text: 'Unwinding, leveling, cutting, intelligent and automated material handling, continuous operation, reducing manual dependency.',
+        img: '/images/series/cpl-series/f2.jpg',
+        ratio: 2.37,
+      },
+      {
+        title: 'Continuous Operation',
+        text: 'The coil material conveying equipment continuously transports materials, with synchronous feeding and unloading, seamless cutting connections, further enhancing efficiency.',
+        img: '/images/series/cpl-series/f3.jpg',
+        ratio: 2.37,
+        layout: 'split',
+      },
+    ],
+    tables: [
+      {
+        title: 'Technical Parameters',
+        head: ['Machine model', 'GKS-CPL3015B', 'GKS-CPLS6015B'],
+        rows: [
+          ['Laser power', '1000W-6000W', '1000W-6000W'],
+          ['Working area', '3000*1500mm', '6000*1500mm'],
+          ['Coiled material inner diameter', 'Φ508mm - Φ610mm', 'Φ508mm - Φ610mm'],
+          ['Coiled material width', '500-1500mm', '500-1500mm'],
+          ['Coiled material thickness', '0.8~3mm(carbon steel) 0.8~2mm(stainless steel)', '0.8~3mm(carbon steel) 0.8~2mm(stainless steel)'],
+          ['Maximum outer diameter of coiled material', 'Φ1500mm', 'Φ1500mm'],
+          ['Minimum outer diameter of coiled material', 'Φ800mm', 'Φ800mm'],
+          ['Maximum material weight', '10 T', '10 T'],
+          ['Feeding speed', '0-20m/min', '0-20m/min'],
+          ['X/Y axis positioning accuracy', '±0.05mm/m', '±0.05mm/m'],
+          ['X/Y axis repeat positioning accuracy', '±0.03mm', '±0.03mm'],
+          ['X/Y axis maximum acceleration', '1.0G', '1.0G'],
+          ['X/Y axis maximum moving speed', '120m/min', '120m/min'],
+          ['Dimension', '15500*6000*2550m', '16000*4000*2100mm'],
+        ],
+      },
+    ],
+  },
   'gv-series': {
+    apps: ['Electrical Cabinets & Enclosures', 'Construction Machinery', 'Sheet Metal Fabrication', 'Automotive Manufacturing', 'Elevator Manufacturing', 'Kitchenware & Cabinetry'],
     sheetOnRequest: false,
     heroImg: '/images/series/gv-series/hero.jpg',
     heroVideo: '/video/gv-hero.mp4',
@@ -90,24 +406,6 @@ export const seriesExtras: Record<string, Partial<Node>> = {
       },
     ],
   },
-  'ln-ii-series': {
-    sheetOnRequest: false,
-    tables: [
-      {
-        title: 'Technical Parameters',
-        head: ['Machine model', 'LF3015L'],
-        rows: [
-          ['Laser power', '500W 750W 1000W 2000W 3000W(Optional)'],
-          ['Dimensions', '4440* 2500*1860mm'],
-          ['Working area', '3000mm x 1500mm'],
-          ['Repeat positioning accuracy', '±0.02mm'],
-          ['Maximum speed', '80m/min'],
-          ['Max. acceleration', '1.0G'],
-          ['Specified voltage and frequency', '380V 50Hz/60Hz/60A'],
-        ],
-      },
-    ],
-  },
   'ln-series': {
     sheetOnRequest: false,
     // ADK's own render, composited onto a dark studio stage (machine.webp + backdrop)
@@ -154,24 +452,6 @@ export const seriesExtras: Record<string, Partial<Node>> = {
           ['X/y axis positioning accuracy', '±0.05mm', '±0.05mm', '±0.05mm'],
           ['X/y axis repeat positioning accuracy', '±0.03mm', '±0.03mm', '±0.03mm'],
           ['Power rated voltage and freguency', '380V 50HZ/60HZ', '380V 50HZ/60HZ', '380V 50HZ/60HZ'],
-        ],
-      },
-    ],
-  },
-  'ga-pro-series': {
-    sheetOnRequest: false,
-    heroImg: '/images/series/ga-pro-series/hero.webp',
-    tables: [
-      {
-        title: 'Technical Parameters',
-        head: ['Machine Model', 'GA III Series'],
-        rows: [
-          ['Laser Power', '3000W / 6000W / 12000W'],
-          ['Working Area', '6050 × 2530 / 4050 × 2030 / 3050 × 1500mm'],
-          ['X/Y Axis Positioning Accuracy', '±0.03mm'],
-          ['X/Y Axis Repeat Positioning Accuracy', '±0.02mm'],
-          ['Maximum Running Speed', '120m/min'],
-          ['Maximum Acceleration', '1.5G'],
         ],
       },
     ],
@@ -263,6 +543,7 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     ],
   },
   'sl-series': {
+    apps: ['Agricultural Machinery', 'Steel Structures', 'Tower Industry', 'Shipbuilding', 'Mining Machinery', 'Sheet Metal Processing', 'Mechanical Equipment', 'Construction Machinery'],
     sheetOnRequest: false,
     heroImg: '/images/series/sl-series/hero.jpg',
     features: [
@@ -303,193 +584,8 @@ export const seriesExtras: Record<string, Partial<Node>> = {
       },
     ],
   },
-  'mb-series': {
-    sheetOnRequest: false,
-    tables: [
-      {
-        title: 'Technical Parameters',
-        head: ['Machine model', 'LF3015MB'],
-        rows: [
-          ['Laser power', '3000W'],
-          ['Working area', '3000*1500mm'],
-          ['Dimensions', '23125*7192*2555mm'],
-          ['Repeat positioning accuracy', '±0.03mm'],
-          ['Maximum speed', '100m/min'],
-          ['Max. acceleration', '1.5G'],
-          ['Voltage and frequency', '380V 50Hz/60Hz'],
-        ],
-      },
-    ],
-  },
-  't2-series': {
-    sheetOnRequest: false,
-    heroImg: '/images/series/t2-series/hero.jpg',
-    features: [
-      {
-        title: 'Professional Pneumatic Chuck',
-        text: 'Precision pneumatic chuck, four-jaw automatic centering clamping, stable clamping without damaging the workpiece.',
-        img: '/images/series/t2-series/f1.jpg',
-        ratio: 2.248,
-      },
-      {
-        title: 'Higher Efficiency',
-        text: 'Maximum chuck speed of 150r/min, providing higher profitability',
-        img: '/images/series/t2-series/f2.jpg',
-        ratio: 2.656,
-      },
-      {
-        title: 'Universal for Various Pipes',
-        text: 'Capable of cutting round pipes, square pipes, rectangular pipes, channel steel, angle steel, I-beams, and other profiled steel.',
-        img: '/images/series/t2-series/f3.jpg',
-        ratio: 1.75,
-      },
-    ],
-    samples: ['/images/series/t2-series/sample1.jpg'],
-    tables: [
-      {
-        title: 'Technical Parameters',
-        head: ['Model', 'GKS-6012T2', 'GKS-6016T2', 'GKS-9016T2'],
-        rows: [
-          ['Laser power', '1500W-3000W', '1500W-3000W', '1500W-3000W'],
-          ['Clamping range', 'Round pipe Φ10-120mm Square pipe 口10-120mm', 'Round pipe Φ10-160mm Square pipe 口10-160mm', 'Round pipe Φ10-160mm Square pipe 口10-160mm'],
-          ['r/min Maximum rotating speed', '200', '140', '140'],
-          ['Effective cutting length of pipe', '6500mm', '6500mm', '9500mm'],
-          ['Single pipe load-bearing', '80KG', '80KG', '80KG'],
-          ['Pneumatic Chuck Chuck structure', '120', '160', '160'],
-        ],
-      },
-    ],
-  },
-  't3-series': {
-    sheetOnRequest: false,
-    heroImg: '/images/series/t3-series/hero.jpg',
-    features: [
-      {
-        title: 'Three-chuck full stroke for more stable cutting',
-        text: 'The three chucks are all positioned on the left side of the cutting head to jointly clamp the pipe, preventing sagging and bending of thin-walled pipes in the middle and ensuring high machining accuracy.',
-        img: '/images/series/t3-series/f1.jpg',
-        ratio: 2.259,
-      },
-      {
-        title: 'Side-hung bed frame with high-low rail layout',
-        text: 'The side-hung machine bed lowers the center of gravity for easier loading. The high-low rail arrangement ensures more reasonable.',
-        img: '/images/series/t3-series/f2.jpg',
-        ratio: 2.0,
-      },
-      {
-        title: 'Independent servo- driven support',
-        text: 'Independent servo-driven support at the loading and unloading end supports the pipe in both vertical and horizontal directionssimultaneously, ensuring a secure grip on slender pipes.',
-        img: '/images/series/t3-series/f3.jpg',
-        ratio: 2.37,
-      },
-      {
-        title: '350 pneumatic chuck, zero tailings cutting',
-        text: 'Heavy-duty pneumatic chuck ensures stable and non-damaging clamping of workpieces, achieving zero tailings cutting through the movement of three chucks.',
-        img: '/images/series/t3-series/f4.jpg',
-        ratio: 2.37,
-      },
-    ],
-    samples: ['/images/series/t3-series/sample1.jpg'],
-    tables: [
-      {
-        title: 'Technical Parameters',
-        head: ['Model', '12050T3', '12065T3', '36T3'],
-        rows: [
-          ['Laser power', '6000W-30000W', '6000W-30000W', '3000W-12000W'],
-          ['Clamping range', 'Round pipe Φ40-500mm Square pipe 口40-500mm', 'Round pipe Φ50-600mm Square pipe 口50-600mm', 'Round pipe Φ30-350mm Square pipe 口30-350mm'],
-          ['r/min Maximum rotating speed', '30', '30', '60'],
-          ['Effective cutting length of pipe', '6500mm', '12500mm', '6500mm/9500mm/12500mm'],
-          ['Single pipe load-bearing', '2000KG', '3000KG', '1200KG'],
-          ['Pneumatic Chuck Chuck structure', '520', '650', '360'],
-        ],
-      },
-    ],
-  },
-  't4-series': {
-    sheetOnRequest: false,
-    heroImg: '/images/series/t4-series/hero.webp',
-    features: [
-      {
-        title: 'Dual Procedure in Parallel',
-        text: 'It ensures unloading for the last round or loading for the next round, while carrying out pipe cutting. Seamless collaboration, remarkable efficiency.',
-        img: '/images/series/t4-series/f1.webp',
-        ratio: 2.37,
-      },
-      {
-        title: 'Intelligent Full-mobility Chucks',
-        text: 'Flexible & Diverse combinations for automatic switch between 3+1, 2+2, and 1+3 modes to adapt to various working conditions, solving the problems of bending and deformation in extra-long heavy pipe processing.',
-        img: '/images/series/t4-series/f2.webp',
-        ratio: 2.954,
-      },
-      {
-        title: '500 Heavy-duty Chucks, Cut with Zero Tailing',
-        text: '500 heavy-duty pneumatic chucks, process round tubes with a diameter of 50 - 500mm and square tubes with a side length of 50x50 - 350x350mm. The Four-chuck flexible system achieves true tailing-free cutting.',
-        img: '/images/series/t4-series/f3.webp',
-        ratio: 2.373,
-      },
-      {
-        title: 'Full Pipe Processing, Superior Load-bearing Capacity',
-        text: 'Supports up to 2000kg single heavy tube and 12m long tube loading, cutting, unloading.',
-        img: '/images/series/t4-series/f4.webp',
-        ratio: 2.37,
-      },
-    ],
-    samples: ['/images/series/t4-series/sample1.webp'],
-    tables: [
-      {
-        title: 'Technical Parameters',
-        head: ['Machine model', '12050T4'],
-        rows: [
-          ['Laser power', '6000W-20000W'],
-          ['Clamping range', 'Round tube (φ50-φ500mm) Square tube (□50X50-□350X350mm)'],
-          ['Max. rotation rate', '30r/min (decreases with increased weight of the pipes)'],
-          ['Effective cutting length', '12500mm'],
-          ['Single pipe load-bearing', '2000KG'],
-          ['Chuck structure', '500 Pneumatic Chuck'],
-        ],
-      },
-    ],
-  },
-  'tg-e-series': {
-    sheetOnRequest: false,
-    heroImg: '/images/series/tg-e-series/hero.jpg',
-    features: [
-      {
-        title: 'Front over-positioning cutting',
-        text: 'The front over-positioning cutting process solves the problem of the last workpiece being unable to be cut due to the downward pressure on the material caused by single-chuck clamping, ensuring more stable cutting.',
-        img: '/images/series/tg-e-series/f1.jpg',
-        ratio: 2.291,
-      },
-      {
-        title: 'Modular Design',
-        text: 'Can be freely matched with unloading racks, fully automatic loading machines, semi-automatic loading machines, bevel cutting heads, and other optional modules to meet diverse customer usage scenarios.',
-        img: '/images/series/tg-e-series/f2.jpg',
-        ratio: 2.819,
-      },
-      {
-        title: 'Universal for Various Pipes',
-        text: 'Capable of cutting round pipes, square pipes, rectangular pipes, and most irregularly shaped pipes, including oval pipes.',
-        img: '/images/series/tg-e-series/f3.jpg',
-        ratio: 1.968,
-      },
-    ],
-    samples: ['/images/series/tg-e-series/sample1.jpg'],
-    tables: [
-      {
-        title: 'Technical Parameters',
-        head: ['Model', 'GKS-6024TG', 'GKS-9024TG'],
-        rows: [
-          ['(Optional) Laser power', '1500W-6000W', '1500W-6000W'],
-          ['Clamping range', 'Round pipe Φ20-240mm Square pipe 口20-240mm', 'Round pipe Φ20-240mm Square pipe 口20-240mm'],
-          ['Maximum rotating speed', '100r/min', '100r/min'],
-          ['Effective cutting length of pipe', '6500mm', '9500mm'],
-          ['Single pipe load-bearing', '300KG', '300KG'],
-          ['Pneumatic Chuck Chuck structure', '240 Pneumatic Chuck/ 280', '240 Pneumatic Chuck/ 280'],
-        ],
-      },
-    ],
-  },
   'lnr-series': {
+    apps: ['Elevator Manufacturing', 'Automobile Manufacturing', 'Engineering Machinery', 'Fitness Equipment', 'Oil Pipelines', 'Sheet Metal Processing'],
     sheetOnRequest: false,
     heroImg: '/images/series/lnr-series/hero.jpg',
     features: [
@@ -530,6 +626,7 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     ],
   },
   'gar-series': {
+    apps: ['Elevator Manufacturing', 'Automobile Manufacturing', 'Engineering Machinery', 'Fitness Equipment', 'Oil Pipelines', 'Sheet Metal Processing'],
     sheetOnRequest: false,
     heroImg: '/images/series/gar-series/hero.jpg',
     features: [
@@ -602,6 +699,7 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     ],
   },
   'm3015g-series': {
+    apps: ['Automotive Manufacturing', 'Aerospace', 'Prototype Mold Making', 'Rail Transportation', 'Engineering Machinery'],
     sheetOnRequest: false,
     heroImg: '/images/series/m3015g-series/hero.jpg',
     features: [

@@ -106,13 +106,16 @@ export const stats = [
   { value: 50, suffix: '+', label: 'Team' },
 ];
 
+/** bump when a photo is replaced under the same filename — busts optimizer/CDN caches */
+export const IMG_V = '?v=3';
+
 export const industries = [
-  { name: 'Aerospace', img: '/images/home-page/industries-we-serve/aerospace.webp' },
-  { name: 'Agriculture Industry', img: '/images/home-page/industries-we-serve/agriculture-industry.webp' },
-  { name: 'Architecture', img: '/images/home-page/industries-we-serve/architecture.webp' },
-  { name: 'Automobile', img: '/images/home-page/industries-we-serve/automobile.webp' },
-  { name: 'Sheet Metal Work', img: '/images/home-page/industries-we-serve/sheet-metal-work.webp' },
-  { name: 'Steel Furniture', img: '/images/home-page/industries-we-serve/steel-furniture.webp' },
+  { name: 'Aerospace', img: `/images/home-page/industries-we-serve/aerospace.webp${IMG_V}` },
+  { name: 'Agriculture Industry', img: `/images/home-page/industries-we-serve/agriculture-industry.webp${IMG_V}` },
+  { name: 'Architecture', img: `/images/home-page/industries-we-serve/architecture.webp${IMG_V}` },
+  { name: 'Automobile', img: `/images/home-page/industries-we-serve/automobile.webp${IMG_V}` },
+  { name: 'Sheet Metal Work', img: `/images/home-page/industries-we-serve/sheet-metal-work.webp${IMG_V}` },
+  { name: 'Steel Furniture', img: `/images/home-page/industries-we-serve/steel-furniture.webp${IMG_V}` },
 ];
 
 /* ---------- images ---------- */
@@ -216,14 +219,12 @@ export const productTree: Node[] = [
               },
             ],
           },
-          series('ln-ii-series', 'LN II Series', IMG.sheetLaser, 'High speed single-platform fiber laser cutting machine.'),
           series('ln-series', 'LN Series', IMG.sheetLaser, 'High capacity single-platform fiber laser cutting machine.'),
-          series('ga-pro-series', 'GA Pro Series', IMG.exchangeLaser, 'High-stability fiber laser cutting machine.'),
           series('ga-series', 'GA Series', IMG.exchangeLaser, 'High-performance fiber laser cutting machine.'),
           series('gv-series', 'GV Series', IMG.exchangeLaser, 'Ultra high speed fiber laser cutting machine.'),
           series('gh-series', 'GH Series', IMG.largeLaser, 'Flagship super power fiber laser cutting machine.'),
           series('sl-series', 'SL Series', IMG.largeLaser, 'Ground rail large format laser cutting machine.'),
-          series('mb-series', 'MB Series', IMG.sheetLaser, 'Automated coil material fiber laser cutting machine.'),
+          series('cpl-series', 'CPL Series', IMG.sheetLaser, 'Automated coil material fiber laser cutting machine.'),
         ],
       },
       {
@@ -646,17 +647,35 @@ export const about = {
   ] as [string, string][],
 };
 
-/** photo for an application name used in a product's `apps` list (falls back to none) */
+/** photo for an application name used in a product's `apps` list (exact names first, then keywords) */
 const appPhotos: Record<string, string> = {
   'Heavy Fabrication': 'heavy-fabrication', Elevators: 'elevators', 'Automobile Industries': 'automobile', 'Chemical Plant Equipments Mfg': 'chemical-plant',
   'Road Construction Machinery Mfg': 'road-construction', 'Job Work': 'job-work', 'Profile Cutting': 'profile-cutting', 'Control Panel Mfg': 'control-panel',
   'Food Machinery Mfg': 'food-machinery', 'Agriculture Machinery Mfg': 'agriculture', 'Steel Furniture': 'steel-furniture', 'Sheet Metal Work': 'steel-metal-work',
   Architecture: 'architecture', 'Aero Space': 'aerospace', 'Textile Machinery Mfg': 'textile-machinery',
 };
-export const appPhoto = (name: string) => (appPhotos[name] ? `/images/application/${appPhotos[name]}.webp` : undefined);
+/** first keyword that appears in the name wins */
+const appKeywords: [match: string, photo: string][] = [
+  ['aerospace', 'aerospace'], ['aero space', 'aerospace'], ['automotive', 'automobile'], ['automobile', 'automobile'], ['elevator', 'elevators'],
+  ['agricultur', 'agriculture'], ['tower', 'tower-manufacturing'], ['steel structure', 'tower-manufacturing'], ['shipbuilding', 'heavy-fabrication'],
+  ['mining', 'heavy-fabrication'], ['heavy machinery', 'heavy-fabrication'], ['construction machinery', 'road-construction'], ['engineering machinery', 'road-construction'],
+  ['bridge', 'pre-engineering-building'], ['curtain wall', 'architecture'], ['greenhouse', 'pre-engineering-building'], ['rail transport', 'material-handling-equipments'],
+  ['office furniture', 'steel-furniture'], ['kitchenware', 'steel-furniture'], ['furniture', 'steel-furniture'], ['cabinet', 'control-panel'],
+  ['electrical', 'control-panel'], ['control panel', 'control-panel'], ['sheet metal', 'steel-metal-work'], ['medical', 'food-machinery'],
+  ['pipe', 'profile-cutting'], ['piping', 'profile-cutting'], ['pipeline', 'profile-cutting'], ['guardrail', 'architecture'],
+  ['hardware', 'job-work'], ['sanitary', 'job-work'], ['mold', 'job-work'], ['prototype', 'job-work'],
+  ['machinery manufactur', 'hydraulic-machinery'], ['mechanical equipment', 'hydraulic-machinery'], ['textile', 'textile-machinery'],
+  ['chemical', 'chemical-plant'], ['food', 'food-machinery'], ['job work', 'job-work'], ['profile', 'profile-cutting'],
+];
+export const appPhoto = (name: string) => {
+  if (appPhotos[name]) return `/images/application/${appPhotos[name]}.webp${IMG_V}`;
+  const n = name.toLowerCase();
+  const hit = appKeywords.find(([k]) => n.includes(k));
+  return hit ? `/images/application/${hit[1]}.webp${IMG_V}` : undefined;
+};
 
 export const applications = ['aerospace', 'agriculture', 'architecture', 'automobile', 'chemical plant', 'control panel', 'elevators', 'food machinery', 'heavy fabrication', 'hydraulic machinery', 'job work', 'material handling equipments', 'pre engineering building', 'profile cutting', 'road construction', 'steel furniture', 'steel metal work', 'tank manufacturing', 'textile machinery', 'tower manufacturing']
-  .map((n) => ({ name: n.replace(/\b\w/g, (c) => c.toUpperCase()), img: `/images/application/${n.replace(/ /g, '-')}.webp` }));
+  .map((n) => ({ name: n.replace(/\b\w/g, (c) => c.toUpperCase()), img: `/images/application/${n.replace(/ /g, '-')}.webp${IMG_V}` }));
 
 export const events = [
   ['BLECH India - 2025', 'blech-India-2025'],

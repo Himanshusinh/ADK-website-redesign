@@ -85,85 +85,99 @@ export function CinemaHero({ node }: { node: Node }) {
   );
 }
 
-/** Count-up figure used under a feature's text. */
-function Stat({ value, unit, label }: { value: string; unit: string; label: string }) {
+/** Count-up figure. `onImage` styling is used when it sits over a photo. */
+function Stat({ value, unit, label, onImage }: { value: string; unit: string; label: string; onImage?: boolean }) {
   return (
-    <div>
-      <p className="font-display-x text-[clamp(30px,3.4vw,52px)] leading-none font-extrabold tracking-[-0.04em]">
+    <div className="min-w-0">
+      <p className={clsx('font-display-x leading-none font-semibold tracking-[-0.03em]', onImage ? 'text-[clamp(26px,2.6vw,40px)] text-white' : 'text-[clamp(26px,3vw,44px)]')}>
         <Counter value={Number(value)} decimals={value.includes('.') ? 1 : 0} />
-        <span className="ml-0.5 text-[0.5em] font-bold text-brand">{unit}</span>
+        <span className="ml-0.5 text-[0.5em] font-semibold text-brand">{unit}</span>
       </p>
-      <p className="mt-2 text-[14px] text-muted">{label}</p>
+      <p className={clsx('mt-1.5 max-w-[24ch] text-[13.5px] font-medium', onImage ? 'text-white/70' : 'text-muted')}>{label}</p>
     </div>
   );
 }
 
-/** Feature panels: a wide close-up, or the picture beside the text on alternating sides. */
+/** Thin rule between the full-bleed panels — a red segment draws in as it scrolls up. */
+function Rule() {
+  return (
+    <div aria-hidden className="bg-[#0b0b0d] px-[clamp(18px,4vw,64px)] py-[clamp(16px,2.4vw,30px)]">
+      <Reveal className="relative mx-auto h-px w-full max-w-[1480px] bg-white/12">
+        <span className="absolute inset-y-0 left-0 w-[clamp(60px,12vw,190px)] bg-brand" />
+      </Reveal>
+    </div>
+  );
+}
+
+/** Feature panels: the picture runs edge to edge and the copy sits on it. */
 export function Features({ node }: { node: Node }) {
   return (
     <>
-      {node.features!.map((f, i) => {
-        const split = f.layout === 'split';
-        const flip = i % 2 === 1;
-        return (
-          <section key={f.title} className={clsx('sec text-ink', i % 2 ? 'bg-soft' : 'bg-white')}>
-            <div className={clsx('wrap', split && 'grid items-center gap-[clamp(32px,5vw,80px)] lg:grid-cols-2')}>
-              <div className={clsx(split ? (flip ? 'lg:order-2' : '') : 'mx-auto mb-[clamp(28px,4vw,48px)] max-w-[760px] text-center')}>
-                <Split className="title-xl">{f.title}</Split>
-                {f.text && (
-                  <Reveal as="p" className="lead mt-4 text-muted">
-                    {f.text}
-                  </Reveal>
-                )}
-                {f.stats && (
-                  <Reveal className="mt-9 flex flex-wrap gap-x-[clamp(28px,5vw,64px)] gap-y-6 border-t border-line pt-7">
-                    {f.stats.map(([v, u, l]) => (
-                      <Stat key={l} value={v} unit={u} label={l} />
-                    ))}
-                  </Reveal>
-                )}
-              </div>
-              {f.videos ? (
-                <Reveal className={clsx('grid gap-4 sm:grid-cols-2', !split && 'mx-auto')}>
+      {node.features!.map((f, i) => (
+        <div key={f.title}>
+          {i > 0 && <Rule />}
+          {f.videos ? (
+            <section className="sec bg-[#0b0b0d] text-white">
+              <div className="wrap">
+                <div className="mx-auto mb-[clamp(24px,3.5vw,44px)] max-w-[820px] text-center">
+                  <Split className="font-display-x text-[clamp(25px,3vw,46px)] leading-[1.06] font-semibold tracking-[-0.03em]">{f.title}</Split>
+                  {f.text && (
+                    <Reveal as="p" className="mt-4 text-[clamp(15px,1.25vw,19px)] leading-relaxed font-medium text-white/80">
+                      {f.text}
+                    </Reveal>
+                  )}
+                </div>
+                <Reveal className="grid gap-4 sm:grid-cols-2">
                   {f.videos.map((v) => (
                     <video key={v} src={v} autoPlay muted loop playsInline preload="none" className="aspect-video w-full rounded-[22px] bg-[#0b0b0d] object-cover" />
                   ))}
                 </Reveal>
-              ) : (
-              <Reveal
-                className={clsx('relative overflow-hidden rounded-[28px] bg-[#0b0b0d]', !split && 'mx-auto')}
-                style={!split && (f.ratio ?? 2.35) < 1.8 ? { maxWidth: 980 } : undefined}
-              >
-                <Parallax amount={5} scale={[1.1, 1]} className="relative max-md:!aspect-[4/3]" style={{ aspectRatio: f.ratio ?? 2.35 }}>
-                  {f.video ? (
-                    <video src={f.video} poster={f.img} autoPlay muted loop playsInline preload="none" className="size-full object-cover" />
-                  ) : (
-                  <Image
-                    src={f.img}
-                    alt={`${node.name} — ${f.title}`}
-                    fill
-                    sizes={split ? '(min-width:1024px) 50vw, 100vw' : '(min-width:1480px) 1352px, 100vw'}
-                    className="object-cover"
-                  />
-                  )}
-                </Parallax>
-                {f.points && <div aria-hidden className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0b0b0d]/85 to-transparent" />}
-                {f.points && (
-                  <ul className="absolute bottom-[clamp(14px,2.4vw,28px)] left-[clamp(14px,2.4vw,28px)] flex flex-wrap gap-2">
-                    {f.points.map((pt) => (
-                      <li key={pt} className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[13.5px] font-medium text-white ring-1 ring-white/20 backdrop-blur-md">
-                        <span className="size-1.5 rounded-full bg-brand" />
-                        {pt}
-                      </li>
-                    ))}
-                  </ul>
+              </div>
+            </section>
+          ) : (
+            <section className="relative isolate h-[clamp(520px,88svh,900px)] overflow-hidden bg-[#0b0b0d] text-white">
+              <Parallax amount={5} scale={[1.1, 1]} className="absolute inset-0">
+                {f.video ? (
+                  <video src={f.video} poster={f.img} autoPlay muted loop playsInline preload="none" className="size-full object-cover" />
+                ) : (
+                  <Image src={f.img} alt={`${node.name} — ${f.title}`} fill sizes="100vw" className="object-cover" />
                 )}
-              </Reveal>
-              )}
-            </div>
-          </section>
-        );
-      })}
+              </Parallax>
+              <div aria-hidden className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,11,13,.5)_0%,rgba(11,11,13,.08)_30%,rgba(11,11,13,.86)_100%)]" />
+
+              <div className="absolute inset-x-0 bottom-0 px-[clamp(18px,4vw,64px)] pb-[clamp(30px,5vw,72px)]">
+                <div className={clsx('mx-auto w-full max-w-[1480px]', i % 2 ? 'lg:flex lg:justify-end lg:text-right' : '')}>
+                  <div className="max-w-[46ch]">
+                    <Split className="font-display-x text-[clamp(26px,3.4vw,52px)] leading-[1.05] font-semibold tracking-[-0.03em] text-white">{f.title}</Split>
+                    {f.text && (
+                      <Reveal as="p" className="mt-4 text-[clamp(15px,1.25vw,19px)] leading-relaxed font-medium text-white/85">
+                        {f.text}
+                      </Reveal>
+                    )}
+                    {f.stats && (
+                      <Reveal className={clsx('mt-[clamp(20px,2.6vw,34px)] flex flex-wrap gap-x-[clamp(26px,4vw,64px)] gap-y-5 border-t border-white/15 pt-[clamp(16px,2vw,26px)]', i % 2 && 'lg:justify-end')}>
+                        {f.stats.map(([v, u, l]) => (
+                          <Stat key={l} value={v} unit={u} label={l} onImage />
+                        ))}
+                      </Reveal>
+                    )}
+                    {f.points && (
+                      <ul className={clsx('mt-5 flex flex-wrap gap-2', i % 2 && 'lg:justify-end')}>
+                        {f.points.map((pt) => (
+                          <li key={pt} className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[13.5px] font-medium text-white ring-1 ring-white/20 backdrop-blur-md">
+                            <span className="size-1.5 rounded-full bg-brand" />
+                            {pt}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+        </div>
+      ))}
     </>
   );
 }
@@ -208,19 +222,38 @@ export function Samples({ imgs, name }: { imgs: string[]; name: string }) {
   );
 }
 
-/** Where the machine is used, as photo tiles. */
+/** Where this machine is used — the list its own page gives. */
 export function AppGrid({ apps }: { apps: string[] }) {
-  const withPhotos = apps.map((a) => ({ name: a, img: appPhoto(a) })).filter((a): a is { name: string; img: string } => !!a.img);
-  if (!withPhotos.length) return null;
+  const seen = new Set<string>();
+  const list = apps.filter((a) => {
+    const k = a.toLowerCase();
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+  const tiles = list.map((a) => ({ name: a, img: appPhoto(a) })).filter((a): a is { name: string; img: string } => !!a.img);
+  const rest = list.filter((a) => !appPhoto(a));
+  if (!tiles.length && !rest.length) return null;
   return (
     <section className="theme-dark sec text-ink">
       <div className="wrap">
         <Split className="title-xl mb-[clamp(28px,4vw,48px)]">Applications</Split>
-        <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-5">
-          {withPhotos.map((a, i) => (
-            <Tile key={a.name} img={a.img} name={a.name} delay={(i % 5) * 0.05} />
-          ))}
-        </div>
+        {!!tiles.length && (
+          <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-4">
+            {tiles.map((a, i) => (
+              <Tile key={a.name} img={a.img} name={a.name} delay={(i % 4) * 0.05} />
+            ))}
+          </div>
+        )}
+        {!!rest.length && (
+          <ul className="mt-5 flex flex-wrap gap-2.5">
+            {rest.map((a) => (
+              <li key={a} className="rounded-full bg-paper px-[18px] py-2.5 text-[14.5px] font-medium ring-1 ring-line">
+                {a}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </section>
   );
