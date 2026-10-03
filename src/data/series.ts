@@ -766,21 +766,6 @@ export const seriesExtras: Record<string, Partial<Node>> = {
       },
     ],
     samples: ['/products/series/handheld-laser-welding-machine/sample1.jpg'],
-    tables: [
-      {
-        title: 'Technical Parameters',
-        head: ['Model', 'LCW1500', 'LCW2000', 'LCW3000'],
-        rows: [
-          ['Laser power', '1500', '2000', '3000'],
-          ['Laser wavelength', '1080nm', '1080nm', '1080nm'],
-          ['Working voltage', 'Single item 220V 50/60HZ Three items 380V 50/60HZ', 'Single item 220V 50/60HZ Three items 380V 50/60HZ', 'Three items 380V 50/60HZ'],
-          ['（Support customization） Fiber length', '10-20m', '10-20m', '10-20m'],
-          ['（Gradient adjustable） Power adjustment range(%)', '10-100', '10-100', '10-100'],
-          ['Laser head weight', '0.8KG', '0.8KG', '0.8KG'],
-          ['Dimensions', '910*540*1100mm', '910*540*1100mm', '1210*650*1200mm'],
-        ],
-      },
-    ],
   },
   'handheld-laser-cleaning-machine': {
     sheetOnRequest: false,
@@ -850,6 +835,292 @@ export const seriesExtras: Record<string, Partial<Node>> = {
           ['Repeated positioning accuracy', '±0.05mm'],
           ['Rated voltage', '220V/380V/50Hz/60Hz'],
         ],
+      },
+    ],
+  },
+  /* ---------- machines photographed at ADK / on the shop floor ---------- */
+
+  'cnc-press-brake': {
+    heroImg: '/products/series/cnc-press-brake/hero.jpg',
+    apps: ['Sheet Metal Work', 'Control Panel Mfg', 'Steel Furniture', 'Elevators', 'Automobile Industries', 'Heavy Fabrication', 'Agriculture Machinery Mfg', 'Road Construction Machinery Mfg'],
+    features: [
+      {
+        title: 'Tooling that changes in minutes',
+        text: 'Quick-release clamping holds Amada or Euro style tooling, so a die change is a short interruption rather than a shift. Front support arms ride the full length of the table on linear guides and T-slots, taking the weight of the sheet before the ram comes down.',
+        img: '/products/series/cnc-press-brake/f1.jpg',
+        ratio: 2.372,
+        stats: [['40', 'T', 'From'], ['800', 'T', 'Up to'], ['9', 'axis', 'Available in 4, 5, 7 and']],
+      },
+      {
+        title: 'Guarded on every side, quiet when idle',
+        text: 'Side doors, a back door and DSP laser protection close the machine in without putting the operator behind a fence. The servo main motor draws current only while the ram is working, which is what you hear — or rather do not hear — between bends.',
+        img: '/products/series/cnc-press-brake/f2.jpg',
+        ratio: 1.451,
+        layout: 'split',
+        points: ['DSP laser guarding on the bend line', 'Servo main motor and servo drive', 'Back and side doors for service access', 'Ladders and platforms where the frame needs them'],
+      },
+    ],
+  },
+
+  // the three trims share one platform, one tooling system and one spec table
+  ...Object.fromEntries(['excellent-series', 'elite-series', 'edge-series'].map((slug) => [slug, {
+    heroImg: '/products/series/cnc-press-brake/hero.jpg',
+    highlights: [['Tonnage', '40T \u2013 800T'], ['Axis', '4, 5, 7 & 9'], ['Energy saving', '60%']] as [string, string][],
+    apps: ['Sheet Metal Work', 'Control Panel Mfg', 'Steel Furniture', 'Elevators', 'Automobile Industries', 'Heavy Fabrication'],
+    features: [
+      {
+        title: 'Tooling that changes in minutes',
+        text: 'Quick-release clamping holds Amada or Euro style tooling, so a die change is a short interruption rather than a shift. Front support arms ride the full length of the table on linear guides and T-slots, taking the weight of the sheet before the ram comes down.',
+        img: '/products/series/cnc-press-brake/f1.jpg',
+        ratio: 2.372,
+      },
+      {
+        title: 'Guarded on every side, quiet when idle',
+        text: 'Side doors, a back door and DSP laser protection close the machine in without putting the operator behind a fence. The servo main motor draws current only while the ram is working, which is what you hear \u2014 or rather do not hear \u2014 between bends.',
+        img: '/products/series/cnc-press-brake/f2.jpg',
+        ratio: 1.451,
+        layout: 'split' as const,
+        points: ['DSP laser guarding on the bend line', 'Servo main motor and servo drive', 'Back and side doors for service access', 'Y1, Y2 precision ram positioning'],
+      },
+    ],
+  }])),
+
+  'iconic-series': {
+    heroImg: '/products/series/iconic-series/hero.jpg',
+    apps: ['Heavy Fabrication', 'Steel Structures', 'Road Construction Machinery Mfg', 'Sheet Metal Work'],
+    features: [
+      {
+        title: 'One programme across two beds',
+        text: 'Both frames follow the same bend programme, so a pole or a long enclosure that spans both beds is formed in one pass instead of being bent twice and matched by eye. Uncouple them and each machine takes its own job, which keeps the pair earning when nothing long is on the floor.',
+        img: '/products/series/iconic-series/f1.jpg',
+        ratio: 2.0,
+      },
+      {
+        title: 'Level rams, even off-centre',
+        text: 'An electro-hydraulic servo system keeps the rams level across both machines, including when the load sits to one side — the usual trouble with long, unevenly loaded parts. CNC crowning works the correction out from the deflection of ram and table together, so a long bend holds one angle end to end.',
+        img: '/products/series/iconic-series/f2.jpg',
+        ratio: 1.601,
+        layout: 'split',
+        points: ['Delem, ESA or Cybelec control with 2D and 3D programming', 'Imported ball screws and linear guides on the X axis', 'Servo and synchronous belt back-gauge drive', 'Frame tempered after welding to release stress'],
+      },
+    ],
+  },
+
+  'nc-press-brake': {
+    heroImg: '/products/series/nc-press-brake/hero.jpg',
+    apps: ['Sheet Metal Work', 'Control Panel Mfg', 'Steel Furniture', 'Job Work', 'Agriculture Machinery Mfg', 'Automobile Industries'],
+    features: [
+      {
+        title: 'Built to stay in line',
+        text: 'The frame is welded in one piece and then tempered to take the stress out of the weld, shot blasted and given an anti-rust coat before paint. That is the part of a press brake nobody sees and the reason a bed is still true after years of heavy work.',
+        img: '/products/series/nc-press-brake/f1.jpg',
+        ratio: 2.372,
+      },
+      {
+        title: 'Two axes, programmed at the machine',
+        text: 'Estun E21 / E200P or Delem DA41s control the X-axis back gauge and the Y-axis bend depth through servo motors, with repeatability you can set a batch by. A V-axis compensation option is available where the part shape calls for it.',
+        img: '/products/series/nc-press-brake/f2.jpg',
+        ratio: 1.451,
+        layout: 'split',
+      },
+      {
+        title: 'Rexroth hydraulics, Schneider electrics',
+        text: 'The integrated Bosch Rexroth hydraulic system switches to the slow bending speed by itself as the ram reaches the sheet. Variable-frequency hydraulic control keeps that changeover smooth rather than abrupt, and the electrical side is Schneider throughout.',
+        img: '/products/series/nc-press-brake/f3.jpg',
+        ratio: 2.372,
+      },
+    ],
+  },
+
+  'gantry-type': {
+    heroImg: '/products/series/gantry-type/hero.jpg',
+    features: [
+      {
+        title: 'Driven from both rails',
+        text: 'High-tension precision rail is driven by rack and pinion on both sides for the longitudinal axis, which keeps a wide gantry square to the plate. High-tension cup springs take up wear automatically and hold the pinion in the rack free of backlash, so the accuracy does not drift away over a year of cutting.',
+        img: '/products/series/gantry-type/f1.jpg',
+        ratio: 2.372,
+        stats: [['0.03', 'mm', 'Accuracy per 3 m'], ['12000', 'mm/min', 'Cutting speed up to']],
+      },
+      {
+        title: 'The torch goes where the programme says',
+        text: 'The torch station crosses on a dual-shaft linear motion guide with rack-and-pinion drive, so the head follows the part and not the slack in the rail. Anti-collision proximity protection pulls it up before it reaches an obstruction, and limit switches with mechanical bumpers sit at both ends of the transverse track.',
+        img: '/products/series/gantry-type/f2.jpg',
+        ratio: 2.0,
+        layout: 'split',
+        points: ['Heavy duty gantry structure', 'Automatic wear compensation on both drives', 'Limit switches and bumpers at every track end', 'Track wiper keeps swarf off the rail'],
+      },
+    ],
+  },
+
+  'table-type': {
+    heroImg: '/products/series/table-type/hero.jpg',
+    features: [
+      {
+        title: 'Controller within reach of the plate',
+        text: 'The FLSK 2300B control sits at the table edge where the operator stands, with the torch station running on dual guide rods above a self-hardened 24 kg/m rail. Table lengths start at 4000 mm and go up, with track widths from 2500 mm.',
+        img: '/products/series/table-type/f1.jpg',
+        ratio: 2.372,
+      },
+      {
+        title: 'A slat bed sized to the job',
+        text: 'Track widths from 2500 mm and lengths from 4000 mm upward, on a table-type gantry driven by rack and pinion from both sides. The same gantry takes a plasma station or an oxy-fuel torch, so thin plate and heavy plate are cut on one machine.',
+        img: '/products/series/table-type/f2.jpg',
+        ratio: 2.0,
+        layout: 'split',
+        points: ['Table type gantry structure', 'Dual shaft LM guide and bearing arrangement', 'Hypertherm USA power source', 'Backlash-free rack engagement'],
+      },
+    ],
+  },
+
+  'portable-type': {
+    heroImg: '/products/series/portable-type/hero.jpg',
+    features: [
+      {
+        title: 'Taken to the plate, not the other way round',
+        text: '1250 × 2500 mm of travel on a frame light enough to be carried to the job and set down on the plate itself. Dual linear motion guides run both axes and the Y-axis frame is heat-resistive heavy iron, which is what a machine sitting over its own cut needs.',
+        img: '/products/series/portable-type/f1.jpg',
+        ratio: 1.902,
+        stats: [['1250', 'mm', 'Cutting width'], ['2500', 'mm', 'Cutting length']],
+      },
+      {
+        title: 'A rail, not a machine foundation',
+        text: 'The whole longitudinal axis is one extruded rail that two people set down beside the plate — no pit, no levelling, no foundation. One station, fed by a Hypertherm USA source for plasma or set up for flame cutting on heavier plate, with parts nested in FastCAM and sent to the NC controller on the machine.',
+        img: '/products/series/portable-type/f2.jpg',
+        ratio: 1.902,
+        layout: 'split',
+      },
+    ],
+  },
+
+  'h-beam': {
+    heroImg: '/products/series/h-beam/hero.jpg',
+    apps: ['Pre Engineering Building (PEB)', 'Heavy Fabrication', 'Steel Structures', 'Tower Mfg', 'Material Handling Equipments'],
+    features: [
+      {
+        title: 'Web and flange held square while it welds',
+        text: 'Webs from 200 to 1500 mm and flanges from 150 to 500 mm are clamped, aligned and welded on the one line, including tapered webs up to 15°. Flanges over 16 mm are pre-bent and pre-tacked before they reach the machine.',
+        img: '/products/series/h-beam/f1.jpg',
+        ratio: 2.0,
+        layout: 'split',
+        points: ['Web thickness 5–20 mm', 'Flange thickness 5–25 mm', 'Computer controlled assembly and welding', 'Built for pre-engineered building sections'],
+      },
+    ],
+  },
+
+  'saw-gantry-welding-machine': {
+    heroImg: '/products/series/saw-gantry-welding-machine/hero.jpg',
+    apps: ['Pre Engineering Building (PEB)', 'Heavy Fabrication', 'Steel Structures', 'Tower Mfg', 'Material Handling Equipments'],
+    features: [
+      {
+        title: 'Submerged arc, carried down the beam',
+        text: 'The gantry carries the welding head along beams from 2.5 to 15 m, on webs up to 2500 mm and flanges up to 1000 mm — sections too heavy to keep turning by hand. Web thickness runs from 5 mm up to 80 mm on the larger configuration.',
+        img: '/products/series/saw-gantry-welding-machine/f1.jpg',
+        ratio: 2.0,
+        layout: 'split',
+        stats: [['15', 'm', 'Beam length up to'], ['2500', 'mm', 'Web width up to'], ['80', 'mm', 'Web thickness up to']],
+      },
+    ],
+  },
+
+  'swing-beam-shearing-machine': {
+    heroImg: '/products/series/swing-beam-shearing-machine/hero.jpg',
+    highlights: [['Shear type', 'Swing beam'], ['Gauge control', 'NC, keypad set'], ['Sheet support', 'Full-length front arms']],
+    apps: ['Sheet Metal Work', 'Control Panel Mfg', 'Heavy Fabrication', 'Job Work', 'Steel Furniture', 'Agriculture Machinery Mfg'],
+    features: [
+      {
+        title: 'Hold-downs the length of the cut',
+        text: 'Hydraulic hold-downs sit across the full width of the table and clamp the sheet before the beam swings, so the plate does not creep and the cut edge stays straight. A full-width finger guard runs in front of the blade line.',
+        img: '/products/series/swing-beam-shearing-machine/f1.jpg',
+        ratio: 2.0,
+      },
+      {
+        title: 'Gauge set from the keypad',
+        text: 'Cut length is keyed into the NC gauge control mounted at the operator position, with the mode selectors and the stop button on the same panel. Set it once and the rest of the batch repeats.',
+        img: '/products/series/swing-beam-shearing-machine/f2.jpg',
+        ratio: 2.0,
+        layout: 'split',
+      },
+      {
+        title: 'Sized to the sheet you run',
+        text: 'The range covers several bed lengths and thicknesses on the same swing-beam frame. Support arms extend from the table so a long sheet is held rather than left to bend over the edge, and the squaring arm gives a reference for repeat cuts.',
+        img: '/products/series/swing-beam-shearing-machine/f3.jpg',
+        ratio: 2.372,
+      },
+    ],
+  },
+
+  'guillotine-shearing-machine': {
+    heroImg: '/products/series/guillotine-shearing-machine/hero.jpg',
+    highlights: [['NC control', 'Estun E21S'], ['Hydraulics', 'Bosch Rexroth'], ['Back gauge', 'Ball screw, belt driven']],
+    apps: ['Sheet Metal Work', 'Control Panel Mfg', 'Heavy Fabrication', 'Job Work', 'Steel Furniture', 'Elevators'],
+    features: [
+      {
+        title: 'Clamped before the blade moves',
+        text: 'A row of hydraulic hold-down cylinders runs the length of the beam and pins the sheet to the table through the whole stroke. That is what keeps the cut square on thin material, where a sheet that lifts is a sheet that distorts.',
+        img: '/products/series/guillotine-shearing-machine/f1.jpg',
+        ratio: 2.372,
+      },
+      {
+        title: 'Estun E21S at the operator position',
+        text: 'Cut length, stroke count and back-gauge position are set on the E21S NC control, mounted in a cabinet on the side frame with the mode selectors and the emergency stop beside it.',
+        img: '/products/series/guillotine-shearing-machine/f2.jpg',
+        ratio: 1.55,
+        layout: 'split',
+      },
+      {
+        title: 'Back gauge on a ball screw',
+        text: 'The gauge is carried on a ground ball screw and driven through a toothed belt, so it returns to the same position rather than to somewhere near it. An emergency stop sits within reach of the gauge itself for setting work.',
+        img: '/products/series/guillotine-shearing-machine/f3.jpg',
+        ratio: 2.0,
+      },
+      {
+        title: 'Bosch Rexroth hydraulics',
+        text: 'Rexroth directional valves rated to 350 bar sit on the manifold with a gauge on the line, so pressure can be read at the machine instead of inferred from the cut.',
+        img: '/products/series/guillotine-shearing-machine/f5.jpg',
+        ratio: 2.0,
+        layout: 'split',
+      },
+      {
+        title: 'Wiring you can follow',
+        text: 'The electrical cabinet is laid out on DIN rail with the circuits numbered and labelled, which is the difference between a ten-minute fault and a lost morning.',
+        img: '/products/series/guillotine-shearing-machine/f4.jpg',
+        ratio: 1.55,
+      },
+    ],
+  },
+
+  'panel-bender': {
+    heroImg: '/products/series/panel-bender/hero.jpg',
+    apps: ['Control Panel Mfg', 'Steel Furniture', 'Elevators', 'Sheet Metal Work', 'Automobile Industries', 'Food Machinery Mfg'],
+    features: [
+      {
+        title: 'One universal die, every profile',
+        text: 'The universal bending die forms arcs, dead edges, returns and closed profiles without a tool change, so a box that would take four sets of press-brake tooling is finished in one set-up. Nothing has to be ordered in for a new part shape.',
+        img: '/products/series/panel-bender/f1.jpg',
+        ratio: 1.451,
+        stats: [['0.2', 's', 'Per bend'], ['2500', 'mm', 'Bend width up to'], ['170', 'mm', 'Bend height']],
+      },
+      {
+        title: 'The sheet stays flat on the brush table',
+        text: 'Brush bed and locating pins carry the blank while the manipulator turns it between bends, so a painted or polished panel reaches the last bend without the scratches that handling puts on it.',
+        img: '/products/series/panel-bender/f2.jpg',
+        ratio: 1.55,
+        layout: 'split',
+      },
+      {
+        title: 'Programmed at the station, not on the part',
+        text: 'The bend sequence is written and simulated on the operator terminal before the first blank goes on the table, which takes the trial bends out of a new job.',
+        img: '/products/series/panel-bender/f3.jpg',
+        ratio: 1.451,
+      },
+      {
+        title: 'Serviceable where it matters',
+        text: 'Central lubrication and a cabinet laid out for access keep routine maintenance to a scheduled job rather than an unplanned stop — the machine averages 1.8 to 2.8 kW in normal running even with a 38 to 77 kW installed motor rating.',
+        img: '/products/series/panel-bender/f4.jpg',
+        ratio: 1.451,
+        layout: 'split',
+        points: ['Central lubrication unit', 'Cabinet wired on DIN rail and labelled', 'Average draw 1.8–2.8 kW', '380 V supply'],
       },
     ],
   },

@@ -90,7 +90,7 @@ function Stat({ value, unit, label, onImage }: { value: string; unit: string; la
   return (
     <div className="min-w-0">
       <p className={clsx('font-display-x leading-none font-semibold tracking-[-0.016em]', onImage ? 'text-[clamp(26px,2.6vw,40px)] text-white' : 'text-[clamp(26px,3vw,44px)]')}>
-        <Counter value={Number(value)} decimals={value.includes('.') ? 1 : 0} />
+        <Counter value={Number(value)} decimals={value.split('.')[1]?.length ?? 0} />
         <span className="ml-0.5 text-[0.5em] font-semibold text-brand">{unit}</span>
       </p>
       <p className={clsx('mt-1.5 max-w-[24ch] text-[13.5px] font-medium', onImage ? 'text-white/70' : 'text-muted')}>{label}</p>

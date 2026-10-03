@@ -75,6 +75,36 @@ export default function AboutPage() {
         ))}
       </HScroll>
 
+      <section className="sec bg-paper text-ink">
+        <div className="wrap grid gap-4 lg:grid-cols-[1.5fr_1fr]">
+          <Reveal className="relative aspect-[16/9] overflow-hidden rounded-[24px] ring-1 ring-line">
+            <Image
+              src="/shared/about/team-group.webp"
+              alt="The ADK Engineering team at the tenth anniversary celebration"
+              fill
+              sizes="(min-width:1024px) 60vw, 100vw"
+              className="object-cover"
+            />
+          </Reveal>
+          <Reveal delay={0.1} className="relative aspect-[16/9] overflow-hidden rounded-[24px] ring-1 ring-line lg:aspect-auto">
+            <Image
+              src="/shared/about/team-celebration.webp"
+              alt="Cutting the cake at ten years of ADK Engineering"
+              fill
+              sizes="(min-width:1024px) 40vw, 100vw"
+              className="object-cover"
+            />
+          </Reveal>
+        </div>
+        <div className="wrap mt-[clamp(26px,3.5vw,44px)] flex flex-wrap items-end justify-between gap-6">
+          <Split className="title-xl">Ten years, one team</Split>
+          <p className="lead max-w-[430px] text-muted">
+            The people who quote your machine, install it and answer the phone when you need them — together at our tenth
+            anniversary.
+          </p>
+        </div>
+      </section>
+
       <section className="sec grid gap-[clamp(80px,10vw,150px)] bg-white text-ink">
         <SplitBlock img="/shared/about/who-we-are.webp" alt="Who we are" eyebrow="Welcome to ADK Engineering PVT LTD" title="Who We Are">
           <Reveal as="p" className="lead text-muted">

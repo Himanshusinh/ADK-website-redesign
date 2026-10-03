@@ -272,7 +272,61 @@ export const productTree: Node[] = [
           series('excellent-series', 'Excellent Series', IMG.cncPressBrake),
           series('elite-series', 'Elite Series', IMG.cncPressBrake),
           series('edge-series', 'Edge Series', IMG.cncPressBrake),
-          series('iconic-series', 'Iconic Series', IMG.cncPressBrake),
+          {
+            slug: 'iconic-series',
+            name: 'Iconic Series',
+            img: IMG.cncPressBrake,
+            sheetOnRequest: true,
+            desc: [
+              'Two press brakes set up as one line. Run them together on a single long workpiece, or split them and run two jobs at once when the schedule calls for it.',
+              'It is the answer for parts that will not fit a single machine — lighting columns, transmission and telecom poles, long enclosures and structural sections.',
+            ],
+            highlights: [['Working mode', 'Tandem or independent'], ['Axis control', 'Synchronised across both machines'], ['Built for', 'Poles, towers, long sections']],
+            lists: [
+              {
+                title: 'Working As One Machine',
+                items: [
+                  'Both frames follow one bend programme, so a pole that spans both beds is formed in a single pass instead of being bent twice and matched by eye.',
+                  'Uncouple them and each machine takes its own job, which keeps the pair earning when nothing long is on the floor.',
+                  'The control handles the loading of long parts as part of the cycle, so two operators are not fighting the sheet between bends.',
+                ],
+              },
+              {
+                title: 'Control',
+                items: [
+                  'Delem, ESA and Cybelec controls are offered, all with 2D and 3D part programming on the screen.',
+                  'The cycle is worked out by the control rather than by trial bends, which cuts set-up time noticeably on repeat batches.',
+                  'Bend sequences can be written off the machine and loaded when the job reaches the floor.',
+                ],
+              },
+              {
+                title: 'Hydraulics And Synchronisation',
+                items: [
+                  'An electro-hydraulic servo system keeps the rams level across both machines, including when the load sits off-centre — the usual problem with long, unevenly loaded parts.',
+                  'System pressure is set to the bend in hand rather than left at maximum, which is easier on the machine and on the power bill.',
+                  'Servo drive on the main motor draws current only while the ram is working, so an idle machine is close to silent.',
+                ],
+              },
+              {
+                title: 'Back Gauge And Frame',
+                items: [
+                  'Imported ball screws and linear guides carry the X axis, holding position far better than a plain screw arrangement.',
+                  'The gauge is driven by a servo through a synchronous belt, not a stepper, so it arrives at the same place every time.',
+                  'The whole frame is tempered after welding to release the stress the weld puts in — that is what stops the bed drifting out of true after a year of heavy work.',
+                  'CNC crowning calculates the correction from the deflection of both ram and table, so a long bend holds one angle end to end.',
+                ],
+              },
+              {
+                title: 'Handling Long Work',
+                items: [
+                  'Front supports ride on linear guides and can be set by hand for height and for the die notch in use.',
+                  'Sheet followers lift with the part through the bend, so a long panel is not left to fold under its own weight.',
+                  'Top tooling can be swapped quickly, which matters when a pole needs several different profiles in one run.',
+                ],
+              },
+            ],
+            components: ['Controller', 'Backgauge', 'Sheet Follower', 'Front Support', 'Crowning System', 'Quick Clamping'],
+          },
         ],
         lists: [
           { title: 'CNC Press Brake', items: ['New EU streamlined design', ...pressIntro] },
@@ -324,6 +378,40 @@ export const productTree: Node[] = [
             ]
           },
           { title: 'Standard Equipment', items: ['Steel welded frame', 'Hydraulic system (Germany Bosch - Rexroth)', 'Standard two axis control (X,Y) Electrical system (France Schneider)', 'Synchronized dual cylinder', 'X axis servo motorized backgauge, Ball screw and Linear guide', 'Quick clamping (Optional)'] },
+          {
+            title: 'On The Controller',
+            items: [
+              'Both the ram and the back gauge run from the same screen, so a bend sequence is keyed in at the machine without a separate programming station.',
+              'Estun, Delem and Cybelec controls are available. The higher options add a touch screen, angle programming and R-axis control for operators who work to an angle rather than a depth.',
+              'Steps can be edited between parts, which suits job work where the next order rarely matches the last one.',
+            ],
+          },
+          {
+            title: 'Hydraulics And Drive',
+            items: [
+              'Bosch Rexroth valves carry the working pressure. They tolerate continuous duty and ask very little in the way of maintenance.',
+              'One stroke covers fast approach, a slowdown before contact, the bend itself at working speed, a fast return and an immediate stop if the operator needs it.',
+              'The machine is built to run at rated load all shift without the system heating up, losing accuracy or weeping oil.',
+              'Cast-iron gear pumps run quietly and shrug off the oil contamination that shortens pump life on a busy shop floor.',
+              'Motor power and supply voltage are matched to the incoming supply at your plant rather than a standard rating.',
+            ],
+          },
+          {
+            title: 'Accuracy Where It Shows',
+            items: [
+              'Ram movement is torsion-synchronised, so both ends of a long bend arrive together.',
+              'The back gauge is a unit in its own right — ground ball screw, adjustable stop fingers and manual height setting for awkward parts.',
+              'Mechanical crowning offsets the deflection a loaded ram and table develop, which is what keeps the angle equal from one end of the bend to the other.',
+              'Schneider switchgear and a shielded Estun electrical box keep the control side stable in workshops full of welding and motor noise.',
+            ],
+          },
+          {
+            title: 'Before You Order',
+            items: [
+              'Tooling decides the shape you get. Tell us the material, thickness and the profile you need and our engineers will work out the punch and die set with the machine, not after it.',
+              'Front sheet supports, a quick-clamping system and V-axis compensation can be added when the work calls for them.',
+            ],
+          },
         ],
         components: ['Controller', 'Backgauge', 'Torque Synchronous Control System'],
         tables: [{
@@ -362,8 +450,53 @@ export const productTree: Node[] = [
         name: 'Handheld Laser Welding Machine',
         img: IMG.handheld,
         imgs: [IMG.handheld, IMG.weldSample, IMG.weldJoint],
-        models: ['LCW-1500W', 'LCW-2000W', 'LCW-3000W'],
-        highlights: [['Power', '1500W / 2000W / 3000W'], ['vs MIG & TIG', 'Faster'], ['Finish', 'No grinder needed']],
+        desc: [
+          'One compact machine that welds, cuts, cleans and finishes seams. Fast to pick up, steady in daily production, and gentle enough on the metal that parts come off the bench without distortion.',
+          'Built for stainless steel, mild steel and aluminium — from kitchen and furniture work to enclosures, railings and general fabrication.',
+        ],
+        models: ['LCW 1500W', 'LCW 2000W', 'LCW 3000W'],
+        highlights: [['Power', '1500W / 2000W / 3000W'], ['In one machine', 'Weld · cut · clean'], ['Welds up to', '8 mm'], ['vs MIG & TIG', 'Faster, no grinding']],
+        lists: [
+          {
+            title: 'Four Jobs, One Machine',
+            items: [
+              'Welding — strong, smooth seams with very little heat distortion, on stainless steel, mild steel and aluminium.',
+              'Cleaning — lifts rust, paint, oil and contamination off the surface without cutting into the metal underneath.',
+              'Seam cleaning — tidies the weld itself, so the finished joint needs no dressing before it is seen.',
+              'Cutting — clean edges and a small heat-affected zone on thin sheet.',
+              'Spot welding — quick, repeatable spots where a continuous seam is not wanted.',
+            ],
+          },
+          {
+            title: 'What Is Inside',
+            items: [
+              'Laser source: Raycus, MAX or BWT — stable output, good beam quality and long service life with little maintenance.',
+              'Gun, control system and wire feeder: Raytools — a hand-sized gun, a touchscreen that sets the parameters, and feeding that can be single or dual wire.',
+              'Chiller: S&A water cooling, which holds the source at temperature and is the single biggest factor in how long the optics last.',
+              'Body, cabinet and guarding are built by ADK, so spares and service come from us rather than an importer.',
+            ],
+          },
+          {
+            title: 'Where Our Customers Use It',
+            items: [
+              'Modular kitchens and cabinets',
+              'Staircases, railings and elevator panels',
+              'Racks, shelving and ovens',
+              'Stainless steel doors, windows and guardrails',
+              'Distribution boxes and electrical enclosures',
+              'Stainless steel furniture and interior fittings',
+            ],
+          },
+          {
+            title: 'Checked Before It Ships',
+            items: [
+              'Laser source tested at power',
+              'Cooling system run and inspected',
+              'Gun and optics inspected',
+              'A final welding test on the actual machine',
+            ],
+          },
+        ],
         compare: {
           title: 'Comparison*',
           note: '*This is just for your reference. Actual data may differ',

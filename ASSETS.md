@@ -1,11 +1,11 @@
 # Images — where everything lives
 
-Every image the site uses is in **`public/`**, and nothing in `public/` is unused: all 334 files
+Every image the site uses is in **`public/`**, and nothing in `public/` is unused: all 375 files
 are either referenced in the code or read from a folder listing at build time. There is no second
 copy of anything anywhere in the project.
 
 ```
-public/                                      66 MB
+public/                                       66MB
 ├── brand/        adk-logo.png (dark type) · adk-logo-light.png (white type, for dark headers)
 ├── home/         landing page only
 │   ├── hero/         machine shots for the hero slides + the full-width statement photo
@@ -49,3 +49,20 @@ The client's full-size source material is **outside the project**, so it never s
 - `~/Downloads/ADK image/` — the full-size application and landing-page photos
 
 The old adkeng.com images that nothing referenced have been deleted.
+
+## Where the originals came from
+
+The machine photography is ADK's own dark-studio set, delivered 3 Oct 2026 as
+`~/Downloads/New public_Send` (552 MB of full-size PNG/JPG). Everything in it was resized and
+re-encoded into the paths below — thumbs to 1100px, gallery to 1500px, series heroes to 2400px,
+feature panels to 2000px — so the folder names and extensions the code already referenced did not
+change. Earlier client media stays in `~/Downloads/ADK client media/` and `~/Downloads/ADK image/`.
+
+Three things in `public/` are **not** from that set, and are the only images that would be lost if it
+were ever copied over wholesale:
+
+- the shop-floor close-ups on the guillotine shear, panel bender and press brake pages
+  (`products/series/{guillotine-shearing-machine,panel-bender,cnc-press-brake,nc-press-brake,iconic-series}/f*.jpg`)
+- the team photographs on the About page (`shared/about/team-*.webp`)
+- `products/series/e-ii/precision.jpg`
+
