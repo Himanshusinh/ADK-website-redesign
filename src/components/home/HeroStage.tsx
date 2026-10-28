@@ -100,8 +100,8 @@ export function HeroStage() {
           className="animate-rise font-display-x max-w-[13ch] text-[clamp(36px,4.8vw,78px)] leading-[1.04] font-semibold tracking-[-0.022em] text-balance"
           style={{ animationDelay: '0.08s' }}
         >
-          Machines that <Verb on={slide.verb === 0}>cut</Verb>, <Verb on={slide.verb === 1}>bend</Verb> &amp;{' '}
-          <Verb on={slide.verb === 2}>weld</Verb> metal.
+          Machines that <Verb on={slide.verb === 0}>Cut</Verb>, <Verb on={slide.verb === 1}>Bend</Verb> &amp;{' '}
+          <Verb on={slide.verb === 2}>Weld</Verb> metal.
         </h1>
         <p className="animate-rise lead mt-5 max-w-[480px] text-white/65" style={{ animationDelay: '0.16s' }}>
           CNC fiber laser cutting, plasma cutting, press brakes, laser welding and PEB machinery — supplied, installed and serviced across India.

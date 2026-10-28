@@ -177,28 +177,26 @@ const series = (slug: string, name: string, img: string, tagline?: string): Node
 export const productTree: Node[] = [
   {
     slug: 'fiber-laser-cutting-machine',
-    name: 'Fiber Laser Cutting Machines',
+    name: 'Fiber Laser Cutting Machine',
     img: IMG.sheetLaser,
     apps: laserApps,
-    samples: ['/shared/gallery/03.webp', '/shared/gallery/04.webp', '/shared/gallery/05.webp', '/shared/gallery/06.webp', '/shared/gallery/07.webp'],
     children: [
       {
         slug: 'sheet-metal-laser-cutting-machine',
-        name: 'Sheet Metal Laser Cutting Machine',
+        name: 'Sheet Laser Cutting Machine',
         img: IMG.sheetLaser,
         children: [
           {
-            ...series('e-ii-series', 'E II Series', '/products/series/e-ii/front.jpg', 'Economical single-platform fiber laser cutting machine.'),
+            ...series('e-ii-series', 'ES Series', '/products/series/e-ii/front.jpg', 'Single-platform fiber laser cutting machine.'),
             sheetOnRequest: false,
             cutout: '/products/series/e-ii/cutout.webp',
             imgs: ['/products/series/e-ii/front.jpg', '/products/series/e-ii/side.jpg'],
-            highlights: [['Working area', '3000 × 1500 mm'], ['Speed', '80 m/min'], ['Accuracy', '±0.03 mm'], ['Machine capacity', 'Up to 60 kW']],
+            highlights: [['Working area', '3000 × 1500 mm'], ['Speed', '120 m/min'], ['Accuracy', '±0.03 mm'], ['Machine capacity', 'Up to 12 kw']],
             features: [
               {
                 title: 'Precision Assurance',
                 text: 'Servo motors, reducers, racks and the other motion components come from leading brands — for high build quality, precise machine operation and a long service life.',
                 img: '/products/series/e-ii/precision.jpg',
-                points: ['Servo motors', 'Reducers', 'Racks'],
               },
               {
                 title: 'Intelligent Operating System',
@@ -210,28 +208,28 @@ export const productTree: Node[] = [
             tables: [
               {
                 title: 'Technical Parameters',
-                head: ['Model', 'BCF 3015E II'],
+                head: ['Model', 'ADK 3015 ES', 'ADK 6515 ES', 'ADK 6520 ES', 'ADK 2065 ES'],
                 rows: [
-                  ['Working Area (mm)', '3000 x 1500'],
-                  ['Speed (m/min)', '80'],
-                  ['Accuracy (mm)', '+/-0.03'],
-                  ['Machine Capacity (KW)', 'Up to 60KW'],
-                  ['Power Source', 'RAYCUS, IPG, MAX PHOTONICS'],
+                  ['Working Area (mm)', '3000 x 1500', '6500 x 1500', '6500 x 2000', '2000 x 6500'],
+                  ['Speed (m/min)', '80', '80', '80', '80'],
+                  ['Accuracy (mm)', '+/-0.03', '+/-0.03', '+/-0.03', '+/-0.03'],
+                  ['Machine Capacity (KW)', 'Up to 12KW', 'Up to 12KW', 'Up to 12KW', 'Up to 12KW'],
+                  ['Power Source', 'RAYCUS, IPG, MAX PHOTONICS', 'RAYCUS, IPG, MAX PHOTONICS', 'RAYCUS, IPG, MAX PHOTONICS', 'RAYCUS, IPG, MAX PHOTONICS'],
                 ],
               },
             ],
           },
-          series('ln-series', 'LN Series', IMG.sheetLaser, 'High capacity single-platform fiber laser cutting machine.'),
-          series('ga-series', 'GA Series', IMG.exchangeLaser, 'High-performance fiber laser cutting machine.'),
-          series('gv-series', 'GV Series', IMG.exchangeLaser, 'Ultra high speed fiber laser cutting machine.'),
-          series('gh-series', 'GH Series', IMG.largeLaser, 'Flagship super power fiber laser cutting machine.'),
+          series('ln-series', 'S Series', '/products/series/ln-series/s-series.jpg', 'High capacity single-platform fiber laser cutting machine.'),
+          series('ga-series', 'C Series', IMG.exchangeLaser, 'High-performance fiber laser cutting machine.'),
+          series('gv-series', 'LNR Series', IMG.exchangeLaser, 'Ultra high speed fiber laser cutting machine.'),
+          series('gh-series', 'D Series', IMG.largeLaser, 'Flagship super power fiber laser cutting machine.'),
           series('sl-series', 'SL Series', IMG.largeLaser, 'Ground rail large format laser cutting machine.'),
-          series('cpl-series', 'CPL Series', IMG.sheetLaser, 'Automated coil material fiber laser cutting machine.'),
+          series('cpl-series', 'GAR Series', IMG.sheetLaser, 'Automated coil material fiber laser cutting machine.'),
         ],
       },
       {
         slug: 'tube-metal-laser-cutting-machine',
-        name: 'Tube Metal Laser Cutting Machine',
+        name: 'Tube Laser Cutting Machine',
         img: IMG.tubeLaser,
         children: [
           series('tf-series', 'TF Series', IMG.tubeLaser, 'Side-mounted front chuck tube laser cutter.'),
@@ -281,7 +279,7 @@ export const productTree: Node[] = [
               'Two press brakes set up as one line. Run them together on a single long workpiece, or split them and run two jobs at once when the schedule calls for it.',
               'It is the answer for parts that will not fit a single machine — lighting columns, transmission and telecom poles, long enclosures and structural sections.',
             ],
-            highlights: [['Working mode', 'Tandem or independent'], ['Axis control', 'Synchronised across both machines'], ['Built for', 'Poles, towers, long sections']],
+            highlights: [['Tonnage', 'upto 3000T'], ['Working mode', 'Tandem or independent'], ['Axis control', 'Synchronised across both machines'], ['Built for', 'Poles, towers, long sections']],
             lists: [
               {
                 title: 'Working As One Machine',
@@ -455,7 +453,7 @@ export const productTree: Node[] = [
           'Built for stainless steel, mild steel and aluminium — from kitchen and furniture work to enclosures, railings and general fabrication.',
         ],
         models: ['LCW 1500W', 'LCW 2000W', 'LCW 3000W'],
-        highlights: [['Power', '1500W / 2000W / 3000W'], ['In one machine', 'Weld · cut · clean'], ['Welds up to', '8 mm'], ['vs MIG & TIG', 'Faster, no grinding']],
+        highlights: [['Power', '1500W / 2000W / 3000W'], ['In one machine', 'Weld · Cut · Clean'], ['Welds up to', '8 mm'], ['vs MIG & TIG', 'Faster, no grinding']],
         lists: [
           {
             title: 'Four Jobs, One Machine',

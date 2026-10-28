@@ -35,27 +35,6 @@ export function ProductSections({ node }: { node: Node }) {
         </section>
       ))}
 
-      {node.components && (
-        <section className="theme-dark glow sec text-ink">
-          <div className="wrap">
-            <Split className="title-xl">Machine Components</Split>
-            <div className="mt-[50px] grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-3.5">
-              {node.components.map((c, i) => (
-                <Reveal
-                  key={c}
-                  data-spot
-                  delay={(i % 4) * 0.06}
-                  className="spot grid gap-[26px] rounded-[18px] px-6 py-[26px] font-display text-[17px] leading-tight font-semibold ring-1 ring-line transition-shadow duration-500 hover:ring-brand/40"
-                >
-                  <span className="h-[3px] w-8 rounded-full bg-brand" />
-                  {c}
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       {node.apps && (
         <section className="sec bg-white text-ink">
           <div className="wrap">

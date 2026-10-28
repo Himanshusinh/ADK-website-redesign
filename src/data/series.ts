@@ -299,22 +299,21 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     tables: [
       {
         title: 'Technical Parameters',
-        head: ['Machine model', 'GKS-CPL3015B', 'GKS-CPLS6015B'],
+        head: ['Machine model', 'ADK 3015 GAR', 'ADK 4020 GAR', 'ADK 6520 GAR'],
         rows: [
-          ['Laser power', '1000W-6000W', '1000W-6000W'],
-          ['Working area', '3000*1500mm', '6000*1500mm'],
-          ['Coiled material inner diameter', 'Φ508mm - Φ610mm', 'Φ508mm - Φ610mm'],
-          ['Coiled material width', '500-1500mm', '500-1500mm'],
-          ['Coiled material thickness', '0.8~3mm(carbon steel) 0.8~2mm(stainless steel)', '0.8~3mm(carbon steel) 0.8~2mm(stainless steel)'],
-          ['Maximum outer diameter of coiled material', 'Φ1500mm', 'Φ1500mm'],
-          ['Minimum outer diameter of coiled material', 'Φ800mm', 'Φ800mm'],
-          ['Maximum material weight', '10 T', '10 T'],
-          ['Feeding speed', '0-20m/min', '0-20m/min'],
-          ['X/Y axis positioning accuracy', '±0.05mm/m', '±0.05mm/m'],
-          ['X/Y axis repeat positioning accuracy', '±0.03mm', '±0.03mm'],
-          ['X/Y axis maximum acceleration', '1.0G', '1.0G'],
-          ['X/Y axis maximum moving speed', '120m/min', '120m/min'],
-          ['Dimension', '15500*6000*2550m', '16000*4000*2100mm'],
+          ['Laser power', '12KW', '12KW', '12KW'],
+          ['Working area', '3000*1500mm', '4000*2000mm', '6500*2000mm'],
+          ['Coiled material inner diameter', 'Φ508mm - Φ610mm', 'Φ508mm - Φ610mm', 'Φ508mm - Φ610mm'],
+          ['Coiled material width', '500-1500mm', '500-1500mm', '500-1500mm'],
+          ['Coiled material thickness', '0.8~3mm(carbon steel) 0.8~2mm(stainless steel)', '0.8~3mm(carbon steel) 0.8~2mm(stainless steel)', '0.8~3mm(carbon steel) 0.8~2mm(stainless steel)'],
+          ['Maximum outer diameter of coiled material', 'Φ1500mm', 'Φ1500mm', 'Φ1500mm'],
+          ['Minimum outer diameter of coiled material', 'Φ800mm', 'Φ800mm', 'Φ800mm'],
+          ['Maximum material weight', '10 T', '10 T', '10 T'],
+          ['Feeding speed', '0-20m/min', '0-20m/min', '0-20m/min'],
+          ['X/Y axis positioning accuracy', '±0.05mm/m', '±0.05mm/m', '±0.05mm/m'],
+          ['X/Y axis repeat positioning accuracy', '±0.03mm', '±0.03mm', '±0.03mm'],
+          ['X/Y axis maximum acceleration', '1.0G', '1.0G', '1.0G'],
+          ['X/Y axis maximum moving speed', '120m/min', '120m/min', '120m/min'],
         ],
       },
     ],
@@ -392,16 +391,15 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     tables: [
       {
         title: 'Technical Parameters',
-        head: ['Model', 'LF-3015GV', 'LF-4020GV', 'LF-6020GV'],
+        head: ['Model', 'ADK 3015 LNR', 'ADK 6520 LNR'],
         rows: [
-          ['Processing format', '3050*1530mm', '4050*2030mm', '6030*2030mm'],
-          ['Laser power', '3000W / 6000W / 12000W (optional)'],
+          ['Processing format', '3050*1530mm', '4050*2030mm'],
+          ['Laser power', '12KW'],
           ['Max X/Y axis speed', '200m/min'],
           ['X/Y axis positioning accuracy', '±0.03mm'],
           ['X/Y axis repeat positioning accuracy', '±0.02mm'],
           ['Max cutting acceleration / low-pass filtering', '3G / 10Hz'],
-          ['Max table load capacity', '1200kg', '2300kg', '3200kg'],
-          ['Rated voltage & frequency', '380V 50Hz/60Hz'],
+          ['Max table load capacity', '1200kg', '2300kg'],
         ],
       },
     ],
@@ -409,7 +407,7 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   'ln-series': {
     sheetOnRequest: false,
     // ADK's own render, composited onto a dark studio stage (machine.webp + backdrop)
-    heroImg: '/products/series/ln-series/hero-studio.jpg',
+    heroImg: '/products/series/ln-series/s-series.jpg',
     reveal: { value: '1.5G', label: 'Maximum acceleration', img: '/products/series/ln-series/reveal.webp' },
     highlights: [['Maximum acceleration', '1.5G'], ['Dry running speed', '120 m/min'], ['Positioning accuracy', '±0.05 mm'], ['Repeat accuracy', '±0.03 mm']],
     features: [
@@ -446,12 +444,13 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     tables: [
       {
         title: 'Technical Parameters',
-        head: ['Model', 'LF6025LN II', 'LF4020LN II', 'LF3015LN II'],
+        head: ['Model', 'ADK 2565 S'],
         rows: [
-          ['Working area', '6100*2550mm', '4100*2050mm', '3050*1520mm'],
-          ['X/y axis positioning accuracy', '±0.05mm', '±0.05mm', '±0.05mm'],
-          ['X/y axis repeat positioning accuracy', '±0.03mm', '±0.03mm', '±0.03mm'],
-          ['Power rated voltage and freguency', '380V 50HZ/60HZ', '380V 50HZ/60HZ', '380V 50HZ/60HZ'],
+          ['Working area', '6100*2550mm'],
+          ['Capacity', 'upto 30KW'],
+          ['X/y axis positioning accuracy', '±0.05mm'],
+          ['X/y axis repeat positioning accuracy', '±0.03mm'],
+          ['Power rated voltage and freguency', '380V 50HZ/60HZ'],
         ],
       },
     ],
@@ -468,25 +467,20 @@ export const seriesExtras: Record<string, Partial<Node>> = {
       },
       {
         title: 'Dual-position exchange table',
-        text: '15 seconds quick exchange, significantly improving production efficiency, saving labor costs.',
+        text: '20 seconds quick exchange, significantly improving production efficiency, saving labor costs.',
         img: '/products/series/ga-series/f2.webp',
         ratio: 2.18,
       },
-      {
-        title: 'Matrix exhaust structure',
-        text: 'Double-row multi-row independent, high-sealing partition smoke exhaust, effectively filtering harmful gases, smoke, dust, making the production process more environmentally friendly.',
-        img: '/products/series/ga-series/f3.webp',
-        ratio: 2.056,
-      },
+
     ],
-    samples: ['/products/series/ga-series/sample1.webp', '/products/series/ga-series/sample2.webp', '/products/series/ga-series/sample3.webp', '/products/series/ga-series/sample4.webp'],
+    samples: ['/products/series/ga-series/sample1.webp'],
     tables: [
       {
         title: 'Technical Parameters',
-        head: ['Model', 'LF3015GA', 'LF4020GA', 'LF6025GA'],
+        head: ['Model', 'ADK 3015 C', 'ADK 4020 C', 'ADK 6025 C'],
         rows: [
-          ['Working area', '3050*1530mm', '4050*2030mm', '6050mm*2530mm'],
-          ['Laser power', '(Optional) 12000W/6000W/4000W/ 3000W/2000W/1500W', '(Optional) 12000W/6000W/4000W/ 3000W/2000W/1500W', '(Optional) 12000W/6000W/4000W/ 3000W/2000W/1500W'],
+          ['Working area', '3000*1500mm', '4000*2000mm', '6000mm*2500mm'],
+          ['Laser power', 'upto 135KW', 'upto 135KW', 'upto 135KW'],
           ['Dimensions', '8580*2850*2300mm', '10750*3350*2300mm', '15000*4018*2300mm'],
           ['X/y axis positioning accuracy', '±0.03mm', '±0.03mm', '±0.03mm'],
           ['X/y axis repeat positioning accuracy', '±0.02mm', '±0.02mm', '±0.02mm'],
@@ -529,15 +523,15 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     tables: [
       {
         title: 'Technical Parameters',
-        head: ['Model', 'LF4020GH', 'LF6025GH', 'LF12025GH'],
+        head: ['Model', 'ADK 3015 D', 'ADK 4020 D', 'ADK 6520 D', 'ADK 6250 D'],
         rows: [
-          ['Working area', '4050mm*2030mm', '6050mm*2530mm', '12500mm*2550mm'],
-          ['Laser power', '(Optional) 60000W/40000W/30000W/ 20000W/15000W/12000W/8000W', '(Optional) 60000W/40000W/30000W/ 20000W/15000W/12000W/8000W', '(Optional) 60000W/40000W/30000W/ 20000W/15000W/12000W/8000W'],
-          ['Dimensions', '11320*3690*2860mm', '15554*4345*2705mm', '27980*4345*2705mm'],
-          ['X/y axis positioning accuracy', '±0.03mm', '±0.03mm', '±0.03mm'],
-          ['X/y axis repeat positioning accuracy', '±0.02mm', '±0.02mm', '±0.02mm'],
-          ['Maximum speed', '150-220m/min', '150-220m/min', '150-220m/min'],
-          ['Max. acceleration', '1.5G-2.5G', '1.5G-2.5G', '1.5G-2.5G'],
+          ['Working area', '3000mm*1500mm', '4000mm*2000mm', '6500mm*2000mm', '6200mm*5000mm'],
+          ['Laser power', 'upto 20KW', 'upto 20KW', 'upto 20KW', 'upto 20KW'],
+          ['Dimensions', '11320*3690*2860mm', '15554*4345*2705mm', '27980*4345*2705mm', '22600*7035*3250mm'],
+          ['X/y axis positioning accuracy', '±0.03mm', '±0.03mm', '±0.03mm', '±0.03mm'],
+          ['X/y axis repeat positioning accuracy', '±0.02mm', '±0.02mm', '±0.02mm', '±0.02mm'],
+          ['Maximum speed', '150-220m/min', '150-220m/min', '150-220m/min', '150-220m/min'],
+          ['Max. acceleration', '1.5G-2.5G', '1.5G-2.5G', '1.5G-2.5G', '1.5G-2.5G'],
         ],
       },
     ],
@@ -575,9 +569,10 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     tables: [
       {
         title: 'Technical Parameters',
-        head: ['Model', '16032SL', '24032SL'],
+        head: ['Model', 'ADK 8025 SL', 'ADK 14035 SL'],
         rows: [
           ['Working area', '16000*3200mm', '24000*3200mm'],
+          ['Capacity', 'upto 80KW', 'upto 80KW'],
           ['X/Y axis positioning accuracy', '0.1/10m&0.05/5m', '0.1/10m&0.05/5m'],
           ['X/Y axis repeat positioning accuracy', '0.05mm', '0.05mm'],
         ],
@@ -589,12 +584,6 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     sheetOnRequest: false,
     heroImg: '/products/series/lnr-series/hero.jpg',
     features: [
-      {
-        title: 'Mortise-riveted welding bed',
-        text: 'Mortise-riveted welding bed with internal reinforcement and stress-relief annealing technology, enhancing bed strength and tensile resistance.',
-        img: '/products/series/lnr-series/f1.jpg',
-        ratio: 2.37,
-      },
       {
         title: 'Economical and practical',
         text: 'One device meets the dual requirements of cutting pipes and sheets, saving costs and space.',
@@ -632,7 +621,7 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     features: [
       {
         title: 'Dual workstation exchange table',
-        text: '15-second rapid exchange of dual workstation platforms greatly reduces standby time, significantly improves production efficiency, and saves labor costs.',
+        text: '20-second rapid exchange of dual workstation platforms greatly reduces standby time, significantly improves production efficiency, and saves labor costs.',
         img: '/products/series/gar-series/f1.jpg',
         ratio: 2.37,
       },
@@ -690,7 +679,7 @@ export const seriesExtras: Record<string, Partial<Node>> = {
         head: ['Machine model', 'LF1800'],
         rows: [
           ['Laser power', '1000W/1500W/2000W/3000W/4000W'],
-          ['Laser type', 'fiber laser source'],
+          ['Capacity', '3KW'],
           ['Arm radius', '1800mm'],
           ['Repeated positioning accuracy', '±0.05mm'],
           ['Installation method', 'Loor Stand/Hang Upside Down'],
@@ -865,7 +854,7 @@ export const seriesExtras: Record<string, Partial<Node>> = {
   // the three trims share one platform, one tooling system and one spec table
   ...Object.fromEntries(['excellent-series', 'elite-series', 'edge-series'].map((slug) => [slug, {
     heroImg: '/products/series/cnc-press-brake/hero.jpg',
-    highlights: [['Tonnage', '40T \u2013 800T'], ['Axis', '4, 5, 7 & 9'], ['Energy saving', '60%']] as [string, string][],
+    highlights: [['Tonnage', '300 - 1200T'], ['Axis', '4, 5, 7 & 9'], ['Energy saving', '60%']] as [string, string][],
     apps: ['Sheet Metal Work', 'Control Panel Mfg', 'Steel Furniture', 'Elevators', 'Automobile Industries', 'Heavy Fabrication'],
     features: [
       {

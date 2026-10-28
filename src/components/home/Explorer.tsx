@@ -84,7 +84,6 @@ export function Explorer() {
 
             {l.models.length > 0 && (
               <div className="mb-8">
-                <p className="mb-3 text-[13px] font-semibold text-muted">Ranges</p>
                 <ul className="flex flex-wrap gap-2">
                   {l.models.map((m) => (
                     <li key={m.name}>

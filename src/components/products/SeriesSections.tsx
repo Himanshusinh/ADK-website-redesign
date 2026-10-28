@@ -161,16 +161,6 @@ export function Features({ node }: { node: Node }) {
                         ))}
                       </Reveal>
                     )}
-                    {f.points && (
-                      <ul className={clsx('mt-5 flex flex-wrap gap-2', i % 2 && 'lg:justify-end')}>
-                        {f.points.map((pt) => (
-                          <li key={pt} className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[13.5px] font-medium text-white ring-1 ring-white/20 backdrop-blur-md">
-                            <span className="size-1.5 rounded-full bg-brand" />
-                            {pt}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
                   </div>
                 </div>
               </div>
