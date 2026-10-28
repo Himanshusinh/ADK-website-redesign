@@ -1086,8 +1086,8 @@ export const seriesExtras: Record<string, Partial<Node>> = {
       {
         title: 'One universal die, every profile',
         text: 'The universal bending die forms arcs, dead edges, returns and closed profiles without a tool change, so a box that would take four sets of press-brake tooling is finished in one set-up. Nothing has to be ordered in for a new part shape.',
-        img: '/products/series/panel-bender/f1.jpg',
-        ratio: 1.451,
+        img: '/products/series/panel-bender/universal-die.jpg',
+        ratio: 1.501,
         stats: [['0.2', 's', 'Per bend'], ['2500', 'mm', 'Bend width up to'], ['170', 'mm', 'Bend height']],
       },
       {
