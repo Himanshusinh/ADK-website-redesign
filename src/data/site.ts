@@ -187,7 +187,7 @@ export const productTree: Node[] = [
         img: IMG.sheetLaser,
         children: [
           {
-            ...series('e-ii-series', 'ES Series', '/products/series/e-ii/front.jpg', 'Single-platform fiber laser cutting machine.'),
+            ...series('es-series', 'ES Series', '/products/series/e-ii/front.jpg', 'Single-platform fiber laser cutting machine.'),
             sheetOnRequest: false,
             cutout: '/products/series/e-ii/cutout.webp',
             imgs: ['/products/series/e-ii/front.jpg', '/products/series/e-ii/side.jpg'],
@@ -219,12 +219,12 @@ export const productTree: Node[] = [
               },
             ],
           },
-          series('ln-series', 'S Series', '/products/series/ln-series/s-series.jpg', 'High capacity single-platform fiber laser cutting machine.'),
-          series('ga-series', 'C Series', IMG.exchangeLaser, 'High-performance fiber laser cutting machine.'),
-          series('gv-series', 'LNR Series', IMG.exchangeLaser, 'Ultra high speed fiber laser cutting machine.'),
-          series('gh-series', 'D Series', IMG.largeLaser, 'Flagship super power fiber laser cutting machine.'),
+          series('s-series', 'S Series', '/products/series/ln-series/s-series.jpg', 'High capacity single-platform fiber laser cutting machine.'),
+          series('c-series', 'C Series', IMG.exchangeLaser, 'High-performance fiber laser cutting machine.'),
+          series('gv-series', 'GV Series', IMG.exchangeLaser, 'Ultra high speed fiber laser cutting machine.'),
+          series('d-series', 'D Series', IMG.largeLaser, 'Flagship super power fiber laser cutting machine.'),
           series('sl-series', 'SL Series', IMG.largeLaser, 'Ground rail large format laser cutting machine.'),
-          series('cpl-series', 'GAR Series', IMG.sheetLaser, 'Automated coil material fiber laser cutting machine.'),
+          series('cpl-series', 'CPL Series', IMG.sheetLaser, 'Automated coil material fiber laser cutting machine.'),
         ],
       },
       {

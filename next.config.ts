@@ -36,6 +36,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: '/products/e-ii-series', destination: '/products/es-series', permanent: true },
+      { source: '/products/ln-series', destination: '/products/s-series', permanent: true },
+      { source: '/products/ga-series', destination: '/products/c-series', permanent: true },
+      { source: '/products/gh-series', destination: '/products/d-series', permanent: true },
       ...Object.entries(legacy).map(([from, to]) => ({ source: `/${from}.php`, destination: to, permanent: true })),
       ...retired.map((slug) => ({ source: `/products/${slug}`, destination: '/products/sheet-metal-laser-cutting-machine', permanent: true })),
       { source: '/:slug.php', destination: '/products/:slug', permanent: true },

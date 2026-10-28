@@ -299,7 +299,7 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     tables: [
       {
         title: 'Technical Parameters',
-        head: ['Machine model', 'ADK 3015 GAR', 'ADK 4020 GAR', 'ADK 6520 GAR'],
+        head: ['Machine model', 'ADK 3015 CPL', 'ADK 4020 CPL', 'ADK 6520 CPL'],
         rows: [
           ['Laser power', '12KW', '12KW', '12KW'],
           ['Working area', '3000*1500mm', '4000*2000mm', '6500*2000mm'],
@@ -391,7 +391,7 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     tables: [
       {
         title: 'Technical Parameters',
-        head: ['Model', 'ADK 3015 LNR', 'ADK 6520 LNR'],
+        head: ['Model', 'ADK 3015 GV', 'ADK 6520 GV'],
         rows: [
           ['Processing format', '3050*1530mm', '4050*2030mm'],
           ['Laser power', '12KW'],
@@ -404,7 +404,7 @@ export const seriesExtras: Record<string, Partial<Node>> = {
       },
     ],
   },
-  'ln-series': {
+  's-series': {
     sheetOnRequest: false,
     // ADK's own render, composited onto a dark studio stage (machine.webp + backdrop)
     heroImg: '/products/series/ln-series/s-series.jpg',
@@ -455,7 +455,7 @@ export const seriesExtras: Record<string, Partial<Node>> = {
       },
     ],
   },
-  'ga-series': {
+  'c-series': {
     sheetOnRequest: false,
     heroImg: '/products/series/ga-series/hero.webp',
     features: [
@@ -490,7 +490,7 @@ export const seriesExtras: Record<string, Partial<Node>> = {
       },
     ],
   },
-  'gh-series': {
+  'd-series': {
     sheetOnRequest: false,
     heroImg: '/products/series/gh-series/hero.webp',
     features: [
@@ -1114,3 +1114,8 @@ export const seriesExtras: Record<string, Partial<Node>> = {
     ],
   },
 };
+
+// Aliases for backwards compatibility with previous slugs
+seriesExtras['ln-series'] = seriesExtras['s-series'];
+seriesExtras['ga-series'] = seriesExtras['c-series'];
+seriesExtras['gh-series'] = seriesExtras['d-series'];

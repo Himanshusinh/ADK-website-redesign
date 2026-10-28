@@ -12,7 +12,6 @@ const trust = [
   ['16+', 'Years of experience'],
   ['750+', 'Happy customers'],
   ['850+', 'Machines installed'],
-  [`${company.branches.length}`, 'Service branches'],
 ];
 
 function Verb({ on, children }: { on: boolean; children: ReactNode }) {
@@ -101,7 +100,7 @@ export function HeroStage() {
           style={{ animationDelay: '0.08s' }}
         >
           Machines that <Verb on={slide.verb === 0}>Cut</Verb>, <Verb on={slide.verb === 1}>Bend</Verb> &amp;{' '}
-          <Verb on={slide.verb === 2}>Weld</Verb> metal.
+          <Verb on={slide.verb === 2}>Weld</Verb> Metal.
         </h1>
         <p className="animate-rise lead mt-5 max-w-[480px] text-white/65" style={{ animationDelay: '0.16s' }}>
           CNC fiber laser cutting, plasma cutting, press brakes, laser welding and PEB machinery — supplied, installed and serviced across India.
