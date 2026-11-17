@@ -65,8 +65,13 @@ export const company = {
   phone: '+91 63526 44186',
   whatsapp: '919227085416',
   email: 'inquiry1@adkeng.com',
-  office: ['A-503/504, Empire Business Hub,', 'Nr. Shukan Mall, Science City Road,', 'Sola, Ahmedabad 380060, Gujarat.'],
-  factory: ['Block No. 2100, Paiki-2,', 'Beside Umiya Industries Estate,', 'Santej, Ahmedabad-382721,', 'Gujarat, India'],
+  office: ['A - 503, Empire Business Hub,', 'Science City Road,', 'Ahmedabad, Gujarat 380060'],
+  factory: [
+    'Plot No. – 2 Lane Number -3,',
+    'opp. Olad Kalptaru Peper Mill primacies,',
+    'opp. Arvind forest gate, Karoli,',
+    'Khatraj, Kalol-382722',
+  ],
   branches: ['Nagpur', 'Pune', 'Nashik', 'Kolhapur', 'Bhopal', 'Jaipur', 'Surat', 'Mumbai', 'Indore'],
   goal: 'Our goal is to offer broad capabilities, competitive pricing, exceptional quality and outstanding service to each and every customer.',
   logo: '/brand/adk-logo.png',
@@ -90,15 +95,15 @@ export const company = {
 export const maps = [
   {
     kicker: 'Head Office',
-    address: 'A-503/504, Empire Business Hub, Nr. Shukan Mall, Science City Road, Sola, Ahmedabad 380060.',
-    src: `https://www.google.com/maps?q=${encodeURIComponent('Empire Business Hub, Science City Road, Sola, Ahmedabad')}&output=embed`,
-    link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Empire Business Hub, Science City Road, Sola, Ahmedabad')}`,
+    address: 'A - 503, Empire Business Hub, Science City Road, Ahmedabad, Gujarat 380060',
+    src: `https://www.google.com/maps?q=${encodeURIComponent('A - 503, Empire Business Hub, Science City Road, Ahmedabad, Gujarat 380060')}&output=embed`,
+    link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('A - 503, Empire Business Hub, Science City Road, Ahmedabad, Gujarat 380060')}`,
   },
   {
     kicker: 'Factory',
-    address: 'Block No. 2100, Paiki-2, Beside Umiya Industries Estate, Santej, Ahmedabad-382721.',
-    src: 'https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7653.971548593346!2d72.456487!3d23.121987!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDA3JzE5LjIiTiA3MsKwMjcnMzIuNiJF!5e1!3m2!1sen!2sin!4v1789549651015!5m2!1sen!2sin',
-    link: 'https://www.google.com/maps/search/?api=1&query=23.121987,72.456487',
+    address: 'Plot No. – 2 Lane Number -3, opp. Olad Kalptaru Peper Mill primacies, opp. Arvind forest gate, Karoli, Khatraj, Kalol-382722',
+    src: `https://www.google.com/maps?q=${encodeURIComponent('Plot No. 2 Lane Number -3, opp. Arvind forest gate, Karoli, Khatraj, Kalol-382722')}&output=embed`,
+    link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Plot No. 2 Lane Number -3, opp. Arvind forest gate, Karoli, Khatraj, Kalol-382722')}`,
   },
 ];
 
