@@ -194,7 +194,7 @@ export const productTree: Node[] = [
           {
             ...series('es-series', 'ES Series', '/products/series/e-ii/front.jpg', 'Single-platform fiber laser cutting machine.'),
             sheetOnRequest: false,
-            cutout: '/products/series/e-ii/cutout.webp',
+            heroImg: '/products/series/e-ii/front.jpg',
             imgs: ['/products/series/e-ii/front.jpg', '/products/series/e-ii/side.jpg'],
             highlights: [['Working area', '3000 × 1500 mm'], ['Speed', '120 m/min'], ['Accuracy', '±0.03 mm'], ['Machine capacity', 'Up to 12 kw']],
             features: [
@@ -225,11 +225,11 @@ export const productTree: Node[] = [
             ],
           },
           series('s-series', 'S Series', '/products/series/ln-series/s-series.jpg', 'High capacity single-platform fiber laser cutting machine.'),
-          series('c-series', 'C Series', IMG.exchangeLaser, 'High-performance fiber laser cutting machine.'),
-          series('gv-series', 'GV Series', IMG.exchangeLaser, 'Ultra high speed fiber laser cutting machine.'),
-          series('d-series', 'D Series', IMG.largeLaser, 'Flagship super power fiber laser cutting machine.'),
-          series('sl-series', 'SL Series', IMG.largeLaser, 'Ground rail large format laser cutting machine.'),
-          series('cpl-series', 'CPL Series', IMG.sheetLaser, 'Automated coil material fiber laser cutting machine.'),
+          series('c-series', 'C Series', '/products/series/ga-series/hero.webp', 'High-performance fiber laser cutting machine.'),
+          series('gv-series', 'GV Series', '/products/series/gv-series/hero.jpg', 'Ultra high speed fiber laser cutting machine.'),
+          series('d-series', 'D Series', '/products/series/gh-series/hero.webp', 'Flagship super power fiber laser cutting machine.'),
+          series('sl-series', 'SL Series', '/products/series/sl-series/hero.jpg', 'Ground rail large format laser cutting machine.'),
+          series('cpl-series', 'CPL Series', '/products/series/cpl-series/hero.jpg', 'Automated coil material fiber laser cutting machine.'),
         ],
       },
       {
@@ -237,25 +237,25 @@ export const productTree: Node[] = [
         name: 'Tube Laser Cutting Machine',
         img: IMG.tubeLaser,
         children: [
-          series('tf-series', 'TF Series', IMG.tubeLaser, 'Side-mounted front chuck tube laser cutter.'),
-          series('t2-series', 'T2 Series', IMG.tubeLaser),
-          series('t3-series', 'T3 Series', IMG.tubeLaser),
-          series('t4-series', 'T4 Series', IMG.tubeLaser),
-          series('tm-ii-series', 'TM II Series', IMG.tubeLaser),
-          series('tg-e-series', 'TG-E Series', IMG.tubeLaser),
+          series('tf-series', 'TF Series', '/products/series/tf-series/hero.jpg', 'Side-mounted front chuck tube laser cutter.'),
+          series('t2-series', 'T2 Series', '/products/series/t2-series/hero.jpg'),
+          series('t3-series', 'T3 Series', '/products/series/t3-series/hero.jpg'),
+          series('t4-series', 'T4 Series', '/products/series/t4-series/hero.webp'),
+          series('tm-ii-series', 'TM II Series', '/products/series/tm-ii-series/hero.jpg'),
+          series('tg-e-series', 'TG-E Series', '/products/series/tg-e-series/hero.jpg'),
         ],
       },
       {
         slug: 'sheet-and-tube-laser-cutting-machine',
         name: 'Sheet & Tube Laser Cutting Machine',
         img: IMG.exchangeLaser,
-        children: [series('lnr-series', 'LNR Series', IMG.exchangeLaser), series('gar-series', 'GAR Series', IMG.exchangeLaser)],
+        children: [series('lnr-series', 'LNR Series', '/products/series/lnr-series/hero.jpg'), series('gar-series', 'GAR Series', '/products/series/gar-series/hero.jpg')],
       },
       {
         slug: 'robot-laser-cutting-machine',
         name: 'Robot Laser Cutting Machine',
         img: IMG.robotLaser,
-        children: [series('lf1800-series', 'LF1800 Series', IMG.robotLaser), series('m3015g-series', 'M3015G Series', IMG.robotLaser)],
+        children: [series('lf1800-series', 'LF1800 Series', '/products/series/lf1800-series/hero.jpg'), series('m3015g-series', 'M3015G Series', '/products/series/m3015g-series/hero.jpg')],
       },
     ],
   },
@@ -268,17 +268,17 @@ export const productTree: Node[] = [
       {
         slug: 'cnc-press-brake',
         name: 'CNC Press Brake',
-        img: IMG.cncPressBrake,
+        img: '/products/series/cnc-press-brake/hero.jpg',
         desc: ['New EU streamlined design. The press brake adopt the latest high-frequency hydraulic control technology, which is faster, more efficient and more stable.'],
         highlights: [['Tonnage', '40T – 800T'], ['Axis', '4, 5, 7 & 9'], ['Energy saving', '60%']],
         children: [
-          series('excellent-series', 'Excellent Series', IMG.cncPressBrake),
-          series('elite-series', 'Elite Series', IMG.cncPressBrake),
-          series('edge-series', 'Edge Series', IMG.cncPressBrake),
+          series('excellent-series', 'Excellent Series', '/products/series/cnc-press-brake/hero.jpg'),
+          series('elite-series', 'Elite Series', '/products/series/cnc-press-brake/hero.jpg'),
+          series('edge-series', 'Edge Series', '/products/series/cnc-press-brake/hero.jpg'),
           {
             slug: 'iconic-series',
             name: 'Iconic Series',
-            img: IMG.cncPressBrake,
+            img: '/products/series/iconic-series/hero.jpg',
             sheetOnRequest: true,
             desc: [
               'Two press brakes set up as one line. Run them together on a single long workpiece, or split them and run two jobs at once when the schedule calls for it.',
@@ -365,7 +365,7 @@ export const productTree: Node[] = [
       {
         slug: 'nc-press-brake',
         name: 'NC Press Brake',
-        img: IMG.ncPressBrake,
+        img: '/products/series/nc-press-brake/hero.jpg',
         desc: ['The entire EU streamlined design, heat treatment frame, high rigidity workbench, optional mechanical compensation device for precise bending.'],
         highlights: [['Tonnage', '40T – 500T'], ['Hydraulics', 'Bosch Rexroth'], ['Controller', 'Estun / Delem']],
         lists: [
@@ -451,8 +451,8 @@ export const productTree: Node[] = [
       {
         slug: 'handheld-laser-welding-machine',
         name: 'Handheld Laser Welding Machine',
-        img: IMG.handheld,
-        imgs: [IMG.handheld, IMG.weldSample, IMG.weldJoint],
+        img: '/products/series/handheld-laser-welding-machine/hero.jpg',
+        imgs: ['/products/series/handheld-laser-welding-machine/hero.jpg', IMG.weldSample, IMG.weldJoint],
         desc: [
           'One compact machine that welds, cuts, cleans and finishes seams. Fast to pick up, steady in daily production, and gentle enough on the metal that parts come off the bench without distortion.',
           'Built for stainless steel, mild steel and aluminium — from kitchen and furniture work to enclosures, railings and general fabrication.',
@@ -510,8 +510,8 @@ export const productTree: Node[] = [
       {
         slug: 'handheld-laser-cleaning-machine',
         name: 'Handheld Laser Cleaning Machine',
-        img: IMG.handheld,
-        imgs: [IMG.handheld, IMG.cleanSample, IMG.cleanSample2],
+        img: '/products/series/handheld-laser-cleaning-machine/hero.jpg',
+        imgs: ['/products/series/handheld-laser-cleaning-machine/hero.jpg', IMG.cleanSample, IMG.cleanSample2],
         models: ['LCW-1500W', 'LCW-2000W', 'LCW-3000W'],
         highlights: [['Power', '1500W / 2000W / 3000W']],
         sheetOnRequest: true,
@@ -519,7 +519,7 @@ export const productTree: Node[] = [
       {
         slug: '3d-fiber-laser-welding-machine-robot',
         name: '3D Fiber Laser Welding Machine Robot',
-        img: IMG.weldRobot,
+        img: '/products/series/3d-fiber-laser-welding-machine-robot/hero.jpg',
         models: ['LW1800'],
         sheetOnRequest: true,
       },
@@ -534,7 +534,7 @@ export const productTree: Node[] = [
       {
         slug: 'gantry-type',
         name: 'Gantry Type',
-        img: IMG.gantry,
+        img: '/products/series/gantry-type/hero.jpg',
         highlights: [['Speed', '0–12000 mm/min'], ['Accuracy', '±0.03 mm/3mtr'], ['Source', 'Hypertherm']],
         lists: [{
           title: 'Features', items: [
@@ -561,7 +561,7 @@ export const productTree: Node[] = [
       {
         slug: 'table-type',
         name: 'Table Type',
-        img: IMG.tableType,
+        img: '/products/series/table-type/hero.jpg',
         highlights: [['Track width', '2500 mm & above'], ['Track length', '4000 mm & above'], ['Controller', 'FLSK 2300B']],
         lists: [{
           title: 'Mechanical Parts', items: [
@@ -589,7 +589,7 @@ export const productTree: Node[] = [
       {
         slug: 'portable-type',
         name: 'Portable Type',
-        img: IMG.portable,
+        img: '/products/series/portable-type/hero.jpg',
         highlights: [['Cutting width', '1250 mm'], ['Cutting length', '2500 mm'], ['Source', 'Hypertherm, USA']],
         tables: [{
           title: 'Technical Parameters', rows: rows(`
@@ -615,7 +615,7 @@ export const productTree: Node[] = [
       {
         slug: 'h-beam',
         name: 'H-Beam',
-        img: IMG.hBeam,
+        img: '/products/series/h-beam/hero.jpg',
         desc: pebDesc,
         highlights: [['Web width', '200–1500 mm'], ['Flange height', '150–500 mm'], ['Web taper', '15°']],
         tables: [{
@@ -633,7 +633,7 @@ export const productTree: Node[] = [
       {
         slug: 'saw-gantry-welding-machine',
         name: 'Saw Gantry Welding Machine',
-        img: IMG.sawGantry,
+        img: '/products/series/saw-gantry-welding-machine/hero.jpg',
         desc: pebDesc,
         highlights: [['Web width', 'Up to 2500 mm'], ['Flange height', 'Up to 1000 mm'], ['Beam length', '2.5–15 mtr']],
         tables: [{
@@ -655,16 +655,16 @@ export const productTree: Node[] = [
     name: 'Shearing Machine',
     img: IMG.shear1,
     children: [
-      { slug: 'swing-beam-shearing-machine', name: 'Swing Beam Shearing Machine', img: IMG.shear1, imgs: [IMG.shear1, IMG.shear3], sheetOnRequest: true },
-      { slug: 'guillotine-shearing-machine', name: 'Guillotine Shearing Machine', img: IMG.shear2, imgs: [IMG.shear2, IMG.shear3], sheetOnRequest: true },
+      { slug: 'swing-beam-shearing-machine', name: 'Swing Beam Shearing Machine', img: '/products/series/swing-beam-shearing-machine/hero.jpg', imgs: ['/products/series/swing-beam-shearing-machine/hero.jpg', IMG.shear3], sheetOnRequest: true },
+      { slug: 'guillotine-shearing-machine', name: 'Guillotine Shearing Machine', img: '/products/series/guillotine-shearing-machine/hero.jpg', imgs: ['/products/series/guillotine-shearing-machine/hero.jpg', IMG.shear3], sheetOnRequest: true },
     ],
   },
 
   {
     slug: 'panel-bender',
     name: 'Panel Bender',
-    img: IMG.panel1,
-    imgs: [IMG.panel1, IMG.panel2, IMG.panel3],
+    img: '/products/series/panel-bender/hero.jpg',
+    imgs: ['/products/series/panel-bender/hero.jpg', IMG.panel2, IMG.panel3],
     desc: ["Panel Bender adopts universal bending die, which can complete bending of various shapes with only one set of die, and users don't need to customize another die. The equipment can easily meet the requirements of arc, dead edge, return, closed and other complex sheet metal bending."],
     highlights: [['Bend speed', '0.2 s/bend'], ['Bend width', 'Up to 2500 mm'], ['Bend height', '170 mm']],
     tables: [{
@@ -698,7 +698,10 @@ export const productTree: Node[] = [
 const applyExtras = (nodes: Node[]) => {
   for (const n of nodes) {
     const extra = seriesExtras[n.slug];
-    if (extra) Object.assign(n, extra);
+    if (extra) {
+      Object.assign(n, extra);
+      if (extra.heroImg) n.img = extra.heroImg;
+    }
     if (n.children) applyExtras(n.children);
   }
 };
